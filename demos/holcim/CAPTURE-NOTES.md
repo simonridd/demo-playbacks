@@ -12,3 +12,5 @@ Captured on 12 October 2026 through the authenticated website and Genesys Agent 
 - The exact generated summary includes 25 m³ ready-mix concrete, C32/40 for a warehouse ground-bearing slab, and requested delivery on 26 October 2026 with unloading before midday.
 - The quote page used its existing defaults for missing prices: £145/m³, £120 delivery and 20% VAT. Total: £4,494.00. Product suitability, availability and environmental evidence remain pending. This is a demonstration draft, not a confirmed order.
 - The test campaign was switched off and the agent left off queue after the capture.
+
+- Journey 3 / slide 14 is an explicitly labelled, synthesised caller/AVA conversation (107.355 seconds), with embedded audio, download and transcript. It illustrates qualification and handoff and does not place a real call.

@@ -1,0 +1,17 @@
+{
+  "id": "holcim-voice",
+  "title": "Holcim simulated voice call",
+  "description": "A prerecorded caller and AVA illustrate project qualification and adviser handoff.",
+  "status": "available",
+  "href": "demos/holcim-voice/",
+  "slides": 1,
+  "capturedOn": null,
+  "journeys": [
+    {
+      "title": "Voice simulation",
+      "href": "demos/holcim-voice/#slide-1"
+    }
+  ],
+  "documents": [],
+  "thumbnail": "demos/holcim-voice/cover.png"
+}

@@ -4,20 +4,53 @@
     {
       "id": "holcim",
       "title": "Holcim customer journeys",
-      "description": "Website enquiry to agent callback, and webchat through Copilot assistance to a generated quotation.",
+      "description": "Website enquiry to callback, webchat through Copilot assistance to a quote, and a simulated voice enquiry with AVA.",
       "status": "available",
       "href": "demos/holcim/",
       "thumbnail": "assets/holcim-cover.png",
-      "slides": 13,
+      "slides": 14,
       "capturedOn": "2026-10-12",
       "journeys": [
-        {"title": "Callback", "href": "demos/holcim/#slide-1"},
-        {"title": "Webchat and quote", "href": "demos/holcim/#slide-5"}
+        {
+          "title": "Callback",
+          "href": "demos/holcim/#slide-1"
+        },
+        {
+          "title": "Webchat and quote",
+          "href": "demos/holcim/#slide-5"
+        },
+        {
+          "title": "Voice simulation",
+          "href": "demos/holcim/#slide-14"
+        }
       ],
       "documents": [
-        {"title": "Generated quotation", "href": "demos/holcim/riverside-quote.html"},
-        {"title": "Generated chat summary", "href": "demos/holcim/holcim-chat-summary.txt"}
+        {
+          "title": "Generated quotation",
+          "href": "demos/holcim/riverside-quote.html"
+        },
+        {
+          "title": "Generated chat summary",
+          "href": "demos/holcim/holcim-chat-summary.txt"
+        }
       ]
+    },
+    {
+      "id": "holcim-voice",
+      "title": "Holcim simulated voice call",
+      "description": "A prerecorded caller and AVA illustrate project qualification and adviser handoff.",
+      "status": "available",
+      "href": "demos/holcim-voice/",
+      "slides": 1,
+      "capturedOn": null,
+      "journeys": [
+        {
+          "title": "Voice simulation",
+          "href": "demos/holcim-voice/#slide-1"
+        }
+      ],
+      "documents": [],
+      "thumbnail": "demos/holcim-voice/cover.png"
     }
   ]
 }

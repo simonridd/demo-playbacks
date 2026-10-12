@@ -4,7 +4,7 @@ A static library of captured customer journeys. Open a demo card to replay its a
 
 ## Available demos
 
-- **Holcim customer journeys** — 13 slides covering a website enquiry and agent callback, then a webchat with Copilot knowledge, checklist progress, wrap-up suggestions and summary-to-quote generation.
+- **Holcim customer journeys** — 14 slides covering a website enquiry and agent callback, then a webchat with Copilot knowledge, checklist progress, wrap-up suggestions and summary-to-quote generation, plus a labelled prerecorded AVA voice enquiry.
 - Playback: `demos/holcim/index.html`
 - Generated quote: `demos/holcim/riverside-quote.html`
 - Exact AI-generated chat summary: `demos/holcim/holcim-chat-summary.txt`
@@ -27,3 +27,5 @@ GitHub Pages serves the repository root from `main`. The `.nojekyll` file keeps 
 4. Check relative links under the GitHub Pages repository prefix.
 
 The first demo uses a fictional Riverside project. Its quote uses the existing demo price list, and the pending technical checks remain on the document. Presenter notes distinguish live conversation output from fixed demo script context.
+
+The voice simulation is Journey 3 / slide 14. Its 1m47s WAV is embedded and plays on request. A separate voice card opens the same recording directly. Both voices are synthesised; no live bot transfer is claimed.
