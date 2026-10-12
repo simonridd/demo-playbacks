@@ -1,0 +1,38 @@
+CUSTOMER AND PROJECT
+Customer: Jamie Taylor
+Company: Riverside Construction
+Project: Riverside Warehouse Project
+Site postcode: Not discussed
+
+COMMERCIAL DETAILS
+Status: Enquiry
+Currency: Not discussed
+Price basis: Not discussed
+VAT rate: Not discussed
+Delivery charge: Not discussed
+Other charges: Not discussed
+Valid until: Not discussed
+Payment terms: Not discussed
+Purchase reference: Not discussed
+Quote reference: Not discussed
+Order reference: Not discussed
+
+MATERIALS
+| Product | Quantity | Unit | Specification | Unit price | Price basis |
+| --- | --- | --- | --- | --- | --- |
+| Ready-mix concrete | 25 | m³ | C32/40 for warehouse ground-bearing slab | Not discussed | Not discussed |
+
+DELIVERY
+Requested delivery: 26 October 2026
+Confirmed delivery: Not discussed
+Delivery window: Unloading to be completed before midday (requested)
+Site access: Mixer trucks can access the Reading site; unloading must finish before midday
+
+OUTSTANDING CHECKS
+ECOPact suitability for C32/40 specification to be verified by technical team. Environmental Product Declaration (EPD) or carbon calculation dataset to be provided for project sustainability report. Availability and specification subject to confirmation. No existing order or quote reference held.
+
+NEXT ACTIONS
+Prepare draft quotation for 25 m³ C32/40 ready-mix concrete (adviser). Refer ECOPact suitability check to technical team (adviser). Refer environmental evidence (EPD or carbon calculation) to technical team (adviser).
+
+EXISTING ORDER CONTEXT
+Not applicable
