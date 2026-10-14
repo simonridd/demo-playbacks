@@ -19,6 +19,24 @@ Use **Next/Back** or the arrow keys. The top navigation jumps between journeys. 
 
 GitHub Pages serves the repository root from `main`. The `.nojekyll` file keeps the site buildless. No API credentials, SDK session tokens or live backend are required.
 
+The redesigned Holcim player starts with an audience, project brief and route selection,
+then closes each journey with retained evidence, limits and an inspection action.
+Original `#slide-1` through `#slide-14` links remain valid. The catalog offers a
+**Download playback HTML** link for each player; the saved quotation and exact summary
+remain separate downloads. Audio starts only after a play action and is labelled a simulation.
+
+For repeat publication, build the approved private manifest and its story sidecar into scratch
+space using `build_playback.py`. Merge its `catalog-entry.json` into `demos/catalog.json`
+by the stable `holcim` ID, retaining other entries and the exact summary document link.
+Regenerate the homepage with `build_catalog.py`, run `check_output.py`, inspect the diff
+and check all routes under the repository prefix before pushing. The production README's
+single-demo worked example is not a replacement catalog for this two-demo library.
+
+Publication acceptance fixes to browser history, responsive toolbars and catalog downloads
+are retained with the private DSS1-PUBLISH rebuild evidence. Apply that private source patch
+when reproducing this release. Captures, the quotation, summary and both players' audio
+were reused without synthesis or new live capture.
+
 ## Adding a demo
 
 1. Add its playback and documents under `demos/<slug>/`.

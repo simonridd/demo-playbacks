@@ -3,37 +3,38 @@
   "demos": [
     {
       "id": "holcim",
-      "title": "Holcim customer journeys",
-      "description": "Website enquiry to callback, webchat through Copilot assistance to a quote, and a simulated voice enquiry with AVA.",
+      "title": "From project enquiry to a reviewable quote",
+      "description": "Follow Jamie Taylor and Riverside Construction from a detailed project enquiry to an informed adviser follow-up and a draft quotation ready for review.",
       "status": "available",
       "href": "demos/holcim/",
-      "thumbnail": "assets/holcim-cover.png",
       "slides": 14,
       "capturedOn": "2026-10-12",
+      "entryButton": "Choose how to follow Jamie’s enquiry",
       "journeys": [
         {
-          "title": "Callback",
+          "title": "From website brief to informed callback",
           "href": "demos/holcim/#slide-1"
         },
         {
-          "title": "Webchat and quote",
+          "title": "From material questions to a draft quotation",
           "href": "demos/holcim/#slide-5"
         },
         {
-          "title": "Voice simulation",
+          "title": "Hear a prerecorded enquiry illustration",
           "href": "demos/holcim/#slide-14"
         }
       ],
       "documents": [
         {
-          "title": "Generated quotation",
+          "title": "Open the saved quotation",
           "href": "demos/holcim/riverside-quote.html"
         },
         {
           "title": "Generated chat summary",
           "href": "demos/holcim/holcim-chat-summary.txt"
         }
-      ]
+      ],
+      "thumbnail": "demos/holcim/cover.png"
     },
     {
       "id": "holcim-voice",

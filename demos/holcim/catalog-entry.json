@@ -1,0 +1,35 @@
+{
+  "id": "holcim",
+  "title": "From project enquiry to a reviewable quote",
+  "description": "Follow Jamie Taylor and Riverside Construction from a detailed project enquiry to an informed adviser follow-up and a draft quotation ready for review.",
+  "status": "available",
+  "href": "demos/holcim/",
+  "slides": 14,
+  "capturedOn": "2026-10-12",
+  "entryButton": "Choose how to follow Jamie’s enquiry",
+  "journeys": [
+    {
+      "title": "From website brief to informed callback",
+      "href": "demos/holcim/#slide-1"
+    },
+    {
+      "title": "From material questions to a draft quotation",
+      "href": "demos/holcim/#slide-5"
+    },
+    {
+      "title": "Hear a prerecorded enquiry illustration",
+      "href": "demos/holcim/#slide-14"
+    }
+  ],
+  "documents": [
+    {
+      "title": "Open the saved quotation",
+      "href": "demos/holcim/riverside-quote.html"
+    },
+    {
+      "title": "Generated chat summary",
+      "href": "demos/holcim/holcim-chat-summary.txt"
+    }
+  ],
+  "thumbnail": "demos/holcim/cover.png"
+}
