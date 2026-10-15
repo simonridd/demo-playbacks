@@ -21,8 +21,8 @@ GitHub Pages serves the repository root from `main`. The `.nojekyll` file keeps 
 
 The redesigned Holcim player starts with an audience, project brief and route selection,
 then closes each journey with retained evidence, limits and an inspection action.
-Original `#slide-1` through `#slide-14` links remain valid. The catalog offers a
-**Download playback HTML** link for each player; the saved quotation and exact summary
+Original `#slide-1` through `#slide-14` links remain valid. The catalog and each player offer **Download demo** to save one named HTML file
+for sharing and offline use; the saved quotation and exact summary
 remain separate downloads. Audio starts only after a play action and is labelled a simulation.
 
 For repeat publication, build the approved private manifest and its story sidecar into scratch
@@ -47,3 +47,5 @@ were reused without synthesis or new live capture.
 The first demo uses a fictional Riverside project. Its quote uses the existing demo price list, and the pending technical checks remain on the document. Presenter notes distinguish live conversation output from fixed demo script context.
 
 The voice simulation is Journey 3 / slide 14. Its 1m47s WAV is embedded and plays on request. A separate voice card opens the same recording directly. Both voices are synthesised; no live bot transfer is claimed.
+
+The Download demo control is available on the story opening, slide header and outcomes. The saved file includes every capture, Messenger conversation, original recording and saved document. Recipients open it directly in a browser. It starts at the opening with playback stopped, has no library-folder dependency, and can export itself again.
