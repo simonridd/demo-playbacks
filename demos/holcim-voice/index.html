@@ -932,7 +932,7 @@ function render(){
   if(story&&view!=='slides'){if(view==='intro')showStoryIntro();else showOutcome();return}
   $('shell').hidden=false;$('storyScreen').hidden=true;$('storyScreen').replaceChildren();$('storyOverview').hidden=!story;stopMedia();disposeConversation();$('shell').classList.toggle('conversation-mode',!!(slides[index].conversation||slides[index].messenger));if(audioUrl){URL.revokeObjectURL(audioUrl);audioUrl=null}const s=slides[index],route=journeySlides(selectedJourney);
   $('eyebrow').textContent=`Journey ${groups.indexOf(s.journey)+1} · ${s.journey} / ${String(route.findIndex(x=>x.i===index)+1).padStart(2,'0')}`;
-  $('title').textContent=s.title;$('lead').textContent=(story?.journeys.find(j=>j.journey===selectedJourney)?.problem||'')+(s.lead?` ${s.lead}`:'');$('facts').replaceChildren();
+  $('title').textContent=s.title;$('lead').textContent=s.lead||story?.journeys.find(j=>j.journey===selectedJourney)?.problem||'';$('facts').replaceChildren();
   (s.facts||[]).forEach(([k,v])=>{const d=text('div','','fact');d.append(text('dt',k),text('dd',v));$('facts').append(d)});
   [...$('journeys').children].forEach((b,i)=>b.setAttribute('aria-pressed',String(groups[i]===s.journey)));
   $('counter').textContent=`${route.findIndex(x=>x.i===index)+1} / ${route.length}`;$('prev').disabled=index===route[0].i&&!story;$('next').disabled=index===route[route.length-1].i&&!story;
