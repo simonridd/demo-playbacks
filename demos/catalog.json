@@ -52,6 +52,38 @@
       ],
       "documents": [],
       "thumbnail": "demos/holcim-voice/cover.png"
+    },
+    {
+      "id": "holcim-agent-copilot",
+      "title": "Holcim agent experience",
+      "description": "Follow a concrete and driveway enquiry through the captured Genesys agent workspace, with knowledge guidance, checklist progress and an after-call summary. Watch continuously or explore eight annotated turns.",
+      "status": "available",
+      "href": "demos/holcim-agent-copilot/",
+      "slides": 8,
+      "slideLabel": "turns",
+      "capturedOn": "2026-10-16",
+      "entryButton": "Explore the agent experience",
+      "journeys": [
+        {
+          "title": "Play the conversation",
+          "href": "demos/holcim-agent-copilot/#opening"
+        },
+        {
+          "title": "See knowledge and checklist assistance",
+          "href": "demos/holcim-agent-copilot/#turn-3"
+        },
+        {
+          "title": "Review summary and wrap-up codes",
+          "href": "demos/holcim-agent-copilot/#wrapup"
+        }
+      ],
+      "documents": [
+        {
+          "title": "Download the full video",
+          "href": "demos/holcim-agent-copilot/holcim-full-playback.mp4"
+        }
+      ],
+      "thumbnail": "demos/holcim-agent-copilot/cover.jpg"
     }
   ]
 }
