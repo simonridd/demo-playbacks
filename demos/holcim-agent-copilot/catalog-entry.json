@@ -1,6 +1,6 @@
 {
   "id": "holcim-agent-copilot",
-  "title": "Holcim agent experience",
+  "title": "Holcim \u00b7 Residential Housing Extension",
   "description": "Follow a concrete and driveway enquiry through the captured Genesys agent workspace, with knowledge guidance, checklist progress and an after-call summary. Watch continuously or explore eight annotated turns.",
   "status": "available",
   "href": "demos/holcim-agent-copilot/",
