@@ -49,3 +49,7 @@ The first demo uses a fictional Riverside project. Its quote uses the existing d
 The voice simulation is Journey 3 / slide 14. Its 1m47s WAV is embedded and plays on request. A separate voice card opens the same recording directly. Both voices are synthesised; no live bot transfer is claimed.
 
 The Download demo control is available on the story opening, slide header and outcomes. The saved file includes every capture, Messenger conversation, original recording and saved document. Recipients open it directly in a browser. It starts at the opening with playback stopped, has no library-folder dependency, and can export itself again.
+
+## Commercial earthworks and logistics yard
+
+`demos/holcim-commercial-earthworks/` follows a website enquiry through the outbound campaign and contact record to an agent callback and after-call work. It contains 23 annotated scenes, a 3m12s continuous video, and a self-contained offline player. The supplied prepared voices are aligned to the selected capture. The recording notes describe the requested training-row cleanup and caller-label correction, early checklist completion and knowledge-result review.
