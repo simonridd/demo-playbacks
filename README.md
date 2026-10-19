@@ -77,3 +77,5 @@ A fourth demo choice opens the user-selected AVA voice playback at `demos/holcim
 ## IPI presentation treatment
 
 The presentation uses a predominantly white canvas with the IPI logo palette: slate `#384d5d` and mint `#63ab8f`, plus a darker green for readable accent text. The partnership label is `Holcim | IPI`. The final slide states the customer and adviser outcomes directly, without references to individual scenarios. Source recordings and customer logos retain their existing appearance.
+
+The introduction gives a short overview of Genesys across the contact centre: inbound voice and digital service, outbound campaigns, virtual assistants and Agent Copilot. Character and scenario details appear later in the presentation.
