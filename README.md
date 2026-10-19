@@ -46,7 +46,7 @@ were reused without synthesis or new live capture.
 
 The first demo uses a fictional Riverside project. Its quote uses the existing demo price list, and the pending technical checks remain on the document. Presenter notes distinguish live conversation output from fixed demo script context.
 
-The voice simulation is Journey 3 / slide 14. Its 1m47s WAV is embedded and plays on request. A separate voice card opens the same recording directly. Both voices are synthesised; no live bot transfer is claimed.
+The voice simulation is Journey 3 / slide 14. Its 1m46s WAV is embedded and plays on request. A separate voice card opens the same recording directly. Both voices are synthesised; no live bot transfer is claimed.
 
 The Download demo control is available on the story opening, slide header and outcomes. The saved file includes every capture, Messenger conversation, original recording and saved document. Recipients open it directly in a browser. It starts at the opening with playback stopped, has no library-folder dependency, and can export itself again.
 
@@ -79,3 +79,11 @@ A fourth demo choice opens the user-selected AVA voice playback at `demos/holcim
 The presentation uses a predominantly white canvas with the IPI logo palette: slate `#384d5d` and mint `#63ab8f`, plus a darker green for readable accent text. The partnership label is `Holcim | IPI`. The final slide states the customer and adviser outcomes directly, without references to individual scenarios. Source recordings and customer logos retain their existing appearance.
 
 The introduction gives a short overview of Genesys across the contact centre: inbound voice and digital service, outbound campaigns, virtual assistants and Agent Copilot. Character and scenario details appear later in the presentation.
+
+## Playback controls and AVA acknowledgement
+
+Space toggles audio/video playback and Left/Right move one scene, including when a playback button or the presentation toolbar has focus. Text fields and native form controls keep their own keyboard behavior. The consolidated file exposes the same controls offline.
+
+The AVA recording now uses Jamie’s revised acknowledgement, “Yes, that's right. Thanks for your help.” Only ALEX-07 was regenerated with the existing approved voice configuration. The other audio samples are unchanged. The transcript, conversation timing, confirmation context and embedded WAV checksum match the revised 105.675-second recording. The original AVA voice and full customer-journey pages share the updated recording. The requested caption clause about proving a live transfer has been removed.
+
+The fourth learning point is now “Consistent delivery and cross-selling,” following the owner’s revision. Demo cards have aligned action rows, no durations or update note, and two equal-width Messenger/Audio buttons for Scenario 3.
