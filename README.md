@@ -73,3 +73,7 @@ The root presentation loads one annotated player at a time inside an iframe. Clo
 The October 19 revision uses the four concerns from slide 3 of the supplied `Holcim_Demo_Customer_Journeys_Jamie_Taylor_IPI_v2 (1).pptx`: manual lead follow-up, context across systems, time spent on post-call notes, and knowledge transfer and coaching. The former problems slide now explains Agent Copilot, campaigns and bots/AVA. The conclusion maps back to those same four concerns. Jamie and Emily’s fictional portraits are the original embedded images from slides 6 and 4, retained as `assets/jamie-taylor.jpeg` and `assets/emily-carter.png`. No Daniel character is introduced in the new narrative. The AVA voice illustration retains its original recording and labels.
 
 A fourth demo choice opens the user-selected AVA voice playback at `demos/holcim-voice/#slide-1` without replacing the three project scenarios or their existing URLs. The standalone presentation includes that AVA playback and both portrait files.
+
+## IPI presentation treatment
+
+The presentation uses a predominantly white canvas with the IPI logo palette: slate `#384d5d` and mint `#63ab8f`, plus a darker green for readable accent text. The partnership label is `Holcim | IPI`. The final slide states the customer and adviser outcomes directly, without references to individual scenarios. Source recordings and customer logos retain their existing appearance.
