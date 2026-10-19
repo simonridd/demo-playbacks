@@ -53,3 +53,13 @@ The Download demo control is available on the story opening, slide header and ou
 ## Commercial earthworks and logistics yard
 
 `demos/holcim-commercial-earthworks/` follows a website enquiry through the outbound campaign and contact record to an agent callback and after-call work. It contains 23 annotated scenes, a 3m12s continuous video, and a self-contained offline player. The supplied prepared voices are aligned to the selected capture. The recording notes describe the requested training-row cleanup and caller-label correction, early checklist completion and knowledge-result review.
+
+## Consolidated Holcim presentation
+
+The root `index.html` is a seven-section presentation: title, introduction, learning themes, problems, Jamie Taylor and Emily Carter, three scenario choices, and a closing slide mapping the demonstrations back to those problems. The previous library remains at `library.html`; all earlier playback URLs remain available.
+
+Scenario 1 is always Residential Housing Extension at `demos/holcim-agent-copilot/`, using the updated 19 October take 12 (109.93 seconds). Scenario 2 is Commercial Earthworks and Logistics Yard at `demos/holcim-commercial-earthworks/` (191.73 seconds). Scenario 3 Web Messenger is Council Green Corridor at `demos/holcim-council-green-corridor/` (109 seconds). Scenario 3 audio is not ready and is shown as Coming soon; it must not link to the earlier AVA voice illustration.
+
+The root presentation loads one annotated player at a time inside an iframe. Closing it unloads the player and stops its media. Hash links `#scenario-1`, `#scenario-2`, `#scenario-3-messenger` and `#together` support direct entry. Preserve the scenario mapping when rebuilding the legacy catalog: `build_catalog.py` must not replace the new presentation. Learning and problem statements are authored demo themes; the closing slide describes illustrated workflows without claiming measured results.
+
+`holcim-presentation.html` is the single-file offline edition (approximately 28 MB), embedding all three annotated players, videos and logos. It does not require a server or network connection for playback. The homepage footer links to it.

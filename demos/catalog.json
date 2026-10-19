@@ -124,6 +124,19 @@
         }
       ],
       "thumbnail": "demos/holcim-commercial-earthworks/cover.jpg"
+    },
+    {
+      "id": "holcim-council-green-corridor",
+      "title": "Holcim \u00b7 Council Green Corridor \u2014 Web Messenger",
+      "description": "Jamie moves from a virtual assistant to Emily, with retained context, automatically surfaced ECOPact guidance and a recorded wrap-up.",
+      "status": "available",
+      "href": "demos/holcim-council-green-corridor/",
+      "slides": 14,
+      "slideLabel": "scenes",
+      "capturedOn": "2026-10-19",
+      "thumbnail": "demos/holcim-council-green-corridor/poster.jpg",
+      "journeys": [],
+      "documents": []
     }
   ]
 }
