@@ -56,14 +56,20 @@ The Download demo control is available on the story opening, slide header and ou
 
 ## Consolidated Holcim presentation
 
-The root `index.html` is a seven-section presentation: title, introduction, learning themes, problems, Jamie Taylor and Emily Carter, three scenario choices, and a closing slide mapping the demonstrations back to those problems. The previous library remains at `library.html`; all earlier playback URLs remain available.
+The root `index.html` is a seven-section presentation: title, introduction, the four concerns from the PowerPoint, how Genesys helps, Jamie Taylor and Emily Carter, three project scenarios plus AVA, and a closing slide mapping the demonstrations back to the four concerns. The previous library remains at `library.html`; all earlier playback URLs remain available.
 
 Scenario 1 is always Residential Housing Extension at `demos/holcim-agent-copilot/`, using the updated 19 October take 12 (109.93 seconds). Scenario 2 is Commercial Earthworks and Logistics Yard at `demos/holcim-commercial-earthworks/` (191.73 seconds). Scenario 3 Web Messenger is Council Green Corridor at `demos/holcim-council-green-corridor/` (109 seconds). Scenario 3 Audio is the separate council road recording at `demos/holcim-council-road-low-carbon/` (approximately 94 seconds), as confirmed by the user. Both Messenger and Audio are available within Scenario 3.
 
 The root presentation loads one annotated player at a time inside an iframe. Closing it unloads the player and stops its media. Hash links `#scenario-1`, `#scenario-2`, `#scenario-3-messenger`, `#scenario-3-audio` and `#together` support direct entry. Preserve the scenario mapping when rebuilding the legacy catalog: `build_catalog.py` must not replace the new presentation. Learning and problem statements are authored demo themes; the closing slide describes illustrated workflows without claiming measured results.
 
-`holcim-presentation.html` is the single-file offline edition (approximately 35 MB), embedding all four annotated players, videos and logos. It does not require a server or network connection for playback. The homepage footer links to it.
+`holcim-presentation.html` is the single-file offline edition (approximately 45 MB), embedding all five playback choices, portraits, videos and logos. It does not require a server or network connection for playback. The homepage footer links to it.
 
 ## Council road resurfacing and lower-carbon materials
 
 `demos/holcim-council-road-low-carbon/` is a separate 1m34s Genesys agent playback with eight prepared dialogue turns, timed knowledge and checklist annotations, and after-call work. It includes a standalone offline player and continuous MP4.
+
+## PowerPoint narrative and portraits
+
+The October 19 revision uses the four concerns from slide 3 of the supplied `Holcim_Demo_Customer_Journeys_Jamie_Taylor_IPI_v2 (1).pptx`: manual lead follow-up, context across systems, time spent on post-call notes, and knowledge transfer and coaching. The former problems slide now explains Agent Copilot, campaigns and bots/AVA. The conclusion maps back to those same four concerns. Jamie and Emily’s fictional portraits are the original embedded images from slides 6 and 4, retained as `assets/jamie-taylor.jpeg` and `assets/emily-carter.png`. No Daniel character is introduced in the new narrative. The AVA voice illustration retains its original recording and labels.
+
+A fourth demo choice opens the user-selected AVA voice playback at `demos/holcim-voice/#slide-1` without replacing the three project scenarios or their existing URLs. The standalone presentation includes that AVA playback and both portrait files.
