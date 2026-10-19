@@ -53,3 +53,7 @@ The Download demo control is available on the story opening, slide header and ou
 ## Commercial earthworks and logistics yard
 
 `demos/holcim-commercial-earthworks/` follows a website enquiry through the outbound campaign and contact record to an agent callback and after-call work. It contains 23 annotated scenes, a 3m12s continuous video, and a self-contained offline player. The supplied prepared voices are aligned to the selected capture. The recording notes describe the requested training-row cleanup and caller-label correction, early checklist completion and knowledge-result review.
+
+## Council road resurfacing and lower-carbon materials
+
+`demos/holcim-council-road-low-carbon/` is a separate 1m34s Genesys agent playback with eight prepared dialogue turns, timed knowledge and checklist annotations, and after-call work. It includes a standalone offline player and continuous MP4.
