@@ -1,25 +1,25 @@
 {
   "id": "holcim-commercial-earthworks",
   "title": "Holcim \u00b7 Commercial earthworks and logistics yard",
-  "description": "Follow a website enquiry through the outbound campaign and contact record to an agent callback, knowledge assistance and after-call work. Explore 23 annotated scenes with the supplied prepared voices.",
+  "description": "Follow the retained website enquiry, outbound campaign and contact record into the new Sales callback and completed after-call work. Explore 27 annotated moments with the supplied prepared WAV voices.",
   "status": "available",
   "href": "demos/holcim-commercial-earthworks/",
-  "slides": 23,
-  "slideLabel": "scenes",
-  "capturedOn": "2026-10-19",
+  "slides": 27,
+  "slideLabel": "moments",
+  "capturedOn": "2026-10-20",
   "entryButton": "Follow the enquiry to the callback",
   "journeys": [
     {
       "title": "Website enquiry and Genesys contact",
-      "href": "demos/holcim-commercial-earthworks/#opening"
+      "href": "demos/holcim-commercial-earthworks/#moment-0"
     },
     {
       "title": "See the outbound campaign configuration",
-      "href": "demos/holcim-commercial-earthworks/#turn-5"
+      "href": "demos/holcim-commercial-earthworks/#moment-5"
     },
     {
       "title": "Follow the agent callback",
-      "href": "demos/holcim-commercial-earthworks/#turn-13"
+      "href": "demos/holcim-commercial-earthworks/#moment-11"
     },
     {
       "title": "Review summary and wrap-up",
