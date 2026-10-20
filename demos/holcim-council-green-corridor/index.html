@@ -222,7 +222,7 @@ function renderTurn(index) {
   text('tag',turn.tag); text('note',turn.note); text('detail',turn.detail);
   $('previous').disabled = selected===0; $('next').disabled=selected===turns.length-1;
   document.querySelectorAll('.turn-row').forEach((button,i) => button.setAttribute('aria-current',String(i===selected)));
-  text('playTurn',turn.kind==='speech'?'Play this turn':turn.kind==='wrapup'?'Play wrap-up':'Play this moment');
+  text('playTurn',turn.kind==='speech'?'Play this moment':turn.kind==='wrapup'?'Play wrap-up':'Play this moment');
   updateAnnotation();
 }
 function updateAnnotation() {
@@ -243,7 +243,7 @@ function updateAnnotation() {
 function updateControls() {
   text('togglePlay',video.paused?'▶':'Ⅱ');
   $('togglePlay').setAttribute('aria-label',video.paused?'Play':'Pause');
-  text('stageStatus',!hasStarted?'Ready to play':video.ended?'Playback complete':video.paused?pendingNext!==null?'Turn complete · continue when ready':'Paused':playbackMode==='single'?'Playing one turn':'Playing journey');
+  text('stageStatus',!hasStarted?'Ready to play':video.ended?'Playback complete':video.paused?pendingNext!==null?'Turn complete · continue when ready':'Paused':playbackMode==='single'?'Playing one moment':'Playing journey');
   $('startOverlay').hidden=hasStarted;
 }
 function selectTurn(index, updateHistory=true) {
