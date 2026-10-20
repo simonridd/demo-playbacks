@@ -56,12 +56,12 @@
     {
       "id": "holcim-agent-copilot",
       "title": "Holcim · Residential Housing Extension",
-      "description": "Follow a concrete and driveway enquiry through the captured Genesys agent workspace, with knowledge guidance, checklist progress and an after-call summary. Watch continuously or explore eight annotated moments.",
+      "description": "Follow the residential concrete and driveway enquiry through live transcription, relevant knowledge, sales discovery and completed after-call work. Explore 15 annotated moments with the supplied prepared voices.",
       "status": "available",
       "href": "demos/holcim-agent-copilot/",
-      "slides": 8,
+      "slides": 15,
       "slideLabel": "moments",
-      "capturedOn": "2026-10-19",
+      "capturedOn": "2026-10-20",
       "entryButton": "Explore the agent experience",
       "journeys": [
         {
@@ -70,7 +70,7 @@
         },
         {
           "title": "See knowledge and checklist assistance",
-          "href": "demos/holcim-agent-copilot/#turn-3"
+          "href": "demos/holcim-agent-copilot/#moment-3"
         },
         {
           "title": "Review summary and wrap-up codes",
@@ -81,6 +81,10 @@
         {
           "title": "Download the full video",
           "href": "demos/holcim-agent-copilot/holcim-full-playback.mp4"
+        },
+        {
+          "title": "Download the offline player",
+          "href": "demos/holcim-agent-copilot/holcim-playback-standalone.html"
         }
       ],
       "thumbnail": "demos/holcim-agent-copilot/cover.jpg"

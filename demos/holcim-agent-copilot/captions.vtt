@@ -1,37 +1,45 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:00.520
-[Connection tone]
-
 1
-00:00:01.877 --> 00:00:05.807
-Emily: Good afternoon, you're through to Emily at Holcim. How can I help?
+00:00:01.482 --> 00:00:06.008
+Emily · Agent: Good afternoon, you're through to Emily at Holcim. How can I help?
 
 2
-00:00:09.227 --> 00:00:24.078
-Jamie: Alright Emily. I need to sort some concrete for next Tuesday. Doing an extension and doing a new driveway in Somerset. Building control is being a bit of a nightmare though, so I want to make sure I get the right mix for the footings. What do you reckon?
+00:00:06.372 --> 00:00:21.853
+Jamie · Customer: Alright Emily. I need to sort some concrete for next Tuesday. Doing an extension and doing a new driveway in Somerset. Building control is being a bit of a nightmare though, so I want to make sure I get the right mix for the footings. What do you reckon?
 
 3
-00:00:26.527 --> 00:00:41.535
-Emily: Not a problem at all. For standard extension footings, building control usually looks for a GEN3 mix, or an RC35 mix if the ground is a bit tricky. I can quote you for the RC35 just to be on the safe side?
+00:00:26.242 --> 00:00:42.042
+Emily · Agent: Not a problem at all. For standard extension footings, building control usually looks for a GEN3 mix, or an RC35 mix if the ground is a bit tricky. I can quote you for the RC35 just to be on the safe side?
 
 4
-00:00:43.367 --> 00:00:49.732
-Jamie: Yeah, let's go with the RC35. Better safe than sorry. Need about 15 cubes.
+00:00:43.072 --> 00:00:49.947
+Jamie · Customer: Yeah, let's go with the RC35. Better safe than sorry. Need about 15 cubes.
 
 5
-00:00:51.527 --> 00:01:06.108
-Emily: Got it. 15 cubic metres of RC35. Now, since you mentioned doing a new driveway as well, have you got your base materials sorted yet? We can send over some MOT Type 1 from our local quarry on the same delivery day.
+00:00:51.202 --> 00:01:06.402
+Emily · Agent: Got it. 15 cubic metres of RC35. Now, since you mentioned doing a new driveway as well, have you got your base materials sorted yet? We can send over some MOT Type 1 from our local quarry on the same delivery day.
 
 6
-00:01:08.187 --> 00:01:18.209
-Jamie: Oh right, actually no, I haven't sorted that. I'll probably need about 20 tonnes of Type 1. What about the actual tarmac? Do you do that too?
+00:01:07.372 --> 00:01:17.393
+Jamie · Customer: Oh right, actually no, I haven't sorted that. I'll probably need about 20 tonnes of Type 1. What about the actual asphalt? Do you do that too?
 
 7
-00:01:20.707 --> 00:01:31.370
-Emily: We do. For a residential drive, I'd highly recommend our SuperDrive Asphalt. It handles power steering scuffs really well. I can put it all on one quote for you?
+00:01:18.512 --> 00:01:29.672
+Emily · Agent: We do. For a residential drive, I'd highly recommend our SuperDrive Asphalt. It handles power steering scuffs really well. I can put it all on one quote for you?
 
 8
-00:01:34.527 --> 00:01:38.493
-Jamie: Yeah, brilliant. Saves me ringing round. Chuck it all on an email.
+00:01:30.632 --> 00:01:34.896
+Jamie · Customer: Yeah, brilliant. Saves me ringing round. Chuck it all on an email.
 
+9
+00:01:36.042 --> 00:01:41.757
+Emily · Agent: I'll put that quote together and email it over. Is there anything else I can help with?
+
+10
+00:01:43.102 --> 00:01:45.841
+Jamie · Customer: No, that's everything, thanks. Have a great day.
+
+11
+00:01:46.812 --> 00:01:49.125
+Emily · Agent: You too, Jamie. Bye.
