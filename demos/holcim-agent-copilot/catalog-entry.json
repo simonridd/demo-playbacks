@@ -1,11 +1,11 @@
 {
   "id": "holcim-agent-copilot",
   "title": "Holcim \u00b7 Residential Housing Extension",
-  "description": "Follow a concrete and driveway enquiry through the captured Genesys agent workspace, with knowledge guidance, checklist progress and an after-call summary. Watch continuously or explore eight annotated turns.",
+  "description": "Follow a concrete and driveway enquiry through the captured Genesys agent workspace, with knowledge guidance, checklist progress and an after-call summary. Watch continuously or explore eight annotated moments.",
   "status": "available",
   "href": "demos/holcim-agent-copilot/",
   "slides": 8,
-  "slideLabel": "turns",
+  "slideLabel": "moments",
   "capturedOn": "2026-10-19",
   "entryButton": "Explore the agent experience",
   "journeys": [
