@@ -56,10 +56,10 @@ const $ = id => document.getElementById(id);
 const video = $('video');
 const loadingJokes=["Your call is important to us. The video is taking that literally.","The next available frame will be with you shortly.","We have put the pixels in a queue. They have been asked to keep it brief.","A quality analyst is listening to the loading bar.","The pixels are on hold. They chose the smooth jazz."];
 let loadingJokeIndex=0,loadingJokeTimer=null,loadingDelay=null,playRequested=false;
-function setLoading(visible){const overlay=$('loadingOverlay');overlay.hidden=!visible;if(visible){text('stageStatus','Loading video');text('loadingJoke',loadingJokes[loadingJokeIndex]);if(!loadingJokeTimer)loadingJokeTimer=setInterval(()=>{loadingJokeIndex=(loadingJokeIndex+1)%loadingJokes.length;text('loadingJoke',loadingJokes[loadingJokeIndex]);},3200);}else{if(loadingJokeTimer)clearInterval(loadingJokeTimer);loadingJokeTimer=null;}}
+function setLoading(visible){const overlay=$('loadingOverlay');overlay.hidden=!visible;if(visible){text('stageStatus','Loading video');text('loadingJoke',loadingJokes[loadingJokeIndex]);if(!loadingJokeTimer)loadingJokeTimer=setInterval(()=>{loadingJokeIndex=(loadingJokeIndex+1)%loadingJokes.length;text('loadingJoke',loadingJokes[loadingJokeIndex]);},3200);}else{if(loadingJokeTimer)clearInterval(loadingJokeTimer);loadingJokeTimer=null;if(typeof updateControls==='function')updateControls();}}
 function queueLoading(){clearTimeout(loadingDelay);loadingDelay=setTimeout(()=>{if(playRequested&&video.readyState<3)setLoading(true);},350);}
 function clearLoading(){playRequested=false;clearTimeout(loadingDelay);loadingDelay=null;setLoading(false);}
-video.addEventListener('playing',clearLoading);video.addEventListener('canplay',()=>{if(video.readyState>=3)clearLoading();});video.addEventListener('waiting',()=>{if(playRequested)setLoading(true);});video.addEventListener('stalled',()=>{if(playRequested)setLoading(true);});video.addEventListener('pause',clearLoading);
+video.addEventListener('playing',clearLoading);video.addEventListener('canplay',()=>{if(video.readyState>=3)clearLoading();});video.addEventListener('waiting',()=>{if((playRequested||!video.paused)&&!video.ended)setLoading(true);});video.addEventListener('stalled',()=>{if((playRequested||!video.paused)&&!video.ended)setLoading(true);});video.addEventListener('pause',clearLoading);
 const turns = data.turns;
 let selected = 0;
 let playbackMode = 'all';
