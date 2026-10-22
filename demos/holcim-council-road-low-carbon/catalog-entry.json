@@ -1,12 +1,12 @@
 {
   "id": "holcim-council-road-low-carbon",
   "title": "Holcim · Council road resurfacing and lower-carbon materials",
-  "description": "Follow a council road enquiry through the captured Genesys agent workspace: night surfacing delivery, carbon targets, ECOPact kerbing concrete, recycled sub-base and a combined quotation request. Explore eight annotated moments with the prepared voices.",
+  "description": "Follow the council-road call through live transcription, checklist progress, lower-carbon knowledge, a quotation request and completed after-call work. Explore 15 annotated moments and the simultaneous recorded phone player.",
   "status": "available",
   "href": "demos/holcim-council-road-low-carbon/",
-  "slides": 8,
+  "slides": 15,
   "slideLabel": "moments",
-  "capturedOn": "2026-10-19",
+  "capturedOn": "2026-10-22",
   "entryButton": "Explore the council road enquiry",
   "journeys": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "title": "See lower-carbon materials assistance",
-      "href": "demos/holcim-council-road-low-carbon/#turn-5"
+      "href": "demos/holcim-council-road-low-carbon/#moment-6"
     },
     {
       "title": "Review summary and wrap-up",

@@ -58,7 +58,7 @@ The Download demo control is available on the story opening, slide header and ou
 
 The root `index.html` is a seven-section presentation: title, introduction, the four concerns from the PowerPoint, how Genesys helps, Jamie Taylor and Emily Carter, three project scenarios plus AVA, and a closing slide mapping the demonstrations back to the four concerns. The previous library remains at `library.html`; all earlier playback URLs remain available.
 
-Scenario 1 is always Residential Housing Extension at `demos/holcim-agent-copilot/`, using the 20 October residential take 7 (126 seconds, 15 annotated moments). Scenario 2 is Commercial Earthworks and Logistics Yard at `demos/holcim-commercial-earthworks/` (191.73 seconds). Scenario 3 Web Messenger is Council Green Corridor at `demos/holcim-council-green-corridor/` (109 seconds). Scenario 3 Audio is the separate council road recording at `demos/holcim-council-road-low-carbon/` (approximately 94 seconds), as confirmed by the user. Both Messenger and Audio are available within Scenario 3.
+Scenario 1 is always Residential Housing Extension at `demos/holcim-agent-copilot/`, using the 20 October residential take 7 (126 seconds, 15 annotated moments). Scenario 2 is Commercial Earthworks and Logistics Yard at `demos/holcim-commercial-earthworks/` (191.73 seconds). Scenario 3 Web Messenger is Council Green Corridor at `demos/holcim-council-green-corridor/` (109 seconds). Scenario 3 Audio is the separate council road recording at `demos/holcim-council-road-low-carbon/` (122.6 seconds), using the approved 22 October take 1. Both Messenger and Audio are available within Scenario 3.
 
 The root presentation loads one annotated player at a time inside an iframe. Closing it unloads the player and stops its media. Hash links `#scenario-1`, `#scenario-2`, `#scenario-3-messenger`, `#scenario-3-audio` and `#together` support direct entry. Preserve the scenario mapping when rebuilding the legacy catalog: `build_catalog.py` must not replace the new presentation. Learning and problem statements are authored demo themes; the closing slide describes illustrated workflows without claiming measured results.
 
@@ -66,7 +66,7 @@ The root presentation loads one annotated player at a time inside an iframe. Clo
 
 ## Council road resurfacing and lower-carbon materials
 
-`demos/holcim-council-road-low-carbon/` is a separate 1m34s Genesys agent playback with eight prepared dialogue turns, timed knowledge and checklist annotations, and after-call work. It includes a standalone offline player and continuous MP4.
+`demos/holcim-council-road-low-carbon/` is the 22 October council-road take 1 (about 2m03s), with 15 moments, the original recorded phone player, full workspace framing, persistent section highlights, and completed after-call work. The unrelated Motor Insurance pane is cosmetically masked; original dialogue, recognition, checklist outcomes and generated summary are retained. The hosted route and combined presentation use this same take. It includes a standalone player and clean continuous MP4.
 
 ## PowerPoint narrative and portraits
 

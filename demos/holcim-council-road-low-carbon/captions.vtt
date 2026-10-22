@@ -1,33 +1,45 @@
 WEBVTT
 
 1
-00:00:01.001 --> 00:00:05.241
-Emily: Good afternoon, you're through to Emily at Holcim. How can I help?
+00:00:01.111 --> 00:00:05.360
+Emily · Agent: Good afternoon, you're through to Emily at Holcim. How can I help?
 
 2
-00:00:06.630 --> 00:00:14.910
-Jamie: Afternoon Emily. I'm after 120 tonnes of 10mm Surface Course for a council road job next Thursday night.
+00:00:06.341 --> 00:00:14.613
+Jamie · Customer: Afternoon Emily. I'm after 120 tonnes of 10mm Surface Course for a council road job next Thursday night.
 
 3
-00:00:16.823 --> 00:00:25.743
-Emily: I can definitely schedule that night delivery for you. With it being a council job, do they have you chasing any strict carbon reduction targets?
+00:00:15.761 --> 00:00:24.681
+Emily · Agent: I can definitely schedule that night delivery for you. With it being a council job, do they have you chasing any strict carbon reduction targets?
 
 4
-00:00:26.880 --> 00:00:35.897
-Jamie: Yeah, it's a massive pain. It's this some green corridor thing, so we have to prove carbon savings on everything we use.
+00:00:25.661 --> 00:00:35.887
+Jamie · Customer: Yeah, it's a massive pain. It's this some green corridor thing, so we have to prove carbon savings on everything we use.
 
 5
-00:00:38.086 --> 00:00:49.806
-Emily: We can definitely help make that easier. If you're doing any kerb bedding or drainage work on that stretch, we can supply our ECOPact low-carbon concrete. It cuts carbon by up to 70%.
+00:00:46.271 --> 00:00:59.791
+Emily · Agent: We can definitely help make that easier. If you're doing any kerb bedding or drainage work on that stretch, we can supply our ECOPact low-carbon concrete. It cuts carbon by up to 70%.
 
 6
-00:00:51.540 --> 00:00:58.632
-Jamie: We do have about 300 metres of kerbing to reset, actually. Will it set the same as the normal stuff?
+00:01:00.771 --> 00:01:08.059
+Jamie · Customer: We do have about 300 metres of kerbing to reset, actually. Will it set the same as the normal stuff?
 
 7
-00:01:00.102 --> 00:01:13.582
-Emily: Exactly the same strength and setting time. We can also swap your sub-base for our recycled aggregates. It meets all the highway specs, and having our carbon saving figures will look brilliant on your handover report.
+00:01:09.171 --> 00:01:23.651
+Emily · Agent: Exactly the same strength and setting time. We can also swap your sub-base for our recycled aggregates. It meets all the highway specs, and having our carbon saving figures will look brilliant on your handover report.
 
 8
-00:01:14.370 --> 00:01:21.879
-Jamie: Sounds good. Put the ECOPact stuff and the recycled stone on the quote as well. That'll keep them off my back.
+00:01:24.631 --> 00:01:31.589
+Jamie · Customer: Sounds good. Put the ECOPact stuff and the recycled stone on the quote as well. That'll keep them off my back.
+
+9
+00:01:32.711 --> 00:01:37.080
+Emily · Agent: I'll include those on the quote for you. Is there anything else I can help with?
+
+10
+00:01:38.051 --> 00:01:40.813
+Jamie · Customer: No thanks, that's everything. Have a great day.
+
+11
+00:01:42.021 --> 00:01:44.156
+Emily · Agent: You too, Jamie. Bye.
