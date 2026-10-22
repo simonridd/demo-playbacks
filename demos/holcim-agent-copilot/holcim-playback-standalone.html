@@ -44,7 +44,21 @@ body.no-commentary .notice,body.no-commentary .insight,body.no-commentary .fulls
 .loading-overlay{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;background:#102b39ed;color:#fff;text-align:center}.loading-kicker{font-size:9px;letter-spacing:1.5px;font-weight:700;color:var(--ipi-mint,#7bc8a4)}.loading-bar{display:block;width:min(230px,65%);height:5px;overflow:hidden;background:#ffffff35;border-radius:5px}.loading-bar i{display:block;width:38%;height:100%;background:var(--ipi-mint,#7bc8a4);border-radius:5px;animation:loading-progress 1.35s ease-in-out infinite}.loading-joke{max-width:360px;font-size:12px;line-height:1.5;color:#edf4f3}@keyframes loading-progress{0%{transform:translateX(-110%)}100%{transform:translateX(280%)}}@media(prefers-reduced-motion:reduce){.loading-bar i{animation:none;width:100%}}
 @media(max-width:760px){.stage:not(:fullscreen){flex-direction:column}.stage:not(:fullscreen) .customer-phone{position:relative;inset:auto;width:min(220px,75%)!important;margin:16px auto}.stage:not(:fullscreen) .phone-avatar{display:grid}}
 
-:root{--video-ratio:2560/1328;--video-aspect:1.927710843373494;}</style></head>
+:root{--video-ratio:2560/1328;--video-aspect:1.927710843373494;}</style><style id="overlay-layout-style">/* Drag the overlay itself; leave controls usable and resize from a familiar corner grip. */
+[data-overlay-editor]{cursor:grab;touch-action:none}
+[data-overlay-editor].overlay-in-flow{cursor:default;touch-action:auto}
+[data-overlay-editor] button,[data-overlay-editor] a,[data-overlay-editor] input,[data-overlay-editor] select{cursor:pointer}
+[data-overlay-editor] .overlay-resize-handle{position:absolute;right:4px;bottom:4px;z-index:6;width:24px;height:24px;border:0;border-radius:0;background:transparent;cursor:nwse-resize;touch-action:none;user-select:none;padding:0;display:block}
+[data-overlay-editor] .overlay-resize-handle:after{content:'';position:absolute;right:3px;bottom:3px;width:12px;height:12px;background:repeating-linear-gradient(135deg,transparent 0 3px,#d5f2e7 3px 4px,transparent 4px 6px);clip-path:polygon(100% 0,100% 100%,0 100%);opacity:.85}
+[data-overlay-editor] .overlay-resize-handle:hover:after{opacity:1}
+.customer-phone[data-overlay-editor] .overlay-resize-handle{right:9px;bottom:12px}
+.overlay-editing,.overlay-editing *{user-select:none!important}.overlay-editing [data-overlay-editor]{cursor:grabbing}
+.stage:fullscreen .fullscreen-commentary.overlay-adjusted{display:flex;flex-direction:column;max-width:none;padding-bottom:28px}
+.fullscreen-commentary.overlay-adjusted>span,.fullscreen-commentary.overlay-adjusted>h2{flex-shrink:0}
+.fullscreen-commentary.overlay-adjusted>p{flex:1;min-height:0;max-height:none;overflow:auto}
+.customer-phone.overlay-adjusted .phone-dialogue p{font-size:clamp(10px,calc(var(--overlay-phone-width,200px)*.055),18px)}
+.fullscreen-controls .overlay-reset{color:#edf7f5;text-decoration:none}
+</style></head>
 <body>
 <a class="skip" href="#workspace">Skip to playback</a>
 <header class="topbar"><div class="brand"><img class="holcim-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODQiIGhlaWdodD0iNjciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyODQgNjciPgogICAgPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CiAgICAgICAgPHBhdGggZmlsbD0iIzAwM2U2OCIgZD0iTTc4LjM5IDE5LjExaDkuMTR2MTIuMjVIOTkuNlYxOS4xMWg5LjEzdjMyLjc0SDk5LjZWMzkuNDFIODcuNTJ2MTIuNDRoLTkuMTRWMTkuMTFoLjAxem0zOC4yNSAxNi40NnYtLjA5YzAtOS40IDcuNDYtMTcuMDMgMTcuNjMtMTcuMDMgMTAuMTcgMCAxNy41MyA3LjUzIDE3LjUzIDE2Ljkzdi4wOWMwIDkuNC03LjQ2IDE3LjAyLTE3LjYzIDE3LjAyLTEwLjE3LjAxLTE3LjUzLTcuNTItMTcuNTMtMTYuOTJ6bTI1Ljg0IDB2LS4wOWMwLTQuNzItMy4yNy04Ljg0LTguMy04Ljg0LTQuOTkgMC04LjE2IDQuMDItOC4xNiA4Ljc1di4wOWMwIDQuNzIgMy4yNyA4Ljg0IDguMjYgOC44NCA1LjAyIDAgOC4yLTQuMDIgOC4yLTguNzV6bTE3LjY1LTE2LjQ2aDkuMTRWNDMuOWgxNS4xdjcuOTVoLTI0LjI0VjE5LjExem0yOC44MyAxNi40NnYtLjA5YzAtOS41NCA3LjM5LTE3LjAzIDE3LjM4LTE3LjAzIDYuNzMgMCAxMS4wNyAyLjgxIDEzLjk5IDYuODNsLTYuODggNS4yOWMtMS44OC0yLjM0LTQuMDUtMy44NC03LjItMy44NC00LjYxIDAtNy44NiAzLjg4LTcuODYgOC42NXYuMDljMCA0LjkxIDMuMjUgOC43NSA3Ljg2IDguNzUgMy40NCAwIDUuNDYtMS41OSA3LjQ0LTMuOThsNi44OCA0Ljg2Yy0zLjExIDQuMjYtNy4zIDcuMzktMTQuNiA3LjM5LTkuNDMuMDEtMTcuMDEtNy4xNC0xNy4wMS0xNi45MnptMzkuODEtMTYuNDZoOS4xOHYzMi43NGgtOS4xOFYxOS4xMXptMTguNjMgMGg5LjY1bDguMzggMTIuNjggOC4zOC0xMi42OGg5LjY1djMyLjc0aC05LjA5VjMyLjdsLTguOTQgMTIuODJoLS4xOWwtOC45LTEyLjcydjE5LjA1aC04Ljk1VjE5LjExaC4wMXoiLz4KICAgICAgICA8cGF0aCBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXIpIiBkPSJNNDMuMzYgMEMzNC42MSAwIDI3LjEgNS42IDI1LjA4IDE0LjIzYy0uNDIgMS44NS0uNzEgNC4yMy0uNzEgNy41djYuMzdIMzhWMTMuNjNoMTAuNzJ2MjMuNTFjNy44Ni0yLjMyIDEzLjY0LTkuNTggMTMuNjQtMTguMjJDNjIuMzYgOC4yNyA1NC4wMiAwIDQzLjM2IDB6TTE4LjgzIDY1LjQ4YzguNzYgMCAxNi40My01LjYgMTguNDUtMTQuMjMuNDItMS44NS43MS00LjIzLjcxLTcuNXYtNi4zN0gyNC4zNnYxNC40N0gxMy42NFYyOC4zNEM1Ljc4IDMwLjY2IDAgMzcuOTIgMCA0Ni41NWMwIDExLjExIDcuNzIgMTguOTMgMTguODMgMTguOTN6Ii8+CiAgICA8L2c+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSItMS44MDQiIHgyPSI2My45OTUiIHkxPSI0Ni43MTQiIHkyPSIxOC43ODQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIuMTUiIHN0b3AtY29sb3I9IiM5NEMxMkUiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIuMTg2IiBzdG9wLWNvbG9yPSIjOERDMTM3Ii8+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iLjI0NSIgc3RvcC1jb2xvcj0iIzdCQzA0RiIvPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9Ii4zMiIgc3RvcC1jb2xvcj0iIzVFQkY3NyIvPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9Ii40MDciIHN0b3AtY29sb3I9IiMzNkJEQUUiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIuNSIgc3RvcC1jb2xvcj0iIzA0QkJGMSIvPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9Ii41ODYiIHN0b3AtY29sb3I9IiMwNUI3RUQiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIuNjc0IiBzdG9wLWNvbG9yPSIjMDhBQkUwIi8+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iLjc2NCIgc3RvcC1jb2xvcj0iIzBDOThDQyIvPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9Ii44NTUiIHN0b3AtY29sb3I9IiMxMTdEQUYiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIuOTQ2IiBzdG9wLWNvbG9yPSIjMTg1QjhBIi8+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzFENDM3MCIvPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPGNsaXBQYXRoIGlkPSJjbGlwMCI+CiAgICAgICAgICAgIDxwYXRoIGZpbGw9IiMwMDNlNjgiIGQ9Ik0wIDBIMjgzLjQ2VjY2LjQ3SDB6Ii8+CiAgICAgICAgPC9jbGlwUGF0aD4KICAgIDwvZGVmcz4KPC9zdmc+Cg==" alt="Holcim"><span class="brand-sub">Genesys / Recorded demo</span></div><div class="top-actions"><span class="demo-label"><i></i> Recorded demonstration</span><a id="downloadVideo" class="text-link" href="demo.mp4" download>Download full video <span aria-hidden="true">↗</span></a></div></header>
@@ -306,4 +320,157 @@ video.addEventListener('loadedmetadata',restoreTurnFromHash);
 window.addEventListener('popstate',restoreTurnFromHash);
 if(video.readyState>=1)restoreTurnFromHash();
 </script>
-</body></html>
+<script id="overlay-layout-script">// Editable overlay geometry is viewer preference only; media and highlight pixels stay unchanged.
+(()=>{
+  const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
+  function fit(rect,bounds,phone=false){
+    const ratio=9/18.5;
+    const maxW=phone?Math.min(520,bounds.w,bounds.h*ratio):Math.min(760,bounds.w);
+    const minW=Math.min(phone?120:240,maxW);
+    const w=clamp(rect.w,minW,maxW);
+    const h=phone?w/ratio:clamp(rect.h,Math.min(130,bounds.h),bounds.h);
+    return {x:clamp(rect.x,bounds.x,bounds.x+bounds.w-w),y:clamp(rect.y,bounds.y,bounds.y+bounds.h-h),w,h};
+  }
+  function resize(rect,dx,dy,bounds,phone=false){
+    const dw=phone?(Math.abs(dx)>=Math.abs(dy)*9/18.5?dx:dy*9/18.5):dx;
+    return fit({...rect,w:rect.w+dw,h:rect.h+dy},{...bounds,w:bounds.x+bounds.w-rect.x,h:bounds.y+bounds.h-rect.y,x:rect.x,y:rect.y},phone);
+  }
+  // Pure geometry can be tested without opening or controlling a browser.
+  if(typeof document==='undefined'){globalThis.demoOverlayGeometry={fit,resize};return;}
+  const stage=document.getElementById('stage');
+  if(!stage||stage.dataset.overlayLayoutReady)return;
+  stage.dataset.overlayLayoutReady='true';
+  const panels=[['phone','customerPhone','customer phone'],['commentary','fullscreenCommentary','moment commentary']]
+    .map(([kind,id,label])=>({kind,node:document.getElementById(id),label})).filter(p=>p.node);
+  if(!panels.length)return;
+  let data={};try{data=JSON.parse(document.getElementById('playback-data')?.textContent||'{}');}catch{}
+  const storageKey='genesys-overlay-layout:v1:'+(data.id||data.title||location.pathname);
+  let preferences={normal:{},fullscreen:{}};
+  try{
+    const saved=JSON.parse(localStorage.getItem(storageKey)||'null');
+    if(saved&&saved.version===1)for(const mode of ['normal','fullscreen'])for(const kind of ['phone','commentary']){
+      const r=saved[mode]?.[kind];
+      if(r&&['x','y','w','h'].every(k=>Number.isFinite(r[k])&&r[k]>=0&&r[k]<=1)&&r.w>0&&r.h>0)preferences[mode][kind]=r;
+    }
+  }catch{} // File and embedded viewers may deny storage; interaction still works in memory.
+  let gesture=null,scheduled=false;
+  const mode=()=>document.fullscreenElement===stage?'fullscreen':'normal';
+  const flow=p=>p.kind==='phone'&&mode()==='normal'&&matchMedia('(max-width:760px)').matches;
+  const visible=p=>!p.node.hidden&&getComputedStyle(p.node).display!=='none';
+  const rect=p=>{const a=p.node.getBoundingClientRect(),b=stage.getBoundingClientRect();return {x:a.left-b.left,y:a.top-b.top,w:a.width,h:a.height};};
+  function bounds(){
+    const s=stage.getBoundingClientRect();let bottom=s.height-8;
+    const hud=document.getElementById('fullscreenControls');
+    if(mode()==='fullscreen'&&hud&&getComputedStyle(hud).display!=='none')bottom=Math.min(bottom,hud.getBoundingClientRect().top-s.top-10);
+    return {x:8,y:8,w:Math.max(1,s.width-16),h:Math.max(1,bottom-8)};
+  }
+  function write(p,r){
+    if(flow(p)){
+      p.node.style.setProperty('width',r.w+'px','important');
+      p.node.style.setProperty('height','auto','important');
+    }else{
+      for(const [key,value] of Object.entries({position:'absolute',left:r.x+'px',top:r.y+'px',right:'auto',bottom:'auto',width:r.w+'px',height:r.h+'px',margin:'0'}))p.node.style.setProperty(key,value,'important');
+    }
+    p.node.style.setProperty('--overlay-phone-width',r.w+'px');p.node.classList.add('overlay-adjusted');
+  }
+  function clear(p){
+    for(const key of ['position','left','top','right','bottom','width','height','margin','--overlay-phone-width'])p.node.style.removeProperty(key);
+    p.node.classList.remove('overlay-adjusted');
+  }
+  function persist(){try{localStorage.setItem(storageKey,JSON.stringify({version:1,...preferences}));}catch{}updateReset();}
+  function remember(p){
+    const r=rect(p),b=bounds();
+    preferences[mode()][p.kind]={x:clamp((r.x-b.x)/b.w,0,1),y:clamp((r.y-b.y)/b.h,0,1),w:clamp(r.w/b.w,0,1),h:clamp(r.h/b.h,0,1)};
+    persist();
+  }
+  function apply(){
+    scheduled=false;if(gesture)return;
+    for(const p of panels){
+      if(!visible(p))continue;
+      clear(p);
+      const r=preferences[mode()][p.kind],b=bounds();
+      p.node.classList.toggle('overlay-in-flow',flow(p));
+      if(!r)continue;
+      if(flow(p))write(p,{w:clamp(r.w*b.w,Math.min(120,b.w),Math.min(400,b.w))});
+      else write(p,fit({x:b.x+r.x*b.w,y:b.y+r.y*b.h,w:r.w*b.w,h:r.h*b.h},b,p.kind==='phone'));
+    }
+    updateReset();
+  }
+  function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(apply);}}
+  function cancel(){
+    if(!gesture)return;
+    const g=gesture;gesture=null;stage.classList.remove('overlay-editing');
+    if(g.before)preferences[g.mode][g.panel.kind]=g.before;else delete preferences[g.mode][g.panel.kind];
+    clear(g.panel);schedule();
+  }
+  function begin(event,p,action){
+    if(event.button!==0||!visible(p)||(action==='move'&&flow(p)))return;
+    event.preventDefault();event.stopPropagation();
+    const handle=event.currentTarget;handle.focus({preventScroll:true});
+    gesture={panel:p,action,mode:mode(),before:preferences[mode()][p.kind],start:rect(p),x:event.clientX,y:event.clientY,pointer:event.pointerId,handle,changed:false};
+    handle.setPointerCapture(event.pointerId);stage.classList.add('overlay-editing');
+  }
+  function move(event){
+    const g=gesture;if(!g||event.pointerId!==g.pointer)return;
+    if(g.mode!==mode()){cancel();return;}
+    const dx=event.clientX-g.x,dy=event.clientY-g.y;
+    if(Math.abs(dx)+Math.abs(dy)<2&&!g.changed)return;
+    g.changed=true;event.preventDefault();
+    let r;
+    if(flow(g.panel))r={w:clamp(g.start.w+dx,Math.min(120,stage.clientWidth-16),Math.min(400,stage.clientWidth-16))};
+    else r=g.action==='resize'?resize(g.start,dx,dy,bounds(),g.panel.kind==='phone'):fit({...g.start,x:g.start.x+dx,y:g.start.y+dy},bounds(),g.panel.kind==='phone');
+    write(g.panel,r);
+  }
+  function finish(event){
+    const g=gesture;if(!g||event.pointerId!==g.pointer)return;
+    gesture=null;stage.classList.remove('overlay-editing');
+    if(g.changed)remember(g.panel);schedule();
+  }
+  for(const p of panels){
+    p.node.dataset.overlayEditor=p.kind;
+    p.node.tabIndex=0;
+    p.node.setAttribute('aria-description','Drag anywhere to move. Use the bottom-right corner to resize. When focused, arrow keys move; Shift + arrows moves faster.');
+    for(const action of ['move','resize']){
+      const button=action==='move'?p.node:document.createElement('button');
+      if(action==='resize'){
+        button.type='button';button.className='overlay-resize-handle';
+        button.setAttribute('aria-label','Resize '+p.label);
+        button.title='Drag to resize. Arrow keys resize; Shift + arrows resizes faster.';
+        p.node.append(button);
+      }
+      button.addEventListener('pointerdown',e=>{
+        if(action==='move'&&e.target.closest('button,a,input,select,textarea,[contenteditable="true"]'))return;
+        begin(e,p,action);
+      });button.addEventListener('pointermove',move);button.addEventListener('pointerup',finish);
+      button.addEventListener('pointercancel',cancel);button.addEventListener('lostpointercapture',()=>{if(gesture?.handle===button)cancel();});
+      button.addEventListener('keydown',event=>{
+        if(event.target!==button)return;
+        if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Escape'].includes(event.key))return;
+        if(event.key==='Escape'&&!gesture)return;
+        event.stopPropagation();event.preventDefault();
+        if(event.key==='Escape'){cancel();return;}
+        const step=event.shiftKey?24:6,dx=event.key==='ArrowLeft'?-step:event.key==='ArrowRight'?step:0,dy=event.key==='ArrowUp'?-step:event.key==='ArrowDown'?step:0;
+        let r;if(flow(p)){
+          if(action==='move')return;
+          r={w:clamp(rect(p).w+(dx||dy*9/18.5),Math.min(120,stage.clientWidth-16),Math.min(400,stage.clientWidth-16))};
+        }else r=action==='resize'?resize(rect(p),dx,dy,bounds(),p.kind==='phone'):fit({...rect(p),x:rect(p).x+dx,y:rect(p).y+dy},bounds(),p.kind==='phone');
+        write(p,r);remember(p);
+      });
+    }
+  }
+  const resets=[];
+  function updateReset(){for(const button of resets)button.disabled=!Object.keys(preferences[mode()]).length;}
+  function reset(){cancel();preferences[mode()]={};for(const p of panels)clear(p);persist();schedule();}
+  for(const [selector,before] of [['.tool-options','#fullscreen'],['.fullscreen-options','#exitFullscreen']]){
+    const parent=stage.ownerDocument.querySelector(selector);if(!parent)continue;
+    const button=document.createElement('button');button.type='button';button.className='overlay-reset quiet-button';button.textContent='Reset layout';button.setAttribute('aria-label','Reset overlay layout');
+    button.title='Reset phone and commentary positions and sizes in this view';button.addEventListener('click',reset);parent.insertBefore(button,parent.querySelector(before));resets.push(button);
+  }
+  const observer=new MutationObserver(schedule);
+  for(const p of panels)observer.observe(p.node,{attributes:true,attributeFilter:['hidden'],childList:true,subtree:true,characterData:true});
+  observer.observe(document.body,{attributes:true,attributeFilter:['class']});
+  new ResizeObserver(schedule).observe(stage);
+  document.addEventListener('fullscreenchange',()=>{cancel();for(const p of panels)clear(p);schedule();});
+  window.addEventListener('resize',schedule);schedule();
+})();
+</script></body></html>
