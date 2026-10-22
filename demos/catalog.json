@@ -56,12 +56,12 @@
     {
       "id": "holcim-agent-copilot",
       "title": "Holcim · Residential Housing Extension",
-      "description": "Follow the residential concrete and driveway enquiry through live transcription, relevant knowledge, sales discovery and completed after-call work. Explore 15 annotated moments with the supplied prepared voices.",
+      "description": "Follow the residential concrete and driveway enquiry through live transcription, footings and SuperDrive knowledge, sales discovery and completed after-call work. Explore 15 annotated moments with the prepared voices and simultaneous recorded phone player.",
       "status": "available",
       "href": "demos/holcim-agent-copilot/",
       "slides": 15,
       "slideLabel": "moments",
-      "capturedOn": "2026-10-20",
+      "capturedOn": "2026-10-22",
       "entryButton": "Explore the agent experience",
       "journeys": [
         {
