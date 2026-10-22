@@ -1,0 +1,1082 @@
+{
+  "id": "holcim-commercial-earthworks",
+  "title": "Holcim · Commercial earthworks and logistics yard",
+  "channel": "voice",
+  "brandName": "Holcim",
+  "duration": 234.13333333333333,
+  "videoWidth": 1560,
+  "videoHeight": 972,
+  "video": "demo.mp4",
+  "poster": "poster.jpg",
+  "turns": [
+    {
+      "kind": "screen",
+      "speaker": "Holcim",
+      "text": "Jamie explores Knowledge & resources on the Holcim website.",
+      "note": "Product information helps the customer frame an enquiry before speaking to Sales.",
+      "tag": "Website journey",
+      "detail": "Actual website navigation, followed by the captured enquiry form.",
+      "focus": null,
+      "id": "website-knowledge",
+      "start": 0,
+      "end": 8.5,
+      "title": "Find the right starting point",
+      "caption": false,
+      "label": "Moment 01"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Holcim",
+      "text": "Jamie selects Make an enquiry and reaches the contact form.",
+      "note": "The website gives the customer a direct route to ask for project advice.",
+      "tag": "Make an enquiry",
+      "detail": "",
+      "focus": null,
+      "id": "website-enquiry",
+      "start": 8.5,
+      "end": 13.6,
+      "title": "From browsing to an enquiry",
+      "caption": false,
+      "label": "Moment 02"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Holcim",
+      "text": "Jamie Taylor · Riverside Construction · Rugby Logistics Yard · 250 tonnes of MOT Type 1.",
+      "note": "The customer supplies the information Sales needs to begin a useful callback.",
+      "tag": "Enquiry context",
+      "detail": "The form-entry section plays at 1.5×. Date, postcode and delivery timing remain blank because they were not supplied.",
+      "focus": null,
+      "id": "website-details",
+      "start": 13.6,
+      "end": 23,
+      "title": "Capture the project and callback details",
+      "caption": false,
+      "label": "Moment 03"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Holcim",
+      "text": "Jamie requests a call to discuss supply and pricing for the hardstanding project.",
+      "note": "The enquiry records a clear next step, alongside permission to contact the customer.",
+      "tag": "Callback requested",
+      "detail": "",
+      "focus": null,
+      "id": "website-nextstep",
+      "start": 23,
+      "end": 28.3333333333,
+      "title": "Ask Sales to follow up",
+      "caption": false,
+      "label": "Moment 04"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Holcim",
+      "text": "Jamie clicks Send enquiry. The website confirms successful submission.",
+      "note": "The submitted enquiry becomes a contact in the configured Genesys Cloud contact list.",
+      "tag": "Website → Genesys",
+      "detail": "The actual successful submission is retained. It creates a contact; the separate outbound campaign delivers the callback.",
+      "focus": null,
+      "id": "website-submit",
+      "start": 28.3333333333,
+      "end": 34.9333333333,
+      "title": "Send the enquiry into Genesys",
+      "caption": false,
+      "label": "Moment 05"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Genesys",
+      "text": "Holcim Servicing Preview is the campaign used for the website follow-up.",
+      "note": "A preview campaign gives the agent the enquiry context before dialling.",
+      "tag": "Outbound campaign",
+      "detail": "The campaign is shown off in this administration clip. The unrelated training campaign row is hidden only in the edited video.",
+      "focus": null,
+      "id": "campaign",
+      "start": 34.9333333333,
+      "end": 38.4000003333,
+      "title": "The outbound campaign connects the workflow",
+      "caption": false,
+      "label": "Moment 06"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Genesys",
+      "text": "The configuration links the contact list, Holcim queue and outbound follow-up script.",
+      "note": "These settings determine which enquiry is delivered and which context the agent sees.",
+      "tag": "Campaign configuration",
+      "detail": "Configuration is inspected without changing its stored settings.",
+      "focus": null,
+      "id": "campaign-config",
+      "start": 38.4000003333,
+      "end": 45.4000003333,
+      "title": "A campaign configured for Holcim follow-up",
+      "caption": false,
+      "label": "Moment 07"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Genesys",
+      "text": "Holcim Servicing Contacts holds the submitted customer record.",
+      "note": "The contact list is the handoff between website submission and outbound work.",
+      "tag": "Contact list",
+      "detail": "The unrelated training list row is hidden only in this edited video.",
+      "focus": null,
+      "id": "contact-lists",
+      "start": 45.4000003333,
+      "end": 49.5000003333,
+      "title": "Find the website enquiry list",
+      "caption": false,
+      "label": "Moment 08"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Genesys",
+      "text": "The contact-list configuration leads to Edit Contacts.",
+      "note": "The agent administrator can inspect the stored enquiry before campaign delivery.",
+      "tag": "Contact-list setup",
+      "detail": "",
+      "focus": null,
+      "id": "contact-config",
+      "start": 49.5000003333,
+      "end": 55.9333333333,
+      "title": "Open the contact records",
+      "caption": false,
+      "label": "Moment 09"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Genesys",
+      "text": "Jamie Taylor’s record contains the Rugby project, MOT Type 1 and 250 tonnes.",
+      "note": "The record carries the original website information into the follow-up workflow.",
+      "tag": "Enquiry record",
+      "detail": "The real captured record is shown; this edit does not change any field values.",
+      "focus": null,
+      "id": "contact-record",
+      "start": 55.9333333333,
+      "end": 63.0833333333,
+      "title": "The submitted details are present",
+      "caption": false,
+      "label": "Moment 10"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Genesys",
+      "text": "The contact’s phone column contains +447402159501.",
+      "note": "The stored callback number completes the route from website enquiry to the customer.",
+      "tag": "Ready for callback",
+      "detail": "Callable values are stored contact defaults. Their presence alone does not show that a campaign is running.",
+      "focus": null,
+      "id": "contact-phone",
+      "start": 63.0833333333,
+      "end": 73.13333333333333,
+      "title": "Verify the callback number",
+      "caption": false,
+      "label": "Moment 11"
+    },
+    {
+      "kind": "opening",
+      "speaker": "Genesys",
+      "text": "The preview interaction brings Jamie’s stored project and callback details into the agent workspace.",
+      "note": "The new take begins with campaign delivery and the callback setup. The original website and contact-list sequence is retained above.",
+      "tag": "Outbound follow-up",
+      "detail": "",
+      "focus": null,
+      "id": "opening",
+      "start": 73.133333,
+      "end": 91.208062,
+      "title": "The website enquiry reaches Sales",
+      "caption": false,
+      "label": "Moment 12"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Jamie · Customer",
+      "text": "Hi, this is Jamie.",
+      "note": "Jamie answers the outbound call. The recorded phone follows the same moment as the agent workspace.",
+      "tag": "Customer conversation",
+      "detail": "",
+      "focus": null,
+      "id": "jamie-05",
+      "start": 91.208062,
+      "end": 94.858062,
+      "title": "Jamie answers the callback",
+      "caption": true,
+      "speechEnd": 92.945436,
+      "label": "Moment 13"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Emily · Agent",
+      "text": "Hi Jamie, this is Emily Carter from the Holcim Sales team, you made an enquiry on our website earlier about a project you're currently working on.",
+      "note": "Emily connects the conversation to the website enquiry. The recognised brand wording is preserved in the live transcript.",
+      "tag": "Customer conversation",
+      "detail": "",
+      "focus": null,
+      "id": "emily-01",
+      "start": 94.858062,
+      "end": 104.808062,
+      "title": "Emily follows up the website enquiry",
+      "caption": true,
+      "speechEnd": 104.31698,
+      "label": "Moment 14"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Jamie · Customer",
+      "text": "Hi Emily. Yea, I need 250 tonnes of MOT Type 1 aggregate dropped at a new logistics yard near Rugby. Just need it to prep the hardstanding.",
+      "note": "Jamie confirms the materials and site. Copilot has already marked one checklist item; the agent still reviews what has actually been confirmed.",
+      "tag": "Customer conversation",
+      "detail": "",
+      "focus": null,
+      "id": "jamie-01",
+      "start": 104.808062,
+      "end": 116.588062,
+      "title": "Confirm the aggregate and destination",
+      "caption": true,
+      "speechEnd": 115.199815,
+      "label": "Moment 15"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Emily · Agent",
+      "text": "I can get that sorted for you. 250 tonnes to Rugby. While I put that through, are you laying standard asphalt over the top, or have you got specific drainage requirements for this site?",
+      "note": "Emily repeats 250 tonnes and Rugby, then asks about asphalt and drainage. A recycled-aggregate result is available for inspection.",
+      "tag": "Knowledge and discovery",
+      "detail": "",
+      "focus": null,
+      "id": "emily-02",
+      "start": 116.588062,
+      "end": 131.208062,
+      "title": "Ask about surfacing and drainage",
+      "caption": true,
+      "speechEnd": 130.268062,
+      "label": "Moment 16"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Jamie · Customer",
+      "text": "The council is breathing down our necks about surface water runoff, to be honest. We need some sort of sustainable drainage for the car park, plus a really heavy-duty slab for the lorry loading bays.",
+      "note": "The wider drainage and loading-bay needs emerge. Copilot marks 4/4 before the later product explanations; completion marks need agent review.",
+      "tag": "Knowledge and discovery",
+      "detail": "",
+      "focus": null,
+      "id": "jamie-02",
+      "start": 131.208062,
+      "end": 144.633333,
+      "title": "Discover the drainage and loading-bay need",
+      "caption": true,
+      "speechEnd": 144.335634,
+      "label": "Moment 17"
+    },
+    {
+      "kind": "screen",
+      "speaker": "Genesys",
+      "text": "HC KA 02 appears for the car-park runoff and loading-bay requirements, then the agent opens the article.",
+      "note": "The opened article explains the wider drainage design and approved slab requirements. Checklist marks remain a review aid.",
+      "tag": "Knowledge review",
+      "detail": "",
+      "focus": null,
+      "id": "drainage-knowledge-review",
+      "start": 144.633333,
+      "end": 155.408062,
+      "title": "Review the drainage and slab guidance",
+      "caption": false,
+      "label": "Moment 18"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Emily · Agent",
+      "text": "Right, for the drainage, you'll want to look at our SuperDrain Asphalt. It's a permeable surface, so the water drains straight through it into the sub-base. It keeps the council happy and saves digging extra drainage channels.",
+      "note": "The HC KA 02 result brings SuperDrain, drainage design and the related slab opportunity into the same workflow. The recorded product claims remain subject to technical review.",
+      "tag": "Knowledge and discovery",
+      "detail": "",
+      "focus": null,
+      "id": "emily-03",
+      "start": 155.408062,
+      "end": 170.448062,
+      "title": "Explain the permeable asphalt option",
+      "caption": true,
+      "speechEnd": 169.488062,
+      "label": "Moment 19"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Jamie · Customer",
+      "text": "Never used that before. Does it actually work?",
+      "note": "The customer asks for reassurance. The live transcript keeps the recognised words and original customer label.",
+      "tag": "Customer conversation",
+      "detail": "",
+      "focus": null,
+      "id": "jamie-03",
+      "start": 170.448062,
+      "end": 175.238062,
+      "title": "The customer asks for reassurance",
+      "caption": true,
+      "speechEnd": 173.987157,
+      "label": "Moment 20"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Emily · Agent",
+      "text": "It does, it's fully SuDS compliant. And for the lorry bays, we can supply a steel fibre-reinforced concrete. You won't even need to lay steel mesh, which will save your lads a lot of time on site.",
+      "note": "Emily discusses fibre-reinforced concrete for loading bays. The knowledge guidance calls for an approved design; the recorded dialogue is retained unchanged.",
+      "tag": "Knowledge and discovery",
+      "detail": "",
+      "focus": null,
+      "id": "emily-04",
+      "start": 175.238062,
+      "end": 189.808062,
+      "title": "Discuss the loading-bay concrete",
+      "caption": true,
+      "speechEnd": 188.798062,
+      "label": "Moment 21"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Jamie · Customer",
+      "text": "Sounds spot on. Get your technical bloke to give me a ring about that slab pour, and send the prices over for the rest.",
+      "note": "Jamie asks for prices and a technical-team call about the slab. These remain requested next steps.",
+      "tag": "Customer conversation",
+      "detail": "",
+      "focus": null,
+      "id": "jamie-04",
+      "start": 189.808062,
+      "end": 198.548062,
+      "title": "Agree prices and a technical callback",
+      "caption": true,
+      "speechEnd": 197.246079,
+      "label": "Moment 22"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Emily · Agent",
+      "text": "I'll send the prices over and ask our technical team to give you a ring about the slab. Is there anything else I can help with?",
+      "note": "Emily confirms the pricing and technical follow-up. Highpave guidance appears alongside the recognised request.",
+      "tag": "Customer conversation",
+      "detail": "",
+      "focus": null,
+      "id": "emily-05",
+      "start": 198.548062,
+      "end": 206.408062,
+      "title": "Confirm the next step",
+      "caption": true,
+      "speechEnd": 205.428062,
+      "label": "Moment 23"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Jamie · Customer",
+      "text": "No, that's all, thanks. Have a great day.",
+      "note": "Jamie confirms there is nothing further and closes the enquiry.",
+      "tag": "Customer conversation",
+      "detail": "",
+      "focus": null,
+      "id": "jamie-06",
+      "start": 206.408062,
+      "end": 211.078062,
+      "title": "Jamie signs off",
+      "caption": true,
+      "speechEnd": 209.844915,
+      "label": "Moment 24"
+    },
+    {
+      "kind": "speech",
+      "speaker": "Emily · Agent",
+      "text": "You too, Jamie. Bye.",
+      "note": "Emily closes the call. The next recorded section shows the actual after-call review.",
+      "tag": "Customer conversation",
+      "detail": "",
+      "focus": null,
+      "id": "emily-06",
+      "start": 211.078062,
+      "end": 216.533333,
+      "title": "Emily closes the conversation",
+      "caption": true,
+      "speechEnd": 213.838062,
+      "label": "Moment 25"
+    },
+    {
+      "kind": "wrapup",
+      "speaker": "Genesys",
+      "text": "Genesys generates a draft summary and suggested wrap-up codes while keeping the transcript and checklist available.",
+      "note": "The actual generation wait is retained. Section outlines follow the new after-call layout.",
+      "tag": "After-call work",
+      "detail": "",
+      "focus": null,
+      "id": "after-call",
+      "start": 216.533333,
+      "end": 223.933333,
+      "title": "After-call support begins",
+      "caption": false,
+      "label": "Moment 26"
+    },
+    {
+      "kind": "wrapup",
+      "speaker": "Genesys",
+      "text": "The draft captures the Rugby aggregate enquiry, SuperDrain discussion, loading-bay slab and technical follow-up.",
+      "note": "Generated text is unchanged, including “250 tons” and the recorded product recommendations. The agent reviews the draft before completing wrap-up.",
+      "tag": "Summary review",
+      "detail": "",
+      "focus": null,
+      "id": "summary",
+      "start": 223.933333,
+      "end": 229.333333,
+      "title": "Review the generated summary",
+      "caption": false,
+      "label": "Moment 27"
+    },
+    {
+      "kind": "wrapup",
+      "speaker": "Genesys",
+      "text": "Sales - Quote requested is selected. The agent scrolls the summary and submits Done.",
+      "note": "Technical follow-up and Quote provided are other suggestions. The selected outcome is a quotation request; no completed order is shown.",
+      "tag": "Outcome captured",
+      "detail": "",
+      "focus": null,
+      "id": "wrapup",
+      "start": 229.333333,
+      "end": 234.133333,
+      "title": "Record the requested quotation",
+      "caption": false,
+      "label": "Moment 28"
+    }
+  ],
+  "events": [
+    {
+      "start": 0,
+      "end": 8.5,
+      "label": "Website journey",
+      "text": "Product information helps the customer frame an enquiry before speaking to Sales."
+    },
+    {
+      "start": 8.5,
+      "end": 13.6,
+      "label": "Make an enquiry",
+      "text": "The website gives the customer a direct route to ask for project advice."
+    },
+    {
+      "start": 13.6,
+      "end": 23,
+      "label": "Enquiry context",
+      "text": "The customer supplies the information Sales needs to begin a useful callback."
+    },
+    {
+      "start": 23,
+      "end": 28.3333333333,
+      "label": "Callback requested",
+      "text": "The enquiry records a clear next step, alongside permission to contact the customer."
+    },
+    {
+      "start": 28.3333333333,
+      "end": 34.9333333333,
+      "label": "Website → Genesys",
+      "text": "The submitted enquiry becomes a contact in the configured Genesys Cloud contact list."
+    },
+    {
+      "start": 34.9333333333,
+      "end": 38.4000003333,
+      "label": "Outbound campaign",
+      "text": "A preview campaign gives the agent the enquiry context before dialling."
+    },
+    {
+      "start": 38.4000003333,
+      "end": 45.4000003333,
+      "label": "Campaign configuration",
+      "text": "These settings determine which enquiry is delivered and which context the agent sees."
+    },
+    {
+      "start": 45.4000003333,
+      "end": 49.5000003333,
+      "label": "Contact list",
+      "text": "The contact list is the handoff between website submission and outbound work."
+    },
+    {
+      "start": 49.5000003333,
+      "end": 55.9333333333,
+      "label": "Contact-list setup",
+      "text": "The agent administrator can inspect the stored enquiry before campaign delivery."
+    },
+    {
+      "start": 55.9333333333,
+      "end": 63.0833333333,
+      "label": "Enquiry record",
+      "text": "The record carries the original website information into the follow-up workflow."
+    },
+    {
+      "start": 63.0833333333,
+      "end": 73.1333333333,
+      "label": "Ready for callback",
+      "text": "The stored callback number completes the route from website enquiry to the customer."
+    },
+    {
+      "start": 94.733333,
+      "end": 99.733333,
+      "label": "Commercial earthworks checklist",
+      "text": "A four-item checklist opens for the Sales callback."
+    },
+    {
+      "start": 105.133333,
+      "end": 120.833333,
+      "label": "Checklist review · 1/4",
+      "text": "One item is marked before the later material and drainage discussion."
+    },
+    {
+      "start": 121.733333,
+      "end": 126.833333,
+      "label": "Open product knowledge",
+      "text": "Recycled-aggregate guidance is inspected during discovery."
+    },
+    {
+      "start": 131.733333,
+      "end": 144.633333,
+      "label": "Checklist review · early 4/4",
+      "text": "All four items are marked before the product explanations. Agent review is still required."
+    },
+    {
+      "start": 147.933333,
+      "end": 150.233333,
+      "label": "Relevant guidance appears",
+      "text": "The runoff and heavy-duty slab question surfaces HC KA 02."
+    },
+    {
+      "start": 150.933333,
+      "end": 156.833333,
+      "label": "Review HC KA 02",
+      "text": "Permeable asphalt and the related loading-bay slab guidance are available together."
+    },
+    {
+      "start": 199.633333,
+      "end": 216.433333,
+      "label": "Technical follow-up guidance",
+      "text": "The request for slab advice surfaces fibre-reinforced pavement-concrete guidance."
+    },
+    {
+      "start": 217.133333,
+      "end": 223.833333,
+      "label": "Generating after-call support",
+      "text": "A draft summary and suggested outcomes are being generated."
+    },
+    {
+      "start": 223.933333,
+      "end": 229.333333,
+      "label": "Review the draft",
+      "text": "Keep the generated wording visible and review the material and next-step details."
+    },
+    {
+      "start": 229.333333,
+      "end": 233.033333,
+      "label": "Selected outcome · Quote requested",
+      "text": "The operator selects the quotation-request outcome and submits after-call work."
+    }
+  ],
+  "highlights": [
+    {
+      "id": "website-nav",
+      "start": 0,
+      "end": 8.5,
+      "label": "Knowledge & resources",
+      "focus": {
+        "x": 50.31250000000001,
+        "y": 11.455776810947494,
+        "w": 7.734375,
+        "h": 3.384370816599733
+      }
+    },
+    {
+      "id": "enquiry-nav",
+      "start": 8.5,
+      "end": 12,
+      "label": "Make an enquiry",
+      "focus": {
+        "x": 67.8125,
+        "y": 11.455776810947494,
+        "w": 7.8125,
+        "h": 3.384370816599733
+      }
+    },
+    {
+      "id": "form-contact",
+      "start": 13.6,
+      "end": 18.5,
+      "label": "Customer and callback",
+      "focus": {
+        "x": 49.140625,
+        "y": 16.657680103128563,
+        "w": 25.1953125,
+        "h": 16.608486414794985
+      }
+    },
+    {
+      "id": "form-project",
+      "start": 18.5,
+      "end": 23,
+      "label": "Project, product and quantity",
+      "focus": {
+        "x": 49.140625,
+        "y": 34.33161658981605,
+        "w": 25.1953125,
+        "h": 21.935736774257524
+      }
+    },
+    {
+      "id": "form-next",
+      "start": 23,
+      "end": 28.3333333333,
+      "label": "Request a callback",
+      "focus": {
+        "x": 49.140625,
+        "y": 63.28678913183599,
+        "w": 25.1953125,
+        "h": 17.8619570876097
+      }
+    },
+    {
+      "id": "submit",
+      "start": 28.3333333333,
+      "end": 30.8,
+      "label": "Send enquiry",
+      "focus": {
+        "x": 56.4453125,
+        "y": 85.59856710793792,
+        "w": 6.25,
+        "h": 3.384370816599733
+      }
+    },
+    {
+      "id": "campaign",
+      "start": 35.1333333333,
+      "end": 38.4000003333,
+      "label": "Holcim follow-up campaign",
+      "focus": {
+        "x": 2.9296875,
+        "y": 32.20071644603104,
+        "w": 89.84375,
+        "h": 3.760412018444147
+      }
+    },
+    {
+      "id": "campaign-config",
+      "start": 38.6333333333,
+      "end": 44.4333333333,
+      "label": "Campaign links list, queue and script",
+      "focus": {
+        "x": 0.625,
+        "y": 18.91392731419505,
+        "w": 39.0625,
+        "h": 57.34628328127322
+      }
+    },
+    {
+      "id": "contact-list",
+      "start": 45.4333333333,
+      "end": 49.5000003333,
+      "label": "Holcim Servicing Contacts",
+      "focus": {
+        "x": 0.9765625,
+        "y": 31.07259284049779,
+        "w": 97.65625,
+        "h": 2.506941345629431
+      }
+    },
+    {
+      "id": "record",
+      "start": 55.9333333333,
+      "end": 63.0833333333,
+      "label": "Website enquiry record",
+      "focus": {
+        "x": 1.171875,
+        "y": 28.377630893946154,
+        "w": 97.65625,
+        "h": 6.706068099558729
+      }
+    },
+    {
+      "id": "contact-detail",
+      "start": 63.233333333299996,
+      "end": 67.9333333333,
+      "label": "Stored enquiry fields",
+      "focus": {
+        "x": 1.0546875,
+        "y": 19.10194791511726,
+        "w": 46.875,
+        "h": 31.02339915216421
+      }
+    },
+    {
+      "id": "phone",
+      "start": 69.4333333333,
+      "end": 73.1333333333,
+      "label": "Callback number",
+      "focus": {
+        "x": 1.0546875,
+        "y": 56.580721032277246,
+        "w": 46.875,
+        "h": 19.42879542862809
+      }
+    },
+    {
+      "id": "enquiry-context",
+      "start": 73.933333,
+      "end": 99.733333,
+      "label": "Website enquiry context",
+      "focus": {
+        "x": 21.53846153846154,
+        "y": 22.839506172839506,
+        "w": 29.807692307692307,
+        "h": 77.1604938271605
+      }
+    },
+    {
+      "id": "checklist-zero-wide",
+      "start": 94.733333,
+      "end": 99.733333,
+      "label": "Checklist · 0/4",
+      "focus": {
+        "x": 53.01282051282051,
+        "y": 37.86008230452675,
+        "w": 37.243589743589745,
+        "h": 18.00411522633745
+      }
+    },
+    {
+      "id": "checklist-zero",
+      "start": 104.333333,
+      "end": 105.033333,
+      "label": "Checklist · 0/4",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 37.86008230452675,
+        "w": 28.525641025641026,
+        "h": 18.00411522633745
+      }
+    },
+    {
+      "id": "checklist-one-a",
+      "start": 105.133333,
+      "end": 120.833333,
+      "label": "Checklist · 1/4 marked early",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 37.86008230452675,
+        "w": 28.525641025641026,
+        "h": 18.00411522633745
+      }
+    },
+    {
+      "id": "recycled-result-a",
+      "start": 118.133333,
+      "end": 120.833333,
+      "label": "Knowledge suggestions",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 64.60905349794238,
+        "w": 28.525641025641026,
+        "h": 23.765432098765434
+      }
+    },
+    {
+      "id": "recycled-open",
+      "start": 121.733333,
+      "end": 126.833333,
+      "label": "Opened knowledge article",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 31.48148148148148,
+        "w": 28.525641025641026,
+        "h": 68.4156378600823
+      }
+    },
+    {
+      "id": "checklist-one-b",
+      "start": 127.333333,
+      "end": 131.633333,
+      "label": "Checklist · 1/4",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 37.86008230452675,
+        "w": 28.525641025641026,
+        "h": 18.00411522633745
+      }
+    },
+    {
+      "id": "recycled-result-b",
+      "start": 127.333333,
+      "end": 147.633333,
+      "label": "Knowledge suggestions",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 64.60905349794238,
+        "w": 28.525641025641026,
+        "h": 23.765432098765434
+      }
+    },
+    {
+      "id": "checklist-four-a",
+      "start": 131.733333,
+      "end": 150.233333,
+      "label": "Checklist · 4/4 before product explanations",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 37.86008230452675,
+        "w": 28.525641025641026,
+        "h": 18.00411522633745
+      }
+    },
+    {
+      "id": "permeable-result-a",
+      "start": 147.933333,
+      "end": 150.233333,
+      "label": "Knowledge suggestions",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 64.60905349794238,
+        "w": 28.525641025641026,
+        "h": 29.938271604938272
+      }
+    },
+    {
+      "id": "permeable-open",
+      "start": 150.933333,
+      "end": 156.833333,
+      "label": "Opened knowledge article",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 31.48148148148148,
+        "w": 28.525641025641026,
+        "h": 68.4156378600823
+      }
+    },
+    {
+      "id": "checklist-four-b",
+      "start": 157.333333,
+      "end": 216.433333,
+      "label": "Checklist · 4/4",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 37.86008230452675,
+        "w": 28.525641025641026,
+        "h": 18.00411522633745
+      }
+    },
+    {
+      "id": "permeable-result-b",
+      "start": 157.333333,
+      "end": 199.433333,
+      "label": "Knowledge suggestions",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 64.60905349794238,
+        "w": 28.525641025641026,
+        "h": 29.938271604938272
+      }
+    },
+    {
+      "id": "highpave-result",
+      "start": 199.633333,
+      "end": 216.433333,
+      "label": "Knowledge suggestions",
+      "focus": {
+        "x": 52.43589743589744,
+        "y": 64.60905349794238,
+        "w": 28.525641025641026,
+        "h": 25.823045267489714
+      }
+    },
+    {
+      "id": "transcript-call",
+      "start": 104.333333,
+      "end": 216.433333,
+      "label": "Live transcript",
+      "focus": {
+        "x": 23.910256410256412,
+        "y": 20.781893004115226,
+        "w": 25.64102564102564,
+        "h": 79.21810699588477
+      },
+      "tone": "transcript"
+    },
+    {
+      "id": "transcript-acw",
+      "start": 217.133333,
+      "end": 233.033333,
+      "label": "Live transcript",
+      "focus": {
+        "x": 43.07692307692308,
+        "y": 20.781893004115226,
+        "w": 25.64102564102564,
+        "h": 76.95473251028807
+      },
+      "tone": "transcript"
+    },
+    {
+      "id": "checklist-review",
+      "start": 217.133333,
+      "end": 233.033333,
+      "label": "Checklist review · 4/4 retained for after-call review",
+      "focus": {
+        "x": 71.66666666666667,
+        "y": 37.86008230452675,
+        "w": 28.333333333333332,
+        "h": 18.00411522633745
+      }
+    },
+    {
+      "id": "knowledge-acw",
+      "start": 217.133333,
+      "end": 233.033333,
+      "label": "Knowledge suggestions",
+      "focus": {
+        "x": 71.66666666666667,
+        "y": 64.60905349794238,
+        "w": 28.333333333333332,
+        "h": 25.823045267489714
+      }
+    },
+    {
+      "id": "summary-generating",
+      "start": 217.133333,
+      "end": 223.833333,
+      "label": "Summary generation",
+      "focus": {
+        "x": 24.743589743589745,
+        "y": 41.9753086419753,
+        "w": 17.435897435897434,
+        "h": 19.54732510288066
+      }
+    },
+    {
+      "id": "codes-generating",
+      "start": 217.133333,
+      "end": 223.833333,
+      "label": "Suggested wrap-up codes",
+      "focus": {
+        "x": 24.743589743589745,
+        "y": 29.938271604938272,
+        "w": 17.435897435897434,
+        "h": 6.995884773662551
+      },
+      "tone": "codes"
+    },
+    {
+      "id": "codes-ready",
+      "start": 223.933333,
+      "end": 230.733333,
+      "label": "Suggested wrap-up codes",
+      "focus": {
+        "x": 24.743589743589745,
+        "y": 34.15637860082305,
+        "w": 17.435897435897434,
+        "h": 8.950617283950617
+      },
+      "tone": "codes"
+    },
+    {
+      "id": "summary-ready",
+      "start": 223.933333,
+      "end": 230.733333,
+      "label": "Generated summary",
+      "focus": {
+        "x": 24.743589743589745,
+        "y": 52.2633744855967,
+        "w": 17.435897435897434,
+        "h": 45.5761316872428
+      }
+    },
+    {
+      "id": "selected-code",
+      "start": 229.333333,
+      "end": 230.733333,
+      "label": "Selected · Quote requested",
+      "focus": {
+        "x": 24.743589743589745,
+        "y": 30.246913580246915,
+        "w": 17.435897435897434,
+        "h": 3.4979423868312756
+      },
+      "tone": "codes"
+    },
+    {
+      "id": "summary-scroll-one",
+      "start": 231.333333,
+      "end": 231.833333,
+      "label": "Generated summary",
+      "focus": {
+        "x": 24.743589743589745,
+        "y": 36.7283950617284,
+        "w": 17.435897435897434,
+        "h": 49.2798353909465
+      }
+    },
+    {
+      "id": "summary-scroll-two",
+      "start": 232.333333,
+      "end": 233.033333,
+      "label": "Generated summary",
+      "focus": {
+        "x": 24.743589743589745,
+        "y": 31.790123456790127,
+        "w": 17.435897435897434,
+        "h": 49.2798353909465
+      }
+    },
+    {
+      "id": "done",
+      "start": 232.333333,
+      "end": 233.033333,
+      "label": "Submit",
+      "focus": {
+        "x": 38.3974358974359,
+        "y": 92.79835390946502,
+        "w": 3.653846153846154,
+        "h": 3.4979423868312756
+      },
+      "tone": "codes"
+    }
+  ],
+  "recordingNote": "The website enquiry and Genesys campaign/contact-list clips are preserved from the existing Scenario 2, including its approved 1.5× form entry and masks over unrelated training rows. Only the agent experience is replaced, using 22 October take 2: raw agent seconds 33–194 at normal speed, through Done. The full new workspace is preserved; the older wide prefix is proportionally letterboxed. The simultaneous recorded customer phone retains its original bezel, notch, clock and home indicator, and is shown only during the replacement call section. Twelve existing prepared voice clips, pinned before recording, are individually aligned to this take; captured system audio is timing evidence only. No new speech is synthesized. Live transcription, unknown customer labels, early checklist marks and generated summary remain unchanged. The checklist reaches 4/4 before product explanations. Technical product claims in the recorded dialogue and summary require project-specific review. No previous-take after-call content, held frame, recovery footage or reconstructed screen is inserted.",
+  "videoLeadSeconds": 0,
+  "audioMode": "prepared",
+  "captionsAvailable": true,
+  "customerView": {
+    "mode": "video",
+    "at": 73.13333333333333,
+    "recordedShell": true,
+    "width": 254,
+    "height": 588,
+    "cornerRadius": {
+      "x": 11.811023622047244,
+      "y": 5.1020408163265305
+    },
+    "frameMasks": [
+      {
+        "at": 0.0,
+        "right": 0.0,
+        "bottom": 12.07483
+      },
+      {
+        "at": 18.0,
+        "right": 0.0,
+        "bottom": 0.510204
+      },
+      {
+        "at": 72.5,
+        "right": 0.0,
+        "bottom": 12.07483
+      },
+      {
+        "at": 82.2,
+        "right": 0.0,
+        "bottom": 0.510204
+      },
+      {
+        "at": 142.8,
+        "right": 0.0,
+        "bottom": 0.340136
+      }
+    ],
+    "title": "Original recorded customer phone",
+    "duration": 161.0,
+    "video": "customer.mp4"
+  }
+}

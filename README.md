@@ -87,3 +87,6 @@ Space toggles audio/video playback and Left/Right move one scene, including when
 The AVA recording now uses Jamie’s revised acknowledgement, “Yes, that's right. Thanks for your help.” Only ALEX-07 was regenerated with the existing approved voice configuration. The other audio samples are unchanged. The transcript, conversation timing, confirmation context and embedded WAV checksum match the revised 105.675-second recording. The original AVA voice and full customer-journey pages share the updated recording. The requested caption clause about proving a live transfer has been removed.
 
 The fourth learning point is now “Consistent delivery and cross-selling,” following the owner’s revision. Demo cards have aligned action rows, no durations or update note, and two equal-width Messenger/Audio buttons for Scenario 3.
+
+
+Scenario 2 agent refresh — 22 October 2026: the website enquiry and campaign/contact-list footage are retained. The Sales callback and after-call section now use 22 October take 2, with 28 annotated moments, the original recorded customer phone, current prepared voices, measured knowledge/checklist coverage and the actual Quote requested selection and Done submission. The hosted route and combined offline edition contain the same updated player.
