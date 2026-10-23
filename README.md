@@ -56,7 +56,7 @@ The Download demo control is available on the story opening, slide header and ou
 
 ## Consolidated Holcim presentation
 
-The root `index.html` is a seven-section presentation: title, introduction, the four concerns from the PowerPoint, how Genesys helps, Jamie Taylor and Emily Carter, three project scenarios plus AVA, and a closing slide mapping the demonstrations back to the four concerns. The previous library remains at `library.html`; all earlier playback URLs remain available.
+The root `index.html` is a nine-section presentation: title, introduction, the four concerns, key benefits for Holcim, Agent Copilot detail, Agent Copilot customer results, Jamie Taylor and Emily Carter, three project scenarios plus AVA, and a closing slide mapping the demonstrations back to the four concerns. The previous library remains at `library.html`; all earlier playback URLs remain available.
 
 Scenario 1 is always Residential Housing Extension at `demos/holcim-agent-copilot/`, using the 22 October residential take 3 (132.9 seconds, 15 annotated moments, with the simultaneous recorded phone player). Scenario 2 is Commercial Earthworks and Logistics Yard at `demos/holcim-commercial-earthworks/` (191.73 seconds). Scenario 3 Web Messenger is Council Green Corridor at `demos/holcim-council-green-corridor/`, using the approved 22 October take 2 (206.5 seconds, 22 annotated moments), with the highlight review completed on 23 October. Scenario 3 Audio is the separate council road recording at `demos/holcim-council-road-low-carbon/` (122.6 seconds), using the approved 22 October take 1. Both Messenger and Audio are available within Scenario 3.
 
@@ -94,3 +94,7 @@ Scenario 2 agent refresh — 22 October 2026: the website enquiry and campaign/c
 ## Refreshed Scenario 3 Web Messenger
 
 The hosted player and single-file presentation use the same silent paired recording of Genesys and the Holcim website. Customer and adviser entries are presented as fast typing; unsent corrections and idle waits were removed. Sent messages and the actual AI output are retained. Summary highlights disappear when their content is displaced off screen. The player includes the annotation controls, transcript and clean MP4 download. Raw captures and production evidence are retained privately.
+
+## Benefits and customer examples — 23 October 2026
+
+The supplied IPI–Holcim demo slides are incorporated into the root presentation and its offline edition using the existing IPI styling. The benefits overview combines overlapping material in `#problems`, with separate Web Messenger and AVA benefits. New `#copilot` and `#customer-results` sections precede the characters and demos. The customer examples retain all nine supplied figures and their customer/region groupings. The welcome includes the demo date. Navigation and counters use all nine sections. Existing routes and all five embedded players are preserved.
