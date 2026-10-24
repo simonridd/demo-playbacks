@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="From an idea to a working AVA proof of value. Internal SC workshop · 29 October 2026.">
+  <title>Genesys AXL | Workshop content draft</title>
+  <style>/* Adapted from demo-playbacks/index.html at 7c37c9fc50d99577dcf4421090c70c22016e9378.
+   Preserve the predominantly white IPI presentation canvas and original type scale. */
+:root {
+  --navy: #384d5d; --ink: #384d5d; --muted: #61727a;
+  --green: #377b64; --lime: #a7d8c6; --ipi-mint: #63ab8f;
+  --paper: #fff; --line: #e0e8e5;
+  font-family: Arial, Helvetica, sans-serif; color: var(--ink);
+  background: var(--paper); font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+button, a { touch-action: manipulation; }
+button { font: inherit; cursor: pointer; }
+button:disabled { cursor: default; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--green); outline-offset: 5px; }
+[hidden] { display: none !important; }
+.skip { position: absolute; top: -70px; left: 20px; z-index: 10; background: white; padding: 14px; }
+.skip:focus { top: 10px; }
+.header { height: 94px; padding: 19px 4.5vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); gap: 25px; }
+.brands { display: flex; align-items: center; gap: 28px; text-decoration: none; min-width: 0; }
+.ipi { width: 115px; height: 46px; object-fit: contain; }
+.brand-divider { height: 35px; width: 1px; background: var(--line); flex-shrink: 0; }
+.brand-title { font-size: 17px; letter-spacing: -.3px; }
+.header-right { display: flex; align-items: center; gap: 25px; flex-shrink: 0; }
+.draft-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+.text-button { background: none; border: 0; padding: 12px 0; color: var(--ink); font-weight: bold; font-size: 12px; min-height: 44px; }
+.nav { display: flex; gap: 5px; max-width: 1440px; margin: auto; padding: 19px 4.5vw 0; overflow: auto; scrollbar-width: thin; }
+.nav button { white-space: nowrap; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted); padding: 12px 16px; min-height: 44px; font-size: 12px; }
+.nav button[aria-current="step"] { border-bottom-color: var(--ipi-mint); color: var(--green); font-weight: bold; }
+.nav button span { font-size: 10px; margin-right: 8px; opacity: .65; }
+.deck { max-width: 1440px; margin: 0 auto; }
+.deck:focus, .slide h1:focus, .slide h2:focus { outline: none; }
+.slide { min-height: calc(100svh - 235px); padding: 48px 5.5vw 42px; display: flex; flex-direction: column; justify-content: center; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(40px, 4.65vw, 70px); line-height: 1.04; letter-spacing: -3px; font-weight: 500; margin-bottom: 27px; max-width: 740px; }
+h2 { font-size: clamp(34px, 3.3vw, 49px); line-height: 1.1; letter-spacing: -1.9px; font-weight: 500; margin-bottom: 23px; max-width: 900px; }
+h3 { font-size: 21px; font-weight: 500; line-height: 1.25; letter-spacing: -.5px; margin-bottom: 12px; }
+.eyebrow { color: var(--green); font-size: 11px; font-weight: bold; letter-spacing: 1.8px; text-transform: uppercase; margin: 0 0 21px; }
+.lead { font-size: clamp(16px, 1.35vw, 20px); line-height: 1.65; color: var(--muted); max-width: 790px; margin-bottom: 30px; }
+.hero { display: grid; grid-template-columns: 1.16fr 1fr; gap: 7%; align-items: center; }
+.hero .lead { max-width: 520px; font-size: 18px; }
+.hero-panel { background: var(--navy); border-radius: 6px; padding: 38px 34px; color: white; box-shadow: 15px 15px 0 #f0f5f3; }
+.panel-label { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #c9ded9; margin-bottom: 30px; }
+.hero-item { padding: 20px 0; border-top: 1px solid #67807e; }
+.hero-item:first-of-type { padding-top: 0; border-top: 0; }
+.hero-item:last-of-type { padding-bottom: 0; }
+.hero-item h3 { font-size: 21px; margin-bottom: 9px; }
+.hero-item p { font-size: 14px; line-height: 1.6; color: #d3e2e0; margin: 0; }
+.primary { display: inline-flex; align-items: center; justify-content: center; gap: 25px; padding: 15px 22px; min-height: 46px; background: var(--navy); color: white; border: 1px solid var(--navy); border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: bold; }
+.primary:hover { background: var(--green); border-color: var(--green); }
+.section-items { margin-top: 12px; border-top: 1px solid var(--line); }
+.content-row { display: grid; grid-template-columns: 40px 1fr 1.4fr; align-items: start; gap: 25px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.content-row .number { color: var(--green); font-size: 12px; padding-top: 5px; }
+.content-row h3, .content-row p { margin: 0; }
+.content-row p { font-size: 16px; line-height: 1.6; color: var(--muted); }
+.split-layout { display: grid; grid-template-columns: 1.1fr 1fr; align-items: start; gap: 8%; }
+.split-layout .section-items { margin-top: 0; }
+.split-layout .content-row { grid-template-columns: 32px 1fr; gap: 14px; }
+.split-layout .content-row p { grid-column: 2; }
+.question { font-size: clamp(23px, 2.5vw, 36px); line-height: 1.4; letter-spacing: -.8px; padding: 22px 0 22px 28px; border-left: 3px solid var(--ipi-mint); color: var(--green); margin: 30px 0 0; max-width: 900px; }
+.footnote { font-size: 12px; color: var(--muted); line-height: 1.6; max-width: 900px; margin: 24px 0 0; }
+.demo-links { display: grid; gap: 20px; margin-top: 25px; }
+.demo-link { border-top: 2px solid var(--ipi-mint); padding-top: 22px; }
+.demo-link p { color: var(--muted); line-height: 1.6; }
+.closing .question { background: #f5f8f7; padding: 25px 30px; border-left-width: 5px; color: var(--ink); }
+.bottom { max-width: 1440px; margin: auto; padding: 14px 5.5vw 23px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); gap: 20px; }
+.progress { font-size: 11px; color: var(--muted); }
+.progress strong { color: var(--ink); font-weight: 500; margin-right: 7px; }
+.draft-note { margin: 0; font-size: 11px; color: var(--muted); }
+.controls { display: flex; gap: 10px; }
+.controls button { padding: 12px 20px; min-height: 44px; border: 1px solid var(--line); border-radius: 4px; color: var(--ink); background: transparent; font-size: 12px; }
+.controls button:last-child { background: var(--navy); color: white; border-color: var(--navy); }
+.controls button:disabled { opacity: .35; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.no-script { padding: 20px 5.5vw; }
+@media (min-width: 1600px) {
+  .deck, .nav, .bottom { max-width: 1800px; }
+  .slide { padding-left: 80px; padding-right: 80px; }
+  h1 { font-size: clamp(40px, 4.65vw, 84px); }
+  h2 { font-size: clamp(34px, 3.3vw, 60px); }
+}
+@media (max-width: 1000px) {
+  .draft-label { display: none; }
+  .hero { gap: 35px; }
+  .hero-panel { padding: 30px 25px; }
+  .slide { padding-top: 35px; }
+}
+@media (max-width: 760px) {
+  .header { height: 77px; padding: 15px 6vw; gap: 14px; }
+  .brands { gap: 16px; }
+  .ipi { width: 80px; height: 36px; }
+  .brand-title { font-size: 14px; }
+  .header-right { gap: 12px; }
+  .text-button { font-size: 11px; }
+  .nav { padding: 9px 4vw 0; }
+  .nav button { padding: 11px; font-size: 11px; }
+  .nav button span { display: none; }
+  .slide { padding: 35px 6vw; min-height: calc(100svh - 207px); justify-content: flex-start; }
+  .hero, .split-layout { grid-template-columns: 1fr; gap: 32px; }
+  h1 { font-size: 47px; letter-spacing: -2px; }
+  h2 { font-size: 36px; }
+  .hero .lead { font-size: 16px; }
+  .hero-panel { box-shadow: 8px 8px 0 #f0f5f3; }
+  .content-row { grid-template-columns: 25px 1fr; gap: 12px; }
+  .content-row p { grid-column: 2; font-size: 15px; }
+  .question { font-size: 26px; padding-left: 22px; }
+  .bottom { padding: 15px 6vw; flex-wrap: wrap; gap: 15px; }
+  .draft-note { order: 3; flex-basis: 100%; }
+  .controls button { padding: 12px 15px; }
+}
+@media print {
+  .header, .nav, .bottom, .primary, .skip, .no-script { display: none !important; }
+  .slide, .slide[hidden] { display: block !important; min-height: 0; break-after: page; padding: 20mm 12mm; }
+  .hero, .split-layout { display: block; }
+  .hero-panel { margin-top: 30px; box-shadow: none; }
+  .slide::before { content: "GENESYS AXL · INTERNAL WORKSHOP CONTENT DRAFT"; display: block; color: #61727a; font-size: 10pt; margin-bottom: 10mm; }
+}
+
+
+/* AXL teaching compositions. Shared IPI source remains the authoring baseline. */
+.slide.hero { display:flex; flex-direction:column; }
+.slide.hero > .hero { width:100%; }
+#bot-vs-ava .section-items,
+#building-blocks .section-items,
+#what-works .section-items { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:17px; border-top:0; }
+#bot-vs-ava .content-row,
+#building-blocks .content-row,
+#what-works .content-row { display:block; padding:25px 22px; border:1px solid var(--line); border-top:3px solid var(--ipi-mint); border-radius:4px; background:#fdfefd; }
+#bot-vs-ava .content-row .number,
+#building-blocks .content-row .number,
+#what-works .content-row .number { display:block; margin:0 0 18px; }
+#bot-vs-ava .content-row h3,
+#building-blocks .content-row h3,
+#what-works .content-row h3 { margin-bottom:13px; }
+#four-hours .section-items,
+#where-to-challenge .section-items,
+#scorecard .section-items { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 24px; border-top:0; }
+#four-hours .content-row,
+#where-to-challenge .content-row,
+#scorecard .content-row { display:block; border:1px solid var(--line); border-top:3px solid var(--ipi-mint); padding:22px 24px; border-radius:4px; }
+#four-hours .content-row .number,
+#where-to-challenge .content-row .number,
+#scorecard .content-row .number { display:block; margin-bottom:12px; }
+#four-hours .content-row h3,
+#where-to-challenge .content-row h3,
+#scorecard .content-row h3 { margin-bottom:11px; }
+#scorecard .content-row { background:#fcfdfc; }
+#scorecard .scorecard-toolbar { display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:18px;padding:16px 0;border-top:1px solid var(--line); }
+#scorecard .scorecard-help { color:var(--muted);font-size:12px;line-height:1.5;max-width:600px;margin:0; }
+#scorecard .scorecard-export { font:inherit;border:1px solid var(--navy);border-radius:4px;padding:12px 16px;min-height:44px;background:var(--navy);color:white;font-size:12px;cursor:pointer; }
+#scorecard .scorecard-export:hover { background:var(--green); }
+#scorecard .scorecard-select { display:block;font:inherit;margin-top:14px;border:1px solid var(--line);border-radius:4px;background:white;color:var(--ink);padding:8px;min-height:42px;max-width:200px;width:100%;font-size:12px; }
+#scorecard .content-row[data-verdict="Pass"]{border-top-color:var(--green);}
+#scorecard .content-row[data-verdict="Fail"]{border-top-color:#b35345;}
+#scorecard .content-row[data-verdict="Blocked"]{border-top-color:#bb9546;}
+.nav button[aria-current="step"] { border-bottom-width:3px; }
+.bottom { background:rgba(255,255,255,.97); }
+@media (max-width:1050px){
+  #bot-vs-ava .section-items,#building-blocks .section-items,#what-works .section-items {grid-template-columns:1fr;}
+}
+@media (max-width:760px){
+  #four-hours .section-items,#where-to-challenge .section-items,#scorecard .section-items{grid-template-columns:1fr;}
+  #bot-vs-ava .content-row,#building-blocks .content-row,#what-works .content-row {padding:21px;}
+  #four-hours .content-row,#where-to-challenge .content-row,#scorecard .content-row {padding:19px;}
+}
+
+/* Editable teaching diagrams use storyboard text and durations. */
+.slide-timing { display:block; margin-top:6px; font-size:10px; }
+.comparison-columns { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin:12px 0 0; }
+.comparison-columns article { border-top:3px solid var(--ipi-mint); padding:24px 0 12px; }
+.comparison-columns article:last-child { border-top-color:var(--navy); }
+.comparison-columns .panel-label { color:var(--green); margin-bottom:18px; }
+.comparison-columns h3 { font-size:28px; }
+.comparison-columns p:not(.panel-label) { color:var(--muted); font-size:18px; line-height:1.6; margin:0; }
+.comparison-caveat { padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; line-height:1.6; margin:20px 0 0; }
+.spec-pipeline,.lab-timeline { list-style:none; display:flex; margin:18px 0 0; padding:0; }
+.spec-pipeline li { position:relative; flex:1; padding:24px 20px 0 0; border-top:3px solid var(--ipi-mint); min-width:0; }
+.spec-pipeline li+li { padding-left:20px; }
+.spec-pipeline li+li::before { content:'→'; position:absolute; left:-9px; top:-17px; font-size:25px; background:white; color:var(--green); }
+.step-index { display:block; font-size:12px; color:var(--green); margin-bottom:24px; }
+.spec-pipeline h3 { font-size:24px; }
+.spec-pipeline p,.lab-timeline li>p:last-child { color:var(--muted); line-height:1.6; font-size:16px; }
+.timeline-label { font-size:11px; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin:15px 0 0; }
+.lab-timeline li { flex:var(--duration); padding:22px 22px 0 0; border-top:12px solid var(--ipi-mint); min-width:0; }
+.lab-timeline li:nth-child(even) { border-top-color:var(--navy); }
+.lab-timeline li+li { padding-left:20px; }
+.elapsed { font-size:13px; color:var(--green); margin-bottom:20px; }
+.lab-timeline h3 { font-size:23px; }
+#scorecard .section-items { grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px 20px; }
+#scorecard .content-row { padding:16px 20px; }
+#scorecard .content-row .number { margin:0 0 8px; padding:0; }
+#scorecard .content-row h3 { font-size:20px; }
+#scorecard .content-row p { font-size:14px; line-height:1.5; }
+#scorecard .scorecard-select { min-height:44px; }
+select:focus-visible { outline:3px solid var(--green); outline-offset:3px; }
+@media (min-width:1100px) and (max-height:820px) {
+ .slide { padding-top:26px; padding-bottom:26px; }
+ h2 { font-size:40px; margin-bottom:18px; }
+ .lead { margin-bottom:20px; }
+ .content-row { padding-top:18px; padding-bottom:18px; }
+ .question { font-size:28px; margin-top:20px; padding-top:14px; padding-bottom:14px; }
+}
+@media (max-width:1050px) {
+ .spec-pipeline { flex-wrap:wrap; gap:28px 0; }
+ .spec-pipeline li { flex:1 1 30%; }
+ .spec-pipeline li+li { padding-left:0; }
+ .spec-pipeline li+li::before { content:none; }
+ .lab-timeline { flex-wrap:wrap; gap:26px 0; }
+ .lab-timeline li { flex:1 1 50%; }
+ .lab-timeline li+li { padding-left:0; }
+ #scorecard .section-items { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:760px) {
+ .comparison-columns { grid-template-columns:1fr; gap:18px; }
+ .comparison-columns p:not(.panel-label) { font-size:16px; }
+ .spec-pipeline { display:block; }
+ .spec-pipeline li { padding:20px 0 10px 25px; border-top:0; border-left:3px solid var(--ipi-mint); }
+ .spec-pipeline li+li { padding-left:25px; }
+ .step-index { margin-bottom:12px; }
+ .lab-timeline { display:block; }
+ .lab-timeline li,.lab-timeline li+li { padding:20px 0 10px 25px; border-top:0; border-left:8px solid var(--ipi-mint); }
+ .lab-timeline li:nth-child(even) { border-left-color:var(--navy); }
+ #scorecard .section-items { grid-template-columns:1fr; }
+}
+@media print {
+ @page { size:A4 landscape; margin:10mm; }
+ .slide,.slide[hidden] { padding:8mm 5mm; break-after:page; }
+ .slide:last-child { break-after:auto; }
+ .slide::before { margin-bottom:6mm; font-size:8pt; }
+ .slide h1 { font-size:36pt; }
+ .slide h2 { font-size:26pt; margin-bottom:12px; }
+ .slide h3 { font-size:14pt; }
+ .slide .lead { font-size:12pt; margin-bottom:16px; }
+ .content-row { padding:14px 0; }
+ .content-row p,.spec-pipeline p,.lab-timeline li>p:last-child { font-size:10pt; }
+ .question { font-size:16pt; margin-top:16px; padding:12px 20px; }
+ .footnote { font-size:8pt; margin-top:12px; }
+ .hero-panel { padding:20px 24px; }
+ .hero-item { padding:12px 0; }
+ .hero-item p { font-size:10pt; }
+ #scorecard .scorecard-toolbar { display:none; }
+ #scorecard .content-row { break-inside:avoid; }
+ .spec-pipeline,.lab-timeline { flex-wrap:nowrap; }
+ .spec-pipeline li { flex:1; }
+ .lab-timeline li { flex:var(--duration); }
+}
+
+@media screen and (min-width:1100px) {
+ .slide { min-height:calc(100svh - 245px); padding-top:30px; padding-bottom:30px; }
+ h2 { font-size:42px; max-width:1140px; margin-bottom:20px; }
+ .lead { font-size:18px; line-height:1.55; max-width:1000px; margin-bottom:24px; }
+ .content-row { padding-top:20px; padding-bottom:20px; }
+ .question { font-size:28px; line-height:1.4; padding-top:14px; padding-bottom:14px; margin-top:24px; max-width:1100px; }
+ .footnote { margin-top:18px; }
+ .comparison-columns p:not(.panel-label) { font-size:17px; }
+ #where-to-challenge .content-row { padding:18px 22px; }
+ #where-to-challenge .content-row p { font-size:15px; }
+ #scorecard .content-row { padding:14px 18px; }
+ #scorecard .content-row h3 { margin-bottom:8px; }
+ #scorecard .scorecard-select { margin-top:10px; }
+ #scorecard .scorecard-toolbar { padding:12px 0; margin-top:12px; }
+}
+@media screen and (min-width:900px) and (max-width:1099px) {
+ #building-blocks .section-items,#what-works .section-items { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+
+@media screen and (min-width:1100px) {
+ #scorecard .footnote { margin-top:12px; }
+ #scorecard .scorecard-toolbar { margin-top:8px; padding:8px 0; }
+ #scorecard .section-items { gap:10px 20px; }
+}
+
+@media print {
+ #building-blocks .section-items,#what-works .section-items,#scorecard .section-items { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ #building-blocks .content-row,#what-works .content-row { padding:16px; }
+ #scorecard .content-row { padding:12px; }
+ #scorecard .scorecard-select { min-height:30px; padding:5px; margin-top:8px; }
+}
+
+/* AXL-EDU1: three reusable, editable teaching patterns. No autoplay or external assets. */
+.teaching-diagram { --soft:#f2f7f4; width:100%; }
+.diagram-surface { width:100%; }
+.diagram-nodes { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.diagram-node { position:relative; padding:20px; border:1px solid var(--line); border-top:4px solid var(--ipi-mint); border-radius:4px; background:white; color:var(--ink); text-align:left; min-width:0; transition:background-color 200ms, border-color 200ms, box-shadow 200ms; }
+.node-index { display:block; color:var(--green); font-size:12px; margin-bottom:16px; }
+.diagram-node h3,.node-title { display:block; font-size:23px; font-weight:500; line-height:1.2; margin:0 0 12px; }
+.node-body { display:block; font-size:17px; color:var(--muted); line-height:1.5; }
+.diagram-node.is-active { border-color:var(--green); background:#edf6f0; box-shadow:0 0 0 2px var(--green); }
+.diagram-node.is-active::after { content:'Current'; display:block; color:var(--green); font-size:11px; font-weight:bold; margin-top:12px; }
+.diagram-node.is-muted { border-top-color:#b8cac1; }
+.diagram-controls { margin-top:22px; }
+.moment-choices,.moment-navigation { display:flex; flex-wrap:wrap; gap:8px; }
+.moment-choices { margin-bottom:12px; }
+.diagram-controls button { min-height:44px; border:1px solid #bdcbc5; background:white; color:var(--ink); padding:10px 14px; border-radius:4px; font-size:13px; }
+.diagram-controls [aria-pressed="true"] { background:var(--navy); color:white; border-color:var(--navy); }
+.diagram-controls [aria-disabled="true"] { color:var(--muted); border-style:dashed; }
+.moment-navigation button[data-diagram-action="next"] { background:var(--navy); color:white; }
+.moment-status { border-left:3px solid var(--ipi-mint); padding-left:14px; margin:14px 0 0; font-size:15px; line-height:1.5; min-height:46px; color:var(--green); }
+.diagram-boundary { background:var(--soft); border-left:4px solid var(--green); padding:12px 16px; font-size:15px; line-height:1.5; }
+.loop .diagram-nodes,.lifecycle .diagram-nodes { grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; }
+.loop .diagram-node,.lifecycle .diagram-node { padding:16px; }
+.loop .diagram-node h3,.lifecycle .diagram-node h3 { font-size:21px; }
+.loop .node-body,.lifecycle .node-body { font-size:16px; }
+.loop .diagram-node+.diagram-node::before,.lifecycle .diagram-node+.diagram-node::before { content:'→'; position:absolute; left:-15px; top:36px; color:var(--green); background:white; }
+.return-path { border-bottom:2px solid var(--ipi-mint); border-left:2px solid var(--ipi-mint); border-radius:0 0 0 12px; margin:0 12px 12px; padding:9px 14px; font-size:14px; color:var(--green); }
+.return-path span { font-size:24px; vertical-align:middle; }
+.diagram-branch .diagram-node { display:flex; gap:14px; align-items:baseline; border:0; border-left:4px solid #9a713b; padding:10px 16px; background:#faf7f1; }
+.diagram-branch .node-index { display:none; }
+.diagram-branch h3 { flex:0 0 190px; font-size:19px; margin:0; }
+.diagram-branch .node-body { font-size:15px; }
+.journey-grid { display:grid; grid-template-columns:145px repeat(4,minmax(0,1fr)); gap:12px; align-items:stretch; }
+.journey-label { font-size:17px; line-height:1.3; align-self:center; margin:0; }
+.customer-moment { font-size:16px; line-height:1.35; color:var(--green); margin:0; padding:0 8px 7px; }
+.journey .diagram-node { padding:14px; }
+.journey .node-index { margin-bottom:10px; }
+.journey .diagram-node h3 { font-size:20px; }
+.journey .node-body { font-size:15px; }
+.consent-gate { border:2px solid var(--green); border-radius:4px; padding:14px 18px; font-size:17px; line-height:1.4; margin:18px 0 0; color:var(--green); }
+.spec .diagram-nodes { display:grid; grid-template-columns:1fr 1fr; gap:10px 20px; }
+.spec .diagram-node { display:grid; grid-template-columns:150px 1fr; gap:12px; padding:14px 16px; min-height:90px; border-top-width:1px; border-left:4px solid var(--ipi-mint); }
+.spec .node-index { display:none; }
+.spec .node-title { font-size:19px; margin:0; }
+.spec .node-body { font-size:16px; }
+.spec .diagram-node.is-active::after { grid-column:2; margin:0; }
+.spec-output { margin:14px 0 0; padding:12px 16px; background:var(--soft); font-size:17px; }
+.spec-center { padding:18px; border:2px solid var(--green); border-radius:50%; width:250px; text-align:center; margin:0 auto 20px; font-size:21px; }
+.value .diagram-nodes { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.value .diagram-node:last-child { grid-column:1/-1; border-top-color:#9a713b; display:grid; grid-template-columns:1fr 2fr; gap:15px; }
+.value .diagram-node:last-child .node-index { display:none; }
+.value .diagram-node:last-child h3 { margin:0; }
+.value .diagram-node:last-child.is-active::after { grid-column:2; }
+@media screen and (min-width:1100px) {
+ .diagram.slide { padding-top:24px; padding-bottom:24px; }
+ .diagram .eyebrow { margin-bottom:14px; }
+ .diagram h2 { margin-bottom:14px; }
+ .diagram .lead { margin-bottom:20px; }
+ .diagram .question { font-size:23px; margin-top:14px; padding:8px 0 8px 18px; }
+ .diagram .footnote { margin-top:12px; }
+}
+@media (max-width:1099px) {
+ .journey-grid { grid-template-columns:115px repeat(4,minmax(0,1fr)); gap:8px; }
+ .journey .diagram-node { padding:10px; }
+ .journey .diagram-node h3 { font-size:18px; }
+ .journey .node-body { font-size:14px; }
+ .spec .diagram-node { display:block; }
+ .spec .node-title { margin-bottom:10px; }
+ .loop .diagram-nodes,.lifecycle .diagram-nodes { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .loop .diagram-node::before,.lifecycle .diagram-node::before { display:none; }
+}
+@media (max-width:760px) {
+ .diagram-nodes,.loop .diagram-nodes,.lifecycle .diagram-nodes,.spec .diagram-nodes,.value .diagram-nodes { grid-template-columns:1fr; }
+ .diagram-node { padding:20px; }
+ .diagram-branch .diagram-node { display:block; }
+ .diagram-branch h3 { margin-bottom:10px; }
+ .value .diagram-node:last-child { display:block; }
+ .value .diagram-node:last-child h3 { margin-bottom:12px; }
+ .journey-grid { grid-template-columns:1fr 1fr; gap:14px; }
+ .journey-grid .journey-label { grid-column:1/-1; padding:12px 0; border-top:2px solid var(--ipi-mint); }
+ .journey-grid .customer-moment { padding:8px; background:var(--soft); }
+ .journey .diagram-node { padding:14px; }
+ .journey .diagram-node h3 { font-size:20px; }
+ .journey .node-body { font-size:16px; }
+ .moment-choices button { flex:1 1 45%; }
+ .moment-navigation button { flex:1 1 45%; }
+ .spec .diagram-node { min-height:44px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ *,*::before,*::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+}
+@media print {
+ .diagram-controls { display:none !important; }
+ .diagram-node,.diagram-node.is-active,.diagram-node.is-muted { background:white !important; box-shadow:none !important; border-color:#a4bcb0 !important; transition:none !important; }
+ .diagram-node.is-active::after { display:none !important; }
+ .diagram .lead { margin-bottom:12px; }
+ .diagram .diagram-node { padding:12px; break-inside:avoid; }
+ .diagram .node-index { margin-bottom:8px; }
+ .diagram .diagram-node h3,.diagram .node-title { font-size:13pt; }
+ .diagram .node-body { font-size:10pt; line-height:1.4; }
+ .diagram .question { margin-top:12px; }
+ .diagram-boundary,.return-path,.spec-output { font-size:10pt; padding:8px; }
+ .diagram-branch .diagram-node { padding:8px; }
+ .diagram-nodes { gap:12px; }
+ .loop .diagram-nodes,.lifecycle .diagram-nodes { grid-template-columns:repeat(5,minmax(0,1fr)); }
+ .journey-grid { grid-template-columns:110px repeat(4,minmax(0,1fr)); gap:8px; }
+ .journey-grid .journey-label { grid-column:auto; font-size:11pt; }
+ .customer-moment { font-size:10pt; }
+ .consent-gate { font-size:11pt; padding:10px; margin-top:12px; }
+ .spec .diagram-nodes { grid-template-columns:1fr 1fr; gap:10px; }
+ .spec .diagram-node { display:block; min-height:0; }
+ .spec .node-title { margin-bottom:8px; }
+ .spec-center { font-size:14pt; padding:12px; margin-bottom:12px; }
+}
+/* Keep the presenter controls secondary to the teaching picture. */
+.diagram-controls { position:relative; display:flex; flex-wrap:wrap; align-items:start; gap:10px; margin-top:16px; }
+.moment-navigation { order:0; }
+.moment-picker { order:1; }
+.moment-picker summary { cursor:pointer; min-height:44px; display:flex; align-items:center; padding:10px 14px; border:1px solid #bdcbc5; border-radius:4px; font-size:13px; }
+.moment-picker summary::after { content:' +'; margin-left:10px; }
+.moment-picker[open] summary::after { content:' −'; }
+.moment-picker .moment-choices { padding:10px 0 0; margin:0; }
+.moment-picker[open] { flex-basis:100%; }
+.moment-status { order:2; flex-basis:100%; margin:0; min-height:40px; }
+.diagram-node.is-active::after { position:absolute; right:9px; top:7px; margin:0; font-size:10px; }
+.journey .node-index { margin:0 0 6px; font-size:10px; }
+summary:focus-visible { outline:3px solid var(--green); outline-offset:3px; }
+@media screen and (min-width:1100px) {
+ .diagram.slide { padding-top:20px; padding-bottom:20px; }
+ .diagram .diagram-node { padding:16px; }
+ .diagram .node-index { margin-bottom:10px; }
+ .diagram .node-body { font-size:16px; line-height:1.4; }
+ .diagram .diagram-node h3 { font-size:21px; margin-bottom:10px; }
+ .journey .diagram-node { padding:12px 14px; }
+ .journey .node-index { position:absolute; right:8px; top:6px; margin:0; }
+ .journey .diagram-node h3 { font-size:19px; margin-top:6px; margin-bottom:8px; }
+ .journey .node-body { font-size:15px; }
+ .journey .customer-moment { font-size:15px; }
+ .diagram .diagram-boundary { padding:9px 14px; margin-bottom:12px; }
+ .diagram .diagram-branch .diagram-node { padding:8px 14px; }
+ .diagram .diagram-branch h3 { margin:0; font-size:18px; }
+ .diagram .diagram-branch .node-body { font-size:14px; }
+ .diagram .consent-gate { padding:10px 14px; margin-top:12px; font-size:16px; }
+ .diagram .diagram-controls { margin-top:14px; }
+ .diagram .question { margin-top:10px; }
+ .diagram .footnote { margin-top:8px; }
+ .diagram .spec-center { margin-bottom:14px; padding:14px; }
+ .spec .diagram-node { min-height:84px; }
+ .spec .node-title { font-size:18px; }
+ .spec .node-body { font-size:15px; }
+ .spec .diagram-node.is-active::after { top:2px; }
+}
+@media (max-width:760px) {
+ .moment-picker { flex-basis:100%; }
+ .moment-navigation { width:100%; }
+}
+@media screen and (min-width:1100px) {
+ .diagram.slide { padding-top:16px; padding-bottom:16px; }
+ .diagram h2 { font-size:38px; margin-bottom:10px; }
+ .diagram .eyebrow { margin-bottom:10px; }
+ .diagram .lead { font-size:17px; margin-bottom:14px; }
+ .diagram .moment-status { min-height:42px; font-size:14px; }
+ .diagram .question { padding-top:6px; padding-bottom:6px; font-size:22px; }
+ .diagram .spec-center { width:310px; font-size:19px; padding:10px; }
+}
+@media screen and (min-width:761px) and (max-width:1099px) {
+ .value .diagram-nodes { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media screen and (min-width:1100px) {
+ .spec .diagram-node { min-height:80px; }
+ .journey .diagram-node.is-active::after { right:28px; top:6px; }
+}
+</style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to presentation</a>
+  <header class="header">
+    <a class="brands" href="#welcome" aria-label="Workshop presentation home">
+      <img class="ipi" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4gPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTUuNzQgNjcuOTUiPjxkZWZzPjxzdHlsZT4uYXtmaWxsOiMzODRkNWQ7fS5ie2ZpbGw6IzYzYWI4Zjt9PC9zdHlsZT48L2RlZnM+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjQ4LjI5IiBjeT0iMzMuMDYiIHI9IjIuODciPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI0Mi40NSIgY3k9IjYyLjE1IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMzYuNjUiIGN5PSI1Ni4zNCIgcj0iMi44NyI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjMwLjgzIiBjeT0iMTUuNiIgcj0iMS4yMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjMwLjgzIiBjeT0iMjcuMTkiIHI9IjEuMjIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIzMC44MyIgY3k9IjMzLjA2IiByPSIxLjc0Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMTIuNjkiIGN5PSI2Mi4xNSIgcj0iMS43NCI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjEyLjY5IiBjeT0iMzguODgiIHI9IjIuODciPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxMi42OSIgY3k9IjMzLjA2IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI0Mi40NSIgY3k9IjIxLjQyIiByPSIxLjIyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNTkuOTIiIGN5PSI5Ljc5IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNjUuNzQiIGN5PSIxNS42IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNjUuNzQiIGN5PSIzMy4wNiIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjU5LjkyIiBjeT0iMzguODgiIHI9IjIuMzIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI0Mi40MyIgY3k9IjMzLjA2IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMzYuNjUiIGN5PSIzMy4wNiIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjMwLjgzIiBjeT0iNDQuNyIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjMwLjgzIiBjeT0iNTAuNTIiIHI9IjIuMzIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIzMC44MyIgY3k9IjU2LjM0IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNDIuNDUiIGN5PSIxNS42IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNDguMjkiIGN5PSIyNy4xOSIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjM2LjY1IiBjeT0iOS43OSIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjU5LjkyIiBjeT0iMTUuNiIgcj0iMy4xIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNTQuMSIgY3k9IjE1LjYiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjU5LjkyIiBjeT0iMjEuNDIiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjU5LjkyIiBjeT0iMjcuMTkiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjU5LjkyIiBjeT0iMzMuMDYiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjU0LjEiIGN5PSIzMy4wNiIgcj0iMy4xIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNDIuNDUiIGN5PSIzOC44OCIgcj0iMy4xIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNDIuNDUiIGN5PSI0NC43IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI0Mi40NSIgY3k9IjUwLjUyIiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIzNi42NSIgY3k9IjQ0LjciIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjM2LjY1IiBjeT0iNTAuNTIiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjQyLjQ1IiBjeT0iNTYuMzQiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjM2LjY1IiBjeT0iNjIuMTUiIHI9IjIuMzIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxOC41MSIgY3k9IjkuNzkiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjE4LjUxIiBjeT0iMTUuNiIgcj0iMy4xIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMTIuNjkiIGN5PSIxNS42IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxOC41MSIgY3k9IjIxLjQyIiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxMi42OSIgY3k9IjIxLjQyIiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxOC41MSIgY3k9IjI3LjE5IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxOC41MSIgY3k9IjMzLjA2IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxMi42OSIgY3k9IjI3LjE5IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxOC41MSIgY3k9IjM4Ljg4IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI0Mi40NSIgY3k9IjI3LjE5IiByPSIyLjAzIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNTQuMSIgY3k9IjM4Ljg4IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI0OC4yOSIgY3k9IjM4Ljg4IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI2NS43NCIgY3k9IjIxLjQyIiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI2NS43NCIgY3k9IjI3LjE5IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI0OC4yOSIgY3k9IjkuNzkiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjI1LjI1IiBjeT0iOS43OSIgcj0iMC44NyI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjEuOTIiIGN5PSIzLjk2IiByPSIwLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNDIuNDUiIGN5PSI5Ljc5IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI1NC4xIiBjeT0iMjEuNDIiIHI9IjIuODciPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIzNi42MyIgY3k9IjM4Ljg4IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNDguMjkiIGN5PSIxNS42IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNTQuMSIgY3k9IjI3LjE5IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNTQuMSIgY3k9IjkuNzkiIHI9IjIuNjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIzNi42MyIgY3k9IjE1LjYiIHI9IjEuNzQiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxMi42OSIgY3k9IjMuOTYiIHI9IjEuNzQiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI2Ljg3IiBjeT0iOS43OSIgcj0iMS43NCI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjM2LjYzIiBjeT0iMjcuMTkiIHI9IjEuNzQiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIzMC44MyIgY3k9IjM4Ljg4IiByPSIxLjc0Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMzAuODMiIGN5PSI2Mi4xNSIgcj0iMS43NCI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjYuODciIGN5PSI1Ni4zNCIgcj0iMS43NCI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjYuODciIGN5PSI1MC41MiIgcj0iMS43NCI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjQ4LjI5IiBjeT0iMjEuNDIiIHI9IjEuNzQiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIzMC44MyIgY3k9IjkuNzkiIHI9IjEuNzQiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI2Ljg3IiBjeT0iMzguODgiIHI9IjIuMzIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxMi42OSIgY3k9IjQ0LjciIHI9IjIuMzIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxOC41MSIgY3k9IjYyLjE1IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMTIuNjkiIGN5PSI1Ni4zNCIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjYuODciIGN5PSI0NC43IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMTguNTEiIGN5PSI0NC43IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNi44NyIgY3k9IjMzLjA2IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNi44NyIgY3k9IjI3LjE5IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNi44NyIgY3k9IjIxLjQyIiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNi44NyIgY3k9IjE1LjYiIHI9IjIuODciPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIxOC41MSIgY3k9IjUwLjUyIiByPSIyLjYxIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMTIuNjkiIGN5PSI1MC41MiIgcj0iMi42MSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjE4LjUxIiBjeT0iNTYuMzQiIHI9IjIuNjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI0Mi40NSIgY3k9IjMuOTYiIHI9IjIuMzIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI1NC4xIiBjeT0iMy45NiIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjQ4LjI5IiBjeT0iMy45NiIgcj0iMi44NyI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjM2LjYzIiBjeT0iMy45NiIgcj0iMS43NCI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjMwLjgzIiBjeT0iMy45NiIgcj0iMS4yMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjYuODciIGN5PSI2Mi4xNSIgcj0iMS4xNiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjM2LjY1IiBjeT0iMjEuNDIiIHI9IjAuODciPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIyNS4yNSIgY3k9IjI3LjE5IiByPSIwLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMjUuMjUiIGN5PSIzOC44OCIgcj0iMC44NyI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjEuOTIiIGN5PSI1MC41MiIgcj0iMS4yMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjYuODciIGN5PSIzLjk2IiByPSIxLjIyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMTIuNjkiIGN5PSI5Ljc5IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iMTguNTEiIGN5PSIzLjk2IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iODkuMDIiIGN5PSIzLjk2IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iODkuMDIiIGN5PSI1Ni4zNCIgcj0iMy4xIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iODMuMiIgY3k9IjUwLjUyIiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI4OS4wMiIgY3k9IjQ0LjciIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjgzLjIiIGN5PSI0NC43IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI3Ny4zOCIgY3k9IjM4Ljg4IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI4OS4wMiIgY3k9IjM4Ljg4IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI4My4yIiBjeT0iMzguODgiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9Ijg5LjAyIiBjeT0iMzMuMDYiIHI9IjMuMSI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjgzLjIiIGN5PSIzMy4wNiIgcj0iMy4xIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iODkuMDIiIGN5PSIyNy4xOSIgcj0iMy4xIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iODkuMDIiIGN5PSIxNS42IiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI4OS4wMiIgY3k9IjIxLjQyIiByPSIzLjEiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI4My4yIiBjeT0iOS43OSIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjgzLjIiIGN5PSIxNS42IiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNzcuMzgiIGN5PSIyNy4xOSIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjgzLjIiIGN5PSIyMS40MiIgcj0iMi4zMiI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9Ijg5LjAyIiBjeT0iOS43OSIgcj0iMi44NyI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjgzLjIiIGN5PSIyNy4xOSIgcj0iMi44NyI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9Ijg5LjAyIiBjeT0iNTAuNTIiIHI9IjIuODciPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI4OS4wMiIgY3k9IjYyLjE1IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNzcuMzgiIGN5PSI0NC43IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iODMuMiIgY3k9IjU2LjM0IiByPSIyLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNzcuMzgiIGN5PSIzMy4wNiIgcj0iMi44NyI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9Ijc3LjM4IiBjeT0iMjEuNDIiIHI9IjEuNzQiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI3Ny4zOCIgY3k9IjE1LjYiIHI9IjEuNzQiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI3MS41NiIgY3k9IjMuOTYiIHI9IjAuODciPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI2NS43NCIgY3k9IjYyLjE1IiByPSIwLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNzcuMzgiIGN5PSI5Ljc5IiByPSIxLjc0Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iODMuMiIgY3k9IjMuOTYiIHI9IjEuNzQiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI3Ny4zOCIgY3k9IjMuOTYiIHI9IjEuMjIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI4My4yIiBjeT0iNjIuMTUiIHI9IjIuMzIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI3MS41NiIgY3k9IjU2LjMzIiByPSIwLjg3Ij48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNzcuMzgiIGN5PSI2Mi4xNSIgcj0iMS43NCI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjEuOTIiIGN5PSI2Mi4xNSIgcj0iMC44NyI+PC9jaXJjbGU+PGNpcmNsZSBjbGFzcz0iYSIgY3g9IjcxLjU2IiBjeT0iNjIuMTUiIHI9IjEuMjIiPjwvY2lyY2xlPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSI3Ny4zOCIgY3k9IjUwLjUyIiByPSIyLjMyIj48L2NpcmNsZT48Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNzcuMzgiIGN5PSI1Ni4zNCIgcj0iMi4zMiI+PC9jaXJjbGU+PHBhdGggY2xhc3M9ImIiIGQ9Ik0xMDEuNiw2Ljc5aDguMjRWOC45MmgtNS43NnYyLjUzaDUuNjR2Mi4xM2gtNS42NHYyLjcxaDUuNzZ2Mi4xNEgxMDEuNloiPjwvcGF0aD48cGF0aCBjbGFzcz0iYiIgZD0iTTExNSwxNS41OWwtMS45NCwyLjg0aC0yLjQ2bDMtNC4zM0wxMTAuOCwxMGgyLjQ4TDExNSwxMi42bDEuNzMtMi42aDIuNDhsLTIuODMsNC4xLDMsNC4zM2gtMi40OFoiPjwvcGF0aD48cGF0aCBjbGFzcz0iYiIgZD0iTTEyNCw5Ljc5YTMuODgsMy44OCwwLDAsMSwzLjMzLDEuNTRsLTEuNDUsMS4zNGEyLjA5LDIuMDksMCwwLDAtMS43OC0uOSwyLjI1LDIuMjUsMCwwLDAtMi4yOSwyLjQ0LDIuMjcsMi4yNywwLDAsMCwyLjI5LDIuNDYsMi4xMiwyLjEyLDAsMCwwLDEuNzgtLjkxbDEuNDUsMS4zNUEzLjksMy45LDAsMCwxLDEyNCwxOC42NGE0LjI3LDQuMjcsMCwwLDEtNC40Ny00LjQzQTQuMjgsNC4yOCwwLDAsMSwxMjQsOS43OVoiPjwvcGF0aD48cGF0aCBjbGFzcz0iYiIgZD0iTTEzMi42Myw5Ljc5YzIuNTEsMCw0LjIyLDEuODksNC4yMiw0LjY1di40OGgtNi4yNmEyLjI3LDIuMjcsMCwwLDAsMi40MiwyLDMuNCwzLjQsMCwwLDAsMi4yNS0uODRsMSwxLjQzYTUuMTUsNS4xNSwwLDAsMS0zLjQ3LDEuMTcsNC4yNyw0LjI3LDAsMCwxLTQuNTEtNC40M0E0LjMsNC4zLDAsMCwxLDEzMi42Myw5Ljc5Wm0tMi4wOCwzLjYzaDQuMTZhMiwyLDAsMCwwLTIuMDgtMS44NkEyLDIsMCwwLDAsMTMwLjU1LDEzLjQyWiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJiIiBkPSJNMTM4LjQ1LDIxLjY0VjEwaDIuMjJ2MS4wN2EzLjI3LDMuMjcsMCwwLDEsMi42LTEuMjhjMi4xNywwLDMuNzQsMS42MSwzLjc0LDQuNDJzLTEuNTcsNC40My0zLjc0LDQuNDNhMy4yMywzLjIzLDAsMCwxLTIuNi0xLjI5djQuMjlabTQuMTItOS44N2EyLjQ2LDIuNDYsMCwwLDAtMS45LDF2M2EyLjU2LDIuNTYsMCwwLDAsMS45LDEsMi4xOSwyLjE5LDAsMCwwLDIuMTMtMi40NkEyLjE4LDIuMTgsMCwwLDAsMTQyLjU3LDExLjc3WiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJiIiBkPSJNMTQ5LjEsMTYuMzR2LTQuNGgtMS40VjEwaDEuNFY3LjdoMi4yM1YxMEgxNTN2MS45NGgtMS43MXYzLjgxYzAsLjUyLjI4LjkyLjc3LjkyYTEuMjUsMS4yNSwwLDAsMCwuNzctLjI0bC40NywxLjY3YTIuNzMsMi43MywwLDAsMS0xLjg1LjU0QTIuMSwyLjEsMCwwLDEsMTQ5LjEsMTYuMzRaIj48L3BhdGg+PHBhdGggY2xhc3M9ImIiIGQ9Ik0xNTQuMzMsNy40NGExLjM0LDEuMzQsMCwwLDEsMS4zMy0xLjMzLDEuMzMsMS4zMywwLDEsMS0xLjMzLDEuMzNabS4yMywyLjU2aDIuMjF2OC40M2gtMi4yMVoiPjwvcGF0aD48cGF0aCBjbGFzcz0iYiIgZD0iTTE1OC40MywxNC4yMWE0LjQ2LDQuNDYsMCwwLDEsOC45MiwwLDQuNDYsNC40NiwwLDAsMS04LjkyLDBabTYuNjIsMGEyLjE4LDIuMTgsMCwxLDAtNC4zMiwwLDIuMTgsMi4xOCwwLDEsMCw0LjMyLDBaIj48L3BhdGg+PHBhdGggY2xhc3M9ImIiIGQ9Ik0xNzQuNjgsMTMuMzRhMS4zNywxLjM3LDAsMCwwLTEuNTYtMS41NywyLjQsMi40LDAsMCwwLTEuOTIsMXY1LjY3SDE2OVYxMGgyLjIxdjEuMWEzLjg4LDMuODgsMCwwLDEsMy0xLjMxLDIuNDUsMi40NSwwLDAsMSwyLjc0LDIuNjl2NS45NWgtMi4yMVoiPjwvcGF0aD48cGF0aCBjbGFzcz0iYiIgZD0iTTE4NC4xNSwxNy41NmEzLjQ5LDMuNDksMCwwLDEtMi42NywxLjA4LDIuOCwyLjgsMCwwLDEtMi45My0yLjc5LDIuNjcsMi42NywwLDAsMSwyLjkzLTIuNjksMy40MiwzLjQyLDAsMCwxLDIuNjcsMVYxM2MwLS44NS0uNzQtMS40MS0xLjg1LTEuNDFhMy41NCwzLjU0LDAsMCwwLTIuNDYsMUwxNzksMTEuMTJhNS41Myw1LjUzLDAsMCwxLDMuNjgtMS4zM2MxLjkyLDAsMy42OS43NywzLjY5LDMuMnY1LjQ0aC0yLjIyWm0wLTIuMmEyLjIyLDIuMjIsMCwwLDAtMS43OC0uNzNjLS44NywwLTEuNTkuNDctMS41OSwxLjI3cy43MiwxLjI0LDEuNTksMS4yNGEyLjIyLDIuMjIsMCwwLDAsMS43OC0uNzNaIj48L3BhdGg+PHBhdGggY2xhc3M9ImIiIGQ9Ik0xODguNTYsNi43OWgyLjIyVjE4LjQzaC0yLjIyWiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTAxLDMzLjM0YTUuODksNS44OSwwLDAsMSw2LjExLTYsNS4zNiw1LjM2LDAsMCwxLDUsMi44NEwxMTAsMzEuMjFhMy4xOSwzLjE5LDAsMCwwLTIuODMtMS42OSwzLjYxLDMuNjEsMCwwLDAtMy41NiwzLjgyLDMuNjEsMy42MSwwLDAsMCwzLjU2LDMuODJBMy4xNSwzLjE1LDAsMCwwLDExMCwzNS40N2wyLjEzLDFhNS40LDUuNCwwLDAsMS01LDIuODZBNS44OSw1Ljg5LDAsMCwxLDEwMSwzMy4zNFoiPjwvcGF0aD48cGF0aCBjbGFzcz0iYSIgZD0iTTExOS4yMywzOC4wOWE0LDQsMCwwLDEtMywxLjI3LDIuNDEsMi40MSwwLDAsMS0yLjcyLTIuNjV2LTZoMi4yMXY1LjEyYTEuMzYsMS4zNiwwLDAsMCwxLjU2LDEuNTUsMi41LDIuNSwwLDAsMCwxLjkyLTFWMzAuNzJoMi4yMnY4LjQzaC0yLjIyWiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTIzLjg3LDM2LjVhNC44NCw0Ljg0LDAsMCwwLDIuOTEsMS4xNWMxLDAsMS40Mi0uMzMsMS40Mi0uODVzLS43NC0uODEtMS43LTFjLTEuNDUtLjI4LTMuMzEtLjYzLTMuMzEtMi42MywwLTEuNDIsMS4yMy0yLjY2LDMuNDUtMi42NkE1LjMzLDUuMzMsMCwwLDEsMTMwLDMxLjY2bC0uODgsMS41MmEzLjUzLDMuNTMsMCwwLDAtMi40OS0xYy0uOCwwLTEuMzMuMjktMS4zMy43OHMuNjcuNzIsMS42MS45MWMxLjQ1LjI4LDMuMzguNjYsMy4zOCwyLjc2LDAsMS41NS0xLjMsMi43LTMuNjQsMi43YTUuNjcsNS42NywwLDAsMS0zLjc3LTEuMzFaIj48L3BhdGg+PHBhdGggY2xhc3M9ImEiIGQ9Ik0xMzIuNCwzNy4wNnYtNC40SDEzMVYzMC43MmgxLjR2LTIuM2gyLjIzdjIuM2gxLjcxdjEuOTRoLTEuNzF2My44YzAsLjUzLjI4LjkzLjc3LjkzYTEuMTcsMS4xNywwLDAsMCwuNzctLjI1bC40NywxLjY4YTIuNzMsMi43MywwLDAsMS0xLjg1LjU0QTIuMTEsMi4xMSwwLDAsMSwxMzIuNCwzNy4wNloiPjwvcGF0aD48cGF0aCBjbGFzcz0iYSIgZD0iTTEzNy4zMiwzNC45M2E0LjQ2LDQuNDYsMCwxLDEsNC40NSw0LjQzQTQuMjcsNC4yNywwLDAsMSwxMzcuMzIsMzQuOTNabTYuNjEsMGEyLjE3LDIuMTcsMCwxLDAtNC4zMSwwLDIuMTcsMi4xNywwLDEsMCw0LjMxLDBaIj48L3BhdGg+PHBhdGggY2xhc3M9ImEiIGQ9Ik0xNTguMzMsMzMuODNjMC0uNzktLjM1LTEuMzUtMS4yNi0xLjM1YTIuMjQsMi4yNCwwLDAsMC0xLjc0LDF2NS42OWgtMi4yNFYzMy44M2MwLS43OS0uMzUtMS4zNS0xLjI1LTEuMzVhMi4yNywyLjI3LDAsMCwwLTEuNzUsMXY1LjY3aC0yLjIyVjMwLjcyaDIuMjJ2MS4xYTMuNjksMy42OSwwLDAsMSwyLjc2LTEuMzEsMi4yNCwyLjI0LDAsMCwxLDIuMzQsMS41NCwzLjU3LDMuNTcsMCwwLDEsMi44OS0xLjU0LDIuMjUsMi4yNSwwLDAsMSwyLjQ4LDIuNTV2Ni4wOWgtMi4yM1oiPjwvcGF0aD48cGF0aCBjbGFzcz0iYSIgZD0iTTE2Ni41NiwzMC41MWMyLjUxLDAsNC4yMywxLjg5LDQuMjMsNC42NHYuNDloLTYuMjdhMi4yNywyLjI3LDAsMCwwLDIuNDMsMiwzLjQ3LDMuNDcsMCwwLDAsMi4yNS0uODRsMSwxLjQzYTUuMTUsNS4xNSwwLDAsMS0zLjQ3LDEuMTcsNC40Myw0LjQzLDAsMSwxLS4xNC04Ljg1Wm0tMi4wOCwzLjYzaDQuMTZhMiwyLDAsMCwwLTIuMDgtMS44N0EyLDIsMCwwLDAsMTY0LjQ4LDM0LjE0WiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTcyLjM5LDMwLjcyaDIuMjF2MS4xNWEzLjYyLDMuNjIsMCwwLDEsMi42OS0xLjM0djIuMTZhMy40LDMuNCwwLDAsMC0uNjEsMCwyLjgzLDIuODMsMCwwLDAtMi4wOC45NHY1LjU3aC0yLjIxWiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTAxLDU0LjA2YTUuODksNS44OSwwLDAsMSw2LjExLTYsNS4zNiw1LjM2LDAsMCwxLDUsMi44NGwtMi4xMywxYTMuMTksMy4xOSwwLDAsMC0yLjgzLTEuNjksMy44MywzLjgzLDAsMCwwLDAsNy42NEEzLjE1LDMuMTUsMCwwLDAsMTEwLDU2LjE5bDIuMTMsMWE1LjQsNS40LDAsMCwxLTUsMi44NkE1Ljg5LDUuODksMCwwLDEsMTAxLDU0LjA2WiI+PC9wYXRoPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTEzLDU1LjY1YTQuNDYsNC40NiwwLDEsMSw0LjQ1LDQuNDNBNC4yNyw0LjI3LDAsMCwxLDExMyw1NS42NVptNi42MSwwYTIuMTcsMi4xNywwLDEsMC0yLjE2LDIuNDZBMi4yMywyLjIzLDAsMCwwLDExOS42MSw1NS42NVoiPjwvcGF0aD48cGF0aCBjbGFzcz0iYSIgZD0iTTEyOS4yNCw1NC43N2ExLjM3LDEuMzcsMCwwLDAtMS41NS0xLjU3LDIuMzksMi4zOSwwLDAsMC0xLjkyLDF2NS42N2gtMi4yMlY1MS40NGgyLjIydjEuMWEzLjg0LDMuODQsMCwwLDEsMy0xLjMxLDIuNDUsMi40NSwwLDAsMSwyLjc0LDIuNjl2NS45NWgtMi4yMloiPjwvcGF0aD48cGF0aCBjbGFzcz0iYSIgZD0iTTEzNC4wOSw1Ny43OHYtNC40aC0xLjRWNTEuNDRoMS40di0yLjNoMi4yM3YyLjNIMTM4djEuOTRoLTEuNzJ2My44YzAsLjUzLjI4LjkzLjc3LjkzYTEuMTcsMS4xNywwLDAsMCwuNzctLjI1bC40NywxLjY4YTIuNzEsMi43MSwwLDAsMS0xLjg1LjU0QTIuMTEsMi4xMSwwLDAsMSwxMzQuMDksNTcuNzhaIj48L3BhdGg+PHBhdGggY2xhc3M9ImEiIGQ9Ik0xNDQuNjEsNTlhMy40OCwzLjQ4LDAsMCwxLTIuNjcsMS4wOEEyLjgxLDIuODEsMCwwLDEsMTM5LDU3LjI5YTIuNjcsMi42NywwLDAsMSwyLjkzLTIuNjksMy40MSwzLjQxLDAsMCwxLDIuNjcsMVY1NC40NmMwLS44Ni0uNzMtMS40MS0xLjg1LTEuNDFhMy41NiwzLjU2LDAsMCwwLTIuNDYsMWwtLjg0LTEuNDhhNS41Myw1LjUzLDAsMCwxLDMuNjktMS4zM2MxLjkyLDAsMy42OC43NywzLjY4LDMuMTl2NS40NWgtMi4yMlptMC0yLjJhMi4yLDIuMiwwLDAsMC0xLjc4LS43M2MtLjg3LDAtMS41OS40Ny0xLjU5LDEuMjdzLjcyLDEuMjQsMS41OSwxLjI0YTIuMjMsMi4yMywwLDAsMCwxLjc4LS43M1oiPjwvcGF0aD48cGF0aCBjbGFzcz0iYSIgZD0iTTE1Myw1MS4yM2EzLjg5LDMuODksMCwwLDEsMy4zNCwxLjU0bC0xLjQ1LDEuMzRhMi4wOCwyLjA4LDAsMCwwLTEuNzgtLjkxLDIuNDYsMi40NiwwLDAsMCwwLDQuOTEsMi4xMywyLjEzLDAsMCwwLDEuNzgtLjkxbDEuNDUsMS4zNEEzLjg5LDMuODksMCwwLDEsMTUzLDYwLjA4YTQuNDMsNC40MywwLDEsMSwwLTguODVaIj48L3BhdGg+PHBhdGggY2xhc3M9ImEiIGQ9Ik0xNTguMTcsNTcuNzh2LTQuNGgtMS40VjUxLjQ0aDEuNHYtMi4zaDIuMjN2Mi4zaDEuNzF2MS45NEgxNjAuNHYzLjhjMCwuNTMuMjguOTMuNzcuOTNhMS4xNywxLjE3LDAsMCwwLC43Ny0uMjVsLjQ3LDEuNjhhMi43MywyLjczLDAsMCwxLTEuODUuNTRBMi4xMSwyLjExLDAsMCwxLDE1OC4xNyw1Ny43OFoiPjwvcGF0aD48L3N2Zz4K" alt="IPI. Exceptional Customer Contact.">
+      <span class="brand-divider" aria-hidden="true"></span>
+      <span class="brand-title">Genesys AXL</span>
+    </a>
+    <div class="header-right"><span class="draft-label">Workshop content draft</span><button class="text-button" id="fullscreen" type="button">Fullscreen</button></div>
+  </header>
+  <nav class="nav" aria-label="Presentation sections"><button type="button" data-go="welcome"><span aria-hidden="true">01</span>Welcome</button><button type="button" data-go="promise"><span aria-hidden="true">02</span>The proposition</button><button type="button" data-go="bot-vs-ava"><span aria-hidden="true">03</span>AVA vs bot</button><button type="button" data-go="bot-spectrum"><span aria-hidden="true">04</span>Bot spectrum</button><button type="button" data-go="same-request-two-designs"><span aria-hidden="true">05</span>Same request</button><button type="button" data-go="agentic-boundaries"><span aria-hidden="true">06</span>Guardrails</button><button type="button" data-go="ava-action-loop"><span aria-hidden="true">07</span>AVA runtime</button><button type="button" data-go="customer-need"><span aria-hidden="true">08</span>The scenario</button><button type="button" data-go="sdd"><span aria-hidden="true">09</span>Spec first</button><button type="button" data-go="sdd-plain-language"><span aria-hidden="true">10</span>SDD in plain English</button><button type="button" data-go="spec-contract"><span aria-hidden="true">11</span>A useful spec</button><button type="button" data-go="sdd-anatomy"><span aria-hidden="true">12</span>Inside the spec</button><button type="button" data-go="sdd-iteration"><span aria-hidden="true">13</span>SDD feedback loop</button><button type="button" data-go="sdd-value"><span aria-hidden="true">14</span>Why SDD helps</button><button type="button" data-go="test-first"><span aria-hidden="true">15</span>Test the edges</button><button type="button" data-go="axl"><span aria-hidden="true">16</span>What is AXL?</button><button type="button" data-go="four-hours"><span aria-hidden="true">17</span>Four hours</button><button type="button" data-go="building-blocks"><span aria-hidden="true">18</span>Behind the lab</button><button type="button" data-go="pinkfish"><span aria-hidden="true">19</span>Where Pinkfish fits</button><button type="button" data-go="what-works"><span aria-hidden="true">20</span>My take</button><button type="button" data-go="where-to-challenge"><span aria-hidden="true">21</span>The hard questions</button><button type="button" data-go="demo-challenge"><span aria-hidden="true">22</span>Rapid demo</button><button type="button" data-go="demo-steps"><span aria-hidden="true">23</span>Demo sequence</button><button type="button" data-go="scorecard"><span aria-hidden="true">24</span>Evidence</button><button type="button" data-go="pov-vs-production"><span aria-hidden="true">25</span>Reality check</button><button type="button" data-go="discussion"><span aria-hidden="true">26</span>Discuss</button><button type="button" data-go="takeaways"><span aria-hidden="true">27</span>Close</button></nav>
+  <main class="deck" id="main" tabindex="-1"><section class="slide hero" id="welcome" data-label="Welcome" data-time-range="14:00–14:05 GMT" aria-labelledby="welcome-title"><div class="hero"><div><p class="eyebrow">Welcome</p><h1 id="welcome-title" tabindex="-1">From idea to proof of value</h1><p class="lead">One customer task. A governed agent. Evidence we can inspect.</p><button class="primary" type="button" data-go="promise">Start the workshop <span aria-hidden="true">→</span></button><p class="footnote">Internal SC workshop · 29 October 2026 · 14:00–16:00. The four-hour PoV is the invitation&#x27;s proposition, not a guarantee.</p></div><aside class="hero-panel" aria-label="Workshop questions"><p class="panel-label">Three questions</p><div class="hero-item"><h3>The experience</h3><p>What changes with an AVA?</p></div><div class="hero-item"><h3>The method</h3><p>What makes a useful specification?</p></div><div class="hero-item"><h3>The evidence</h3><p>What can four hours prove?</p></div></aside></div></section>
+<section class="slide rows" id="promise" data-label="The proposition" data-time-range="14:00–14:05 GMT" aria-labelledby="promise-title"><p class="eyebrow">The proposition</p><h2 id="promise-title" tabindex="-1">What counts as a useful proof?</h2><p class="lead">A useful PoV leaves a result, its limits and a next decision.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>Understand</h3><p>One customer outcome.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>Build</h3><p>Approved actions and clear boundaries.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Prove</h3><p>Observed results and remaining gaps.</p></article></div><blockquote class="question">What would make a four-hour proof worth taking to a customer?</blockquote></section>
+<section class="slide comparison" id="bot-vs-ava" data-label="AVA vs bot" data-time-range="14:05–14:27 GMT" aria-labelledby="bot-vs-ava-title"><p class="eyebrow">AVA vs bot</p><h2 id="bot-vs-ava-title" tabindex="-1">Who chooses the next action?</h2><p class="lead">Both can use services. The responsibility for sequencing shifts.</p><div class="comparison-columns"><article><p class="panel-label">Authored sequencing</p><h3>Conventional voicebot</h3><p>Designer authors conversational paths and actions.</p></article><article><p class="panel-label">Governed action selection</p><h3>Agentic Virtual Agent</h3><p>Agent selects permitted actions towards a goal.</p></article></div><p class="comparison-caveat"><strong>Both need governance.</strong> Complex transactions are possible in both designs. Safety needs tests.</p></section>
+<section class="slide diagram" id="bot-spectrum" data-label="Bot spectrum" data-time-range="14:05–14:27 GMT" aria-labelledby="bot-spectrum-title"><p class="eyebrow">Bot spectrum</p><h2 id="bot-spectrum-title" tabindex="-1">Three ways to design self-service</h2><p class="lead">A spectrum of sequencing choices, with useful automation at every point.</p><div class="teaching-diagram spectrum" data-diagram="progressive-diagram" data-state="all" data-overview="All moments: explore one step or use Next moment." role="group" aria-label="Self-service design spectrum" id="bot-spectrum-visual"><div class="diagram-surface"><div class="diagram-nodes"><article class="diagram-node" data-key="menu"><span class="node-index" aria-hidden="true">01</span><h3>Menu / rules</h3><span class="node-body">Designer defines branches. Architect routes a selected option.</span></article><article class="diagram-node" data-key="intent"><span class="node-index" aria-hidden="true">02</span><h3>Intents / slots</h3><span class="node-body">NLU identifies the task, collects fields, then an authored Data Action calls a service.</span></article><article class="diagram-node" data-key="goal"><span class="node-index" aria-hidden="true">03</span><h3>Goal / tools</h3><span class="node-body">An AVA chooses among configured tools and knowledge within boundaries.</span></article></div></div><div class="diagram-controls" hidden><div class="moment-navigation"><button type="button" data-diagram-action="previous">Previous moment</button><button type="button" data-diagram-action="next">Next moment</button><button type="button" data-diagram-action="all">Show all</button></div><details class="moment-picker"><summary>Choose moment</summary><div class="moment-choices" aria-label="Choose teaching moment"><button type="button" data-moment="0" data-targets="menu" data-cue="Travel option follows a designed branch." aria-pressed="false" aria-controls="bot-spectrum-visual">Menu / rules</button><button type="button" data-moment="1" data-targets="intent" data-cue="“Travel quote” fills fields before a designed service call." aria-pressed="false" aria-controls="bot-spectrum-visual">Intents / slots</button><button type="button" data-moment="2" data-targets="goal" data-cue="The AVA can adapt which permitted action comes next." aria-pressed="false" aria-controls="bot-spectrum-visual">Goal / tools</button></div></details><p class="moment-status" role="status" aria-live="polite" aria-atomic="true">All moments: explore one step or use Next moment.</p></div></div><blockquote class="question">Who specifies the order of actions?</blockquote><p class="footnote">Conceptual design spectrum. An intent/slot bot can also complete complex transactions.</p></section>
+<section class="slide diagram" id="same-request-two-designs" data-label="Same request" data-time-range="14:05–14:27 GMT" aria-labelledby="same-request-two-designs-title"><p class="eyebrow">Same request</p><h2 id="same-request-two-designs-title" tabindex="-1">Same customer, two safe designs</h2><p class="lead">The change is how the next action is selected.</p><div class="teaching-diagram journey" data-diagram="journey-compare" data-state="all" data-overview="Both designs can re-quote, clarify consent and stop safely." role="group" aria-label="Travel request comparison" id="same-request-two-designs-visual"><div class="diagram-surface"><div class="journey-grid"><div class="journey-label">Customer moment</div><p class="customer-moment">“Europe, next month.”</p><p class="customer-moment">“Change the destination.”</p><p class="customer-moment">“That looks fine, maybe.”</p><p class="customer-moment">Tool unavailable</p><h3 class="journey-label">Authored bot flow</h3><article class="diagram-node" data-key="bot-ask"><span class="node-index" aria-hidden="true">01</span><h3>Intent + slots</h3><span class="node-body">Collect missing fields; quote Data Action.</span></article><article class="diagram-node" data-key="bot-change"><span class="node-index" aria-hidden="true">02</span><h3>Designed correction branch</h3><span class="node-body">Confirm new region; create replacement quote.</span></article><article class="diagram-node" data-key="bot-consent"><span class="node-index" aria-hidden="true">03</span><h3>Designed consent branch</h3><span class="node-body">Clarify. No acceptance on “maybe”.</span></article><article class="diagram-node" data-key="bot-fail"><span class="node-index" aria-hidden="true">04</span><h3>Designed error branch</h3><span class="node-body">State uncertainty; safe readback or handoff.</span></article><h3 class="journey-label">Goal-and-tools AVA</h3><article class="diagram-node" data-key="ava-ask"><span class="node-index" aria-hidden="true">01</span><h3>Select permitted action</h3><span class="node-body">Collect missing fields; create quote tool.</span></article><article class="diagram-node" data-key="ava-change"><span class="node-index" aria-hidden="true">02</span><h3>Re-plan within tools</h3><span class="node-body">Confirm new region; select replacement quote.</span></article><article class="diagram-node" data-key="ava-consent"><span class="node-index" aria-hidden="true">03</span><h3>Apply consent rule</h3><span class="node-body">Clarify. No acceptance on “maybe”.</span></article><article class="diagram-node" data-key="ava-fail"><span class="node-index" aria-hidden="true">04</span><h3>Check actual outcome</h3><span class="node-body">State uncertainty; safe readback or handoff.</span></article></div><p class="consent-gate">Explicit consent to current terms → accept quote → read policy only if policyId exists.</p></div><div class="diagram-controls" hidden><div class="moment-navigation"><button type="button" data-diagram-action="previous">Previous moment</button><button type="button" data-diagram-action="next">Next moment</button><button type="button" data-diagram-action="all">Show all</button></div><details class="moment-picker"><summary>Choose moment</summary><div class="moment-choices" aria-label="Choose teaching moment"><button type="button" data-moment="0" data-targets="bot-ask ava-ask" data-cue="Neither design invents dates, travellers or price." aria-pressed="false" aria-controls="same-request-two-designs-visual">Quote request</button><button type="button" data-moment="1" data-targets="bot-change ava-change" data-cue="No PATCH tool is mapped. Confirm inputs, create a replacement quote and seek fresh consent." aria-pressed="false" aria-controls="same-request-two-designs-visual">Destination change</button><button type="button" data-moment="2" data-targets="bot-consent ava-consent" data-cue="“Maybe” cannot open the acceptance gate in either intended design." aria-pressed="false" aria-controls="same-request-two-designs-visual">Ambiguous consent</button><button type="button" data-moment="3" data-targets="bot-fail ava-fail" data-cue="Unknown write outcome requires reconciliation, never a claimed policy or blind retry." aria-pressed="false" aria-controls="same-request-two-designs-visual">Failure</button></div></details><p class="moment-status" role="status" aria-live="polite" aria-atomic="true">Both designs can re-quote, clarify consent and stop safely.</p></div></div><blockquote class="question">What changed in the design responsibility?</blockquote><p class="footnote">Synthetic teaching example. No observed AVA execution.</p></section>
+<section class="slide rows" id="agentic-boundaries" data-label="Guardrails" data-time-range="14:05–14:27 GMT" aria-labelledby="agentic-boundaries-title"><p class="eyebrow">Guardrails</p><h2 id="agentic-boundaries-title" tabindex="-1">Permission to act, reasons to stop</h2><p class="lead">Every action needs a boundary and an honest result.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>Tools are capabilities, not permission</h3><p>Consent governs when a tool may run.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>A result must come from a system</h3><p>Prices and identifiers come from the backend.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Failure is part of the design</h3><p>Missing consent or uncertain results mean clarify, read back or hand off.</p></article></div></section>
+<section class="slide diagram" id="ava-action-loop" data-label="AVA runtime" data-time-range="14:05–14:27 GMT" aria-labelledby="ava-action-loop-title"><p class="eyebrow">AVA runtime</p><h2 id="ava-action-loop-title" tabindex="-1">A permitted action, then a checked result</h2><p class="lead">Conceptual runtime model. Each result can change the next decision.</p><div class="teaching-diagram loop" data-diagram="progressive-diagram" data-state="all" data-overview="All moments: explore one step or use Next moment." role="group" aria-label="Conceptual AVA action loop" id="ava-action-loop-visual"><div class="diagram-surface"><p class="diagram-boundary">Business rules, tool permissions and consent surround every step.</p><div class="diagram-nodes"><article class="diagram-node" data-key="need"><span class="node-index" aria-hidden="true">01</span><h3>Understand need</h3><span class="node-body">Current goal and missing information.</span></article><article class="diagram-node" data-key="choose"><span class="node-index" aria-hidden="true">02</span><h3>Choose permitted action</h3><span class="node-body">Configured tools or knowledge only.</span></article><article class="diagram-node" data-key="invoke"><span class="node-index" aria-hidden="true">03</span><h3>Invoke</h3><span class="node-body">Consent gate before accept quote.</span></article><article class="diagram-node" data-key="check"><span class="node-index" aria-hidden="true">04</span><h3>Check actual result</h3><span class="node-body">Use returned price and state.</span></article><article class="diagram-node" data-key="respond"><span class="node-index" aria-hidden="true">05</span><h3>Respond / re-plan</h3><span class="node-body">Continue, clarify or stop safely.</span></article></div><p class="return-path"><span aria-hidden="true">↶</span> Changed context: return to Understand need</p><aside class="diagram-branch"><article class="diagram-node" data-key="stop"><span class="node-index" aria-hidden="true">06</span><h3>Stop / hand off</h3><span class="node-body">Tool error or uncertain write: explain uncertainty, read back safely.</span></article></aside></div><div class="diagram-controls" hidden><div class="moment-navigation"><button type="button" data-diagram-action="previous">Previous moment</button><button type="button" data-diagram-action="next">Next moment</button><button type="button" data-diagram-action="all">Show all</button></div><details class="moment-picker"><summary>Choose moment</summary><div class="moment-choices" aria-label="Choose teaching moment"><button type="button" data-moment="0" data-targets="need" data-cue="Confirm missing trip details before requesting a quote." aria-pressed="false" aria-controls="ava-action-loop-visual">Understand</button><button type="button" data-moment="1" data-targets="choose" data-cue="Use a quote tool for a price; approved knowledge only for supported explanations." aria-pressed="false" aria-controls="ava-action-loop-visual">Choose</button><button type="button" data-moment="2" data-targets="invoke" data-cue="Explicit current consent is required before synthetic acceptance." aria-pressed="false" aria-controls="ava-action-loop-visual">Consent gate</button><button type="button" data-moment="3" data-targets="check" data-cue="Accept returns a quote. Read policy only when policyId exists." aria-pressed="false" aria-controls="ava-action-loop-visual">Verify</button><button type="button" data-moment="4" data-targets="respond stop" data-cue="A changed trip returns to context; a tool error takes the safe stop branch." aria-pressed="false" aria-controls="ava-action-loop-visual">Re-plan or stop</button></div></details><p class="moment-status" role="status" aria-live="polite" aria-atomic="true">All moments: explore one step or use Next moment.</p></div></div><blockquote class="question">What must happen before we claim acceptance?</blockquote><p class="footnote">Conceptual model, not a Genesys internal trace. Synthetic only, no payment.</p></section>
+<section class="slide split" id="customer-need" data-label="The scenario" data-time-range="14:05–14:27 GMT" aria-labelledby="customer-need-title"><div class="split-layout"><div><p class="eyebrow">The scenario</p><h2 id="customer-need-title" tabindex="-1">Travel quote to synthetic policy</h2><p class="lead">One fictional single trip, with an optional acceptance.</p><blockquote class="question">Where does explicit customer consent become essential?</blockquote></div><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>The request</h3><p>Collect customer, region, dates and travellers.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>The decision</h3><p>Show returned price, trip, cover level and extras only.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>The result</h3><p>Accept only with explicit consent. Read policy only if policyId exists.</p></article></div></div><p class="footnote">Synthetic teaching example. No real insurance, payment or executed AVA tool call.</p></section>
+<section class="slide pipeline" id="sdd" data-label="Spec first" data-time-range="14:27–14:51 GMT" aria-labelledby="sdd-title"><p class="eyebrow">Spec first</p><h2 id="sdd-title" tabindex="-1">SDD starts with observable behaviour</h2><p class="lead">A reviewed specification guides the candidate and the tests.</p><ol class="spec-pipeline" aria-label="Proposed specification workflow"><li><span class="step-index">01</span><h3>Reviewed spec</h3><p>Agree observable behaviour.</p></li><li><span class="step-index">02</span><h3>Candidate</h3><p>AI accelerates configuration.</p></li><li><span class="step-index">03</span><h3>Evidence</h3><p>Humans review runtime results.</p></li></ol><p class="footnote">SDD is an authoring methodology. The AVA runtime is a separate conversation process.</p></section>
+<section class="slide diagram" id="sdd-plain-language" data-label="SDD in plain English" data-time-range="14:27–14:51 GMT" aria-labelledby="sdd-plain-language-title"><p class="eyebrow">SDD in plain English</p><h2 id="sdd-plain-language-title" tabindex="-1">From a request to a testable contract</h2><p class="lead">“Build me a travel quote assistant” leaves important decisions unstated.</p><div class="teaching-diagram before-after" data-diagram="progressive-diagram" data-state="all" data-overview="All moments: explore one step or use Next moment." role="group" aria-label="Request to observable behaviour" id="sdd-plain-language-visual"><div class="diagram-surface"><div class="diagram-nodes"><article class="diagram-node" data-key="request"><span class="node-index" aria-hidden="true">01</span><h3>The request</h3><span class="node-body">Build me a travel quote assistant.</span></article><article class="diagram-node" data-key="behaviour"><span class="node-index" aria-hidden="true">02</span><h3>Observable behaviour</h3><span class="node-body">Collect required fields. Return the backend quote. Accept only after explicit consent.</span></article><article class="diagram-node" data-key="proof"><span class="node-index" aria-hidden="true">03</span><h3>Acceptance evidence</h3><span class="node-body">On “maybe”, no accept call. On tool error, no invented success.</span></article></div></div><div class="diagram-controls" hidden><div class="moment-navigation"><button type="button" data-diagram-action="previous">Previous moment</button><button type="button" data-diagram-action="next">Next moment</button><button type="button" data-diagram-action="all">Show all</button></div><details class="moment-picker"><summary>Choose moment</summary><div class="moment-choices" aria-label="Choose teaching moment"><button type="button" data-moment="0" data-targets="request" data-cue="Which fields, actions and success criteria are missing?" aria-pressed="false" aria-controls="sdd-plain-language-visual">Ambiguous request</button><button type="button" data-moment="1" data-targets="behaviour" data-cue="Humans agree the scope, inputs, tools, rules and errors before generation." aria-pressed="false" aria-controls="sdd-plain-language-visual">Agreed behaviour</button><button type="button" data-moment="2" data-targets="proof" data-cue="The same contract tells reviewers what to look for in runtime evidence." aria-pressed="false" aria-controls="sdd-plain-language-visual">Testable outcome</button></div></details><p class="moment-status" role="status" aria-live="polite" aria-atomic="true">All moments: explore one step or use Next moment.</p></div></div><blockquote class="question">What would you test for “maybe”?</blockquote><p class="footnote">Teaching abstraction. AI accelerates authoring; human review and runtime testing remain essential.</p></section>
+<section class="slide split" id="spec-contract" data-label="A useful spec" data-time-range="14:27–14:51 GMT" aria-labelledby="spec-contract-title"><div class="split-layout"><div><p class="eyebrow">A useful spec</p><h2 id="spec-contract-title" tabindex="-1">One contract, three readers</h2><p class="lead">Business owner, engineer and AI assistant work from the same agreed behaviour.</p></div><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>Goal</h3><p>A fictional quote, then optional consented acceptance.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>Approved actions</h3><p>Create quote, get quote, accept quote, get policy.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Guardrails</h3><p>Backend prices, no payment, fresh consent on changed terms.</p></article><article class="content-row"><span class="number" aria-hidden="true">04</span><h3>Acceptance</h3><p>Specify normal, ambiguous, changed-trip and failure cases.</p></article></div></div><p class="footnote">Teaching abstraction, not a live platform payload. Full requests and responses remain in demo-spec.md and tool-mapping.json.</p></section>
+<section class="slide diagram" id="sdd-anatomy" data-label="Inside the spec" data-time-range="14:27–14:51 GMT" aria-labelledby="sdd-anatomy-title"><p class="eyebrow">Inside the spec</p><h2 id="sdd-anatomy-title" tabindex="-1">Six fields make behaviour reviewable</h2><p class="lead">One fictional single-trip quote, with optional explicit acceptance.</p><div class="teaching-diagram spec" data-diagram="annotated-spec" data-state="all" data-overview="All moments: explore one step or use Next moment." role="group" aria-label="Synthetic travel behaviour contract" id="sdd-anatomy-visual"><div class="diagram-surface"><div class="diagram-nodes"><button type="button" data-field="0" aria-pressed="false" class="diagram-node" data-key="outcome"><span class="node-index" aria-hidden="true">01</span><span class="node-title">Outcome</span><span class="node-body">Quote a fictional single trip; accept only when explicitly confirmed.</span></button><button type="button" data-field="1" aria-pressed="false" class="diagram-node" data-key="inputs"><span class="node-index" aria-hidden="true">02</span><span class="node-title">Inputs</span><span class="node-body">customerId, destinationRegion, start/end dates, travellers.</span></button><button type="button" data-field="2" aria-pressed="false" class="diagram-node" data-key="tools"><span class="node-index" aria-hidden="true">03</span><span class="node-title">Tool contracts</span><span class="node-body">Create quote · get quote · accept quote · get policy.</span></button><button type="button" data-field="3" aria-pressed="false" class="diagram-node" data-key="rules"><span class="node-index" aria-hidden="true">04</span><span class="node-title">Business / consent rules</span><span class="node-body">No invented price or payment. Fresh consent on changed terms.</span></button><button type="button" data-field="4" aria-pressed="false" class="diagram-node" data-key="failures"><span class="node-index" aria-hidden="true">05</span><span class="node-title">Errors / handoff</span><span class="node-body">Tool error or uncertain write: state uncertainty, safe readback.</span></button><button type="button" data-field="5" aria-pressed="false" class="diagram-node" data-key="tests"><span class="node-index" aria-hidden="true">06</span><span class="node-title">Acceptance tests</span><span class="node-body">T01 quote · T03 “maybe” · T05 tool failure · T06 repeat acceptance.</span></button></div><p class="spec-output">Output: observed result + missing evidence + next decision.</p></div><div class="diagram-controls" hidden><div class="moment-navigation"><button type="button" data-diagram-action="previous">Previous moment</button><button type="button" data-diagram-action="next">Next moment</button><button type="button" data-diagram-action="all">Show all</button></div><details class="moment-picker"><summary>Choose moment</summary><div class="moment-choices" aria-label="Choose teaching moment"><button type="button" data-moment="0" data-targets="outcome" data-cue="The scope is a synthetic single trip, with acceptance optional." aria-pressed="false" aria-controls="sdd-anatomy-visual">Outcome</button><button type="button" data-moment="1" data-targets="inputs" data-cue="“Next month” is insufficient: confirm actual dates and all required fields." aria-pressed="false" aria-controls="sdd-anatomy-visual">Inputs</button><button type="button" data-moment="2" data-targets="tools" data-cue="POST quote, GET quote, POST accept, GET policy if policyId exists. No PATCH is mapped." aria-pressed="false" aria-controls="sdd-anatomy-visual">Tools</button><button type="button" data-moment="3" data-targets="rules" data-cue="Prices are GBP integer pence. Benefits are absent. Quote-version enforcement at accept is unresolved." aria-pressed="false" aria-controls="sdd-anatomy-visual">Rules</button><button type="button" data-moment="4" data-targets="failures" data-cue="Unknown write outcome is uncertainty, not proof of failure. Reconcile safely before retry." aria-pressed="false" aria-controls="sdd-anatomy-visual">Failure</button><button type="button" data-moment="5" data-targets="tests" data-cue="Cases are planned and blocked. Documented idempotency has not been exercised." aria-pressed="false" aria-controls="sdd-anatomy-visual">Tests</button></div></details><p class="moment-status" role="status" aria-live="polite" aria-atomic="true">All moments: explore one step or use Next moment.</p></div></div><blockquote class="question">Which field would expose a consent gap?</blockquote><p class="footnote">Editable teaching card, not a live AVA schema. Click or focus a field to inspect it.</p></section>
+<section class="slide diagram" id="sdd-iteration" data-label="SDD feedback loop" data-time-range="14:27–14:51 GMT" aria-labelledby="sdd-iteration-title"><p class="eyebrow">SDD feedback loop</p><h2 id="sdd-iteration-title" tabindex="-1">The first candidate starts the learning</h2><p class="lead">Authoring loop: the specification stays the shared contract.</p><div class="teaching-diagram lifecycle" data-diagram="progressive-diagram" data-state="all" data-overview="All moments: explore one step or use Next moment." role="group" aria-label="SDD authoring feedback loop" id="sdd-iteration-visual"><div class="diagram-surface"><p class="diagram-boundary">Human review at each stage. Outputs: design artifact, candidate/version, tests and evidence.</p><div class="diagram-nodes"><article class="diagram-node" data-key="design"><span class="node-index" aria-hidden="true">01</span><h3>Design ⇄ knowledge</h3><span class="node-body">Reviewed behaviour + approved information.</span></article><article class="diagram-node" data-key="build"><span class="node-index" aria-hidden="true">02</span><h3>Build candidate</h3><span class="node-body">Design artifact becomes candidate configuration.</span></article><article class="diagram-node" data-key="test"><span class="node-index" aria-hidden="true">03</span><h3>Test / evaluate</h3><span class="node-body">Test set, authorised version, runtime evidence.</span></article><article class="diagram-node" data-key="critique"><span class="node-index" aria-hidden="true">04</span><h3>Critique</h3><span class="node-body">Compare results and definition with the spec.</span></article><article class="diagram-node" data-key="refine"><span class="node-index" aria-hidden="true">05</span><h3>Refine</h3><span class="node-body">Revise spec, knowledge or configuration; repeat.</span></article></div><p class="return-path"><span aria-hidden="true">↶</span> Refinement feeds the reviewed specification</p><aside class="diagram-branch"><article class="diagram-node" data-key="runtime"><span class="node-index" aria-hidden="true">06</span><h3>Conversation runtime</h3><span class="node-body">Separate process: deployed AVA + permitted tools + systems.</span></article></aside></div><div class="diagram-controls" hidden><div class="moment-navigation"><button type="button" data-diagram-action="previous">Previous moment</button><button type="button" data-diagram-action="next">Next moment</button><button type="button" data-diagram-action="all">Show all</button></div><details class="moment-picker"><summary>Choose moment</summary><div class="moment-choices" aria-label="Choose teaching moment"><button type="button" data-moment="0" data-targets="design" data-cue="A design artifact records the intended agent. Knowledge work may change the design." aria-pressed="false" aria-controls="sdd-iteration-visual">Design and knowledge</button><button type="button" data-moment="1" data-targets="build" data-cue="A generated candidate is not yet a verified deployed service." aria-pressed="false" aria-controls="sdd-iteration-visual">Candidate</button><button type="button" data-moment="2" data-targets="test" data-cue="Only an authorised deployed version with real conversations provides runtime evidence. Stubs prove less." aria-pressed="false" aria-controls="sdd-iteration-visual">Test and evaluate</button><button type="button" data-moment="3" data-targets="critique" data-cue="Inspect both configuration quality and gaps between intended and observed behaviour." aria-pressed="false" aria-controls="sdd-iteration-visual">Critique</button><button type="button" data-moment="4" data-targets="refine design" data-cue="Feed failures back to the contract, rebuild and rerun affected tests." aria-pressed="false" aria-controls="sdd-iteration-visual">Refine and repeat</button></div></details><p class="moment-status" role="status" aria-live="polite" aria-atomic="true">All moments: explore one step or use Next moment.</p></div></div><blockquote class="question">What evidence is missing after generation alone?</blockquote><p class="footnote">Proposed teaching model of the public lifecycle. No deployment or runtime test is claimed here.</p></section>
+<section class="slide diagram" id="sdd-value" data-label="Why SDD helps" data-time-range="14:27–14:51 GMT" aria-labelledby="sdd-value-title"><p class="eyebrow">Why SDD helps</p><h2 id="sdd-value-title" tabindex="-1">A spec makes learning reusable</h2><p class="lead">Benefits depend on the quality of the contract and the evidence.</p><div class="teaching-diagram value" data-diagram="progressive-diagram" data-state="all" data-overview="All moments: explore one step or use Next moment." role="group" aria-label="Value and limits of a reviewed spec" id="sdd-value-visual"><div class="diagram-surface"><p class="spec-center">Reviewed specification</p><div class="diagram-nodes"><article class="diagram-node" data-key="align"><span class="node-index" aria-hidden="true">01</span><h3>Alignment</h3><span class="node-body">One agreed definition of success.</span></article><article class="diagram-node" data-key="scope"><span class="node-index" aria-hidden="true">02</span><h3>Controllable scope</h3><span class="node-body">Explicit tools, rules and exclusions.</span></article><article class="diagram-node" data-key="reuse"><span class="node-index" aria-hidden="true">03</span><h3>Reuse + traceability</h3><span class="node-body">Versioned decisions and reusable artefacts.</span></article><article class="diagram-node" data-key="learn"><span class="node-index" aria-hidden="true">04</span><h3>Testability + faster learning</h3><span class="node-body">Repeatable tests expose gaps early.</span></article><article class="diagram-node" data-key="limits"><span class="node-index" aria-hidden="true">05</span><h3>What SDD does not solve</h3><span class="node-body">Weak specs, missing APIs, access and integration risks. Generated output and small test sets give no guarantee.</span></article></div></div><div class="diagram-controls" hidden><div class="moment-navigation"><button type="button" data-diagram-action="previous">Previous moment</button><button type="button" data-diagram-action="next">Next moment</button><button type="button" data-diagram-action="all">Show all</button></div><details class="moment-picker"><summary>Choose moment</summary><div class="moment-choices" aria-label="Choose teaching moment"><button type="button" data-moment="0" data-targets="align" data-cue="Customer, engineer and AI assistant can challenge the same contract." aria-pressed="false" aria-controls="sdd-value-visual">Alignment</button><button type="button" data-moment="1" data-targets="scope" data-cue="Explicit boundaries make review and change impact easier." aria-pressed="false" aria-controls="sdd-value-visual">Scope</button><button type="button" data-moment="2" data-targets="reuse" data-cue="Keep the contract, candidate, test set and evidence linked across revisions." aria-pressed="false" aria-controls="sdd-value-visual">Traceability</button><button type="button" data-moment="3" data-targets="learn" data-cue="Automated configuration can shorten iteration; observable tests reveal what remains." aria-pressed="false" aria-controls="sdd-value-visual">Learning</button><button type="button" data-moment="4" data-targets="limits" data-cue="Our 401/404 blockers remain real. A specification cannot supply missing access or prove production readiness." aria-pressed="false" aria-controls="sdd-value-visual">Limits</button></div></details><p class="moment-status" role="status" aria-live="polite" aria-atomic="true">All moments: explore one step or use Next moment.</p></div></div><blockquote class="question">Name three benefits and one limit.</blockquote><p class="footnote">Benefits are methodology rationale, not measured workshop performance gains.</p></section>
+<section class="slide rows" id="test-first" data-label="Test the edges" data-time-range="14:27–14:51 GMT" aria-labelledby="test-first-title"><p class="eyebrow">Test the edges</p><h2 id="test-first-title" tabindex="-1">Fluency needs evidence</h2><p class="lead">A good answer must survive the edges of the task.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>A normal request</h3><p>T01: return the actual backend price.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>A changed mind</h3><p>T03 / T04: clarify “maybe”; re-quote changed terms.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>A failed integration</h3><p>T05 / T06: explain errors; reconcile repeated acceptance.</p></article></div><blockquote class="question">Which of these three would you test first in front of a customer?</blockquote></section>
+<section class="slide rows" id="axl" data-label="What is AXL?" data-time-range="14:51–15:01 GMT" aria-labelledby="axl-title"><p class="eyebrow">What is AXL?</p><h2 id="axl-title" tabindex="-1">AXL: the facilitated proof of value</h2><p class="lead">Customer and engineering teams explore one bounded use case.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>Start with a business problem</h3><p>Choose a valuable, feasible problem.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>Turn the problem into a bounded spec</h3><p>Agree tools, rules and acceptance tests.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Show a proof and record gaps</h3><p>Show evidence and record the gaps.</p></article></div><p class="footnote">AXL is the workshop proposition described in the invitation and Genesys event materials; internal facilitator assets have not been fully audited.</p></section>
+<section class="slide timeline" id="four-hours" data-label="Four hours" data-time-range="14:51–15:01 GMT" aria-labelledby="four-hours-title"><p class="eyebrow">Four hours</p><h2 id="four-hours-title" tabindex="-1">Four hours, one bounded proof</h2><p class="lead">Illustrative lab timing. The invitation’s ambition carries no delivery guarantee.</p><p class="timeline-label">Illustrative elapsed time · 240 minutes total</p><ol class="lab-timeline"><li style="--duration:45"><p class="elapsed">00:00–00:45</p><h3>Discover · 45 minutes</h3><p>Choose one use case and check access.</p></li><li style="--duration:60"><p class="elapsed">00:45–01:45</p><h3>Specify · 60 minutes</h3><p>Agree behaviour, tools and tests.</p></li><li style="--duration:90"><p class="elapsed">01:45–03:15</p><h3>Build and rehearse · 90 minutes</h3><p>Build a candidate and try the edges.</p></li><li style="--duration:45"><p class="elapsed">03:15–04:00</p><h3>Review · 45 minutes</h3><p>Inspect evidence and remaining work.</p></li></ol><blockquote class="question">Which dependency could break this timetable?</blockquote></section>
+<section class="slide rows" id="building-blocks" data-label="Behind the lab" data-time-range="14:51–15:01 GMT" aria-labelledby="building-blocks-title"><p class="eyebrow">Behind the lab</p><h2 id="building-blocks-title" tabindex="-1">The engineering behind the lab</h2><p class="lead">Public AVA APIs and a staged authoring lifecycle support the method.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>Public AVA APIs</h3><p>Automate configuration and version management.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>A staged skill workflow</h3><p>Design, knowledge, build, test, evaluate, critique.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Genesys Cloud deployment</h3><p>AI Studio configuration connects to an Architect flow.</p></article></div><p class="footnote">Public setup lists Cursor, Kiro and Claude Code. Codex runtime compatibility and org permissions remain unproven.</p></section>
+<section class="slide rows" id="pinkfish" data-label="Where Pinkfish fits" data-time-range="14:51–15:01 GMT" aria-labelledby="pinkfish-title"><p class="eyebrow">Where Pinkfish fits</p><h2 id="pinkfish-title" tabindex="-1">Pinkfish: strategic context</h2><p class="lead">Genesys announced the acquisition in June 2026.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>Confirmed</h3><p>MCP integration and workflow strategy announced.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>Expected direction</h3><p>Wider enterprise actions are the stated direction.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Important distinction</h3><p>Native workshop availability and AXL causation remain unproven.</p></article></div><p class="footnote">Native capabilities and availability must be checked against the actual region, licence and current release.</p></section>
+<section class="slide rows" id="what-works" data-label="My take" data-time-range="15:01–15:10 GMT" aria-labelledby="what-works-title"><p class="eyebrow">My take</p><h2 id="what-works-title" tabindex="-1">Why the approach has potential</h2><p class="lead">My assessment: the shared contract makes the collaboration useful.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>A better discovery conversation</h3><p>Start with a customer outcome and rules.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>A visible artefact</h3><p>Reuse the specification and evaluation set.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>A faster learning loop</h3><p>Expose integration gaps and edge cases early.</p></article></div><p class="footnote">Presenter interpretation: deliberately distinguish this assessment from Genesys claims.</p></section>
+<section class="slide rows" id="where-to-challenge" data-label="The hard questions" data-time-range="15:01–15:10 GMT" aria-labelledby="where-to-challenge-title"><p class="eyebrow">The hard questions</p><h2 id="where-to-challenge-title" tabindex="-1">What could the PoV conceal?</h2><p class="lead">Small demonstrations leave large questions.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>Integration readiness</h3><p>Identity, consent and real API access.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>Test coverage</h3><p>Reliability, adversarial cases and coverage.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Ownership and repeatability</h3><p>A versioned spec, repeatable build and accountable owner.</p></article><article class="content-row"><span class="number" aria-hidden="true">04</span><h3>Cost and availability</h3><p>Licence, region, consumption and IDE support.</p></article></div><blockquote class="question">What evidence would you need before a pilot?</blockquote></section>
+<section class="slide rows" id="demo-challenge" data-label="Rapid demo" data-time-range="15:10–15:30 GMT" aria-labelledby="demo-challenge-title"><p class="eyebrow">Rapid demo</p><h2 id="demo-challenge-title" tabindex="-1">A rapid demo with clear success criteria</h2><p class="lead">Synthetic travel only. Current mode: design walkthrough.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>A bounded request</h3><p>A backend quote and an optional explicit acceptance.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>Clear tool contract</h3><p>Only the mapped tools, no payment.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Three tests to prove</h3><p>Quote accuracy, consent and safe failure.</p></article></div><p class="footnote">Retained preflight: connector 401, public routes 404, local API reads 200. No live build or transaction is proven.</p></section>
+<section class="slide rows" id="demo-steps" data-label="Demo sequence" data-time-range="15:10–15:30 GMT" aria-labelledby="demo-steps-title"><p class="eyebrow">Demo sequence</p><h2 id="demo-steps-title" tabindex="-1">Four checkpoints for the demo</h2><p class="lead">Access remains blocked. Use the prepared design walkthrough.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>1 · Frame</h3><p>Inspect goal, tools, consent and exclusions.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>2 · Design</h3><p>Review the candidate design and failure paths.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>3 · Try</h3><p>Discuss expected behaviour; no runtime is proven.</p></article><article class="content-row"><span class="number" aria-hidden="true">04</span><h3>4 · Evaluate</h3><p>Compare with all six planned cases; record missing evidence.</p></article></div></section>
+<section class="slide scorecard" id="scorecard" data-label="Evidence" data-time-range="15:10–15:30 GMT" aria-labelledby="scorecard-title"><p class="eyebrow">Evidence</p><h2 id="scorecard-title" tabindex="-1">Six tests for a credible PoV</h2><p class="lead">T01–T06 are blocked before runtime. Manual notes require separate proof.</p><div class="section-items"><article class="content-row" data-test-id="T01"><span class="number">T01</span><h3>Accurate quote</h3><p>Collect required details; present the returned price.</p></article><article class="content-row" data-test-id="T02"><span class="number">T02</span><h3>Explicit acceptance</h3><p>Confirm this quote; accept once; verify the policy.</p></article><article class="content-row" data-test-id="T03"><span class="number">T03</span><h3>Ambiguous reply</h3><p>Clarify “maybe” without accepting anything.</p></article><article class="content-row" data-test-id="T04"><span class="number">T04</span><h3>Changed destination</h3><p>Refresh the quote and obtain fresh approval.</p></article><article class="content-row" data-test-id="T05"><span class="number">T05</span><h3>Unavailable tool</h3><p>Explain the failure without inventing success.</p></article><article class="content-row" data-test-id="T06"><span class="number">T06</span><h3>Repeat acceptance</h3><p>Read back state; avoid a duplicate policy.</p></article></div><p class="footnote">No AVA outcomes measured. Selectors record manual observations only.</p></section>
+<section class="slide rows" id="pov-vs-production" data-label="Reality check" data-time-range="15:10–15:30 GMT" aria-labelledby="pov-vs-production-title"><p class="eyebrow">Reality check</p><h2 id="pov-vs-production-title" tabindex="-1">What production still requires</h2><p class="lead">A PoV supports the next decision; production needs operational proof.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>PoV establishes</h3><p>A bounded slice with observed evidence.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>Production additionally requires</h3><p>Security, real systems, resilience, monitoring and ownership.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Presales should leave with</h3><p>A gap report and an implementation plan.</p></article></div></section>
+<section class="slide discussion" id="discussion" data-label="Discuss" data-time-range="15:30–16:00 GMT" aria-labelledby="discussion-title"><p class="eyebrow">Discuss</p><h2 id="discussion-title" tabindex="-1">Which customer use case would you choose?</h2><p class="lead">Choose one valuable action, one blocker and the evidence you need.</p><blockquote class="question">What would make you confident enough to propose an AXL session?</blockquote><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>Where could this work?</h3><p>One meaningful outcome small enough to explore.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>What would you ask for?</h3><p>Minimum documents, access, data and a policy owner.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>What would you challenge?</h3><p>Unsafe actions, hidden failures or weak value.</p></article></div></section>
+<section class="slide closing" id="takeaways" data-label="Close" data-time-range="15:30–16:00 GMT" aria-labelledby="takeaways-title"><p class="eyebrow">Close</p><h2 id="takeaways-title" tabindex="-1">Make the next decision with evidence</h2><p class="lead">AVA: permitted action selection. SDD: reviewed behaviour. AXL: shared learning.</p><div class="section-items"><article class="content-row"><span class="number" aria-hidden="true">01</span><h3>Keep the scope small</h3><p>One valuable action and a plausible path.</p></article><article class="content-row"><span class="number" aria-hidden="true">02</span><h3>Keep the specification honest</h3><p>Explicit rules, constraints and tests.</p></article><article class="content-row"><span class="number" aria-hidden="true">03</span><h3>Keep the evidence visible</h3><p>Observed outcomes, failures and remaining work.</p></article></div><blockquote class="question">What can we prove in four hours?</blockquote></section></main>
+  <footer class="bottom">
+    <div class="progress" aria-live="polite" aria-atomic="true"><strong id="slidePosition"></strong> <span id="slideName"></span><span id="slideTiming" class="slide-timing"></span></div>
+    <p class="draft-note">AXL content draft · Live demo evidence pending.</p>
+    <div class="controls"><button id="back" type="button" aria-label="Previous section">Back</button><button id="next" type="button" aria-label="Next section">Next</button></div>
+  </footer>
+  <p id="status" class="sr-only" role="status"></p>
+  <noscript><p class="no-script">JavaScript is off. All sections appear below for reading.</p></noscript>
+  <script>// Narrative navigation only. Existing demo players retain ownership of playback.
+(() => {
+  const sections = Array.from(document.querySelectorAll('.slide'));
+  const nav = Array.from(document.querySelectorAll('.nav [data-go]'));
+  const back = document.getElementById('back');
+  const next = document.getElementById('next');
+  const fullscreen = document.getElementById('fullscreen');
+  const status = document.getElementById('status');
+  let current = 0;
+
+  function go(id) {
+    if (location.hash !== '#' + id) location.hash = id;
+    // Keep rapid keyboard moves in sync before the hashchange event arrives.
+    render();
+  }
+
+  function render() {
+    const requested = location.hash.slice(1);
+    const match = sections.findIndex(section => section.id === requested);
+    current = match < 0 ? 0 : match;
+    sections.forEach((section, index) => { section.hidden = index !== current; });
+    nav.forEach(button => {
+      if (button.dataset.go === sections[current].id) button.setAttribute('aria-current', 'step');
+      else button.removeAttribute('aria-current');
+    });
+    const activeNav=nav.find(button=>button.dataset.go===sections[current].id);
+    activeNav?.scrollIntoView({block:'nearest',inline:'nearest'});
+    document.getElementById('slidePosition').textContent =
+      String(current + 1).padStart(2, '0') + ' / ' + String(sections.length).padStart(2, '0');
+    document.getElementById('slideName').textContent = sections[current].dataset.label;
+    document.getElementById('slideTiming').textContent = sections[current].dataset.timeRange || '';
+    document.title = document.querySelector('.brand-title').textContent + ' | ' + sections[current].dataset.label;
+    back.disabled = current === 0;
+    next.disabled = current === sections.length - 1;
+    sections[current].querySelector('h1,h2').focus({preventScroll: true});
+    window.scrollTo(0, 0);
+  }
+
+  document.querySelectorAll('[data-go]').forEach(button => {
+    button.addEventListener('click', () => go(button.dataset.go));
+  });
+  document.querySelector('.skip').addEventListener('click', event => {
+    event.preventDefault();
+    sections[current].querySelector('h1,h2').focus();
+  });
+  back.addEventListener('click', () => go(sections[Math.max(0, current - 1)].id));
+  next.addEventListener('click', () => go(sections[Math.min(sections.length - 1, current + 1)].id));
+  window.addEventListener('hashchange', render);
+  window.addEventListener('keydown', event => {
+    if (event.altKey || event.ctrlKey || event.metaKey ||
+        event.target.closest('button,a,input,select,textarea,summary,[contenteditable]')) return;
+    const moves = {ArrowLeft: current - 1, ArrowRight: current + 1, Home: 0, End: sections.length - 1};
+    if (Object.hasOwn(moves, event.key)) {
+      event.preventDefault();
+      go(sections[Math.max(0, Math.min(sections.length - 1, moves[event.key]))].id);
+    }
+  });
+
+  if (!document.documentElement.requestFullscreen) fullscreen.hidden = true;
+  fullscreen.addEventListener('click', async () => {
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await document.documentElement.requestFullscreen();
+    } catch {
+      status.textContent = 'Fullscreen is unavailable here. You can use your browser’s fullscreen control.';
+    }
+  });
+  document.addEventListener('fullscreenchange', () => {
+    fullscreen.textContent = document.fullscreenElement ? 'Exit fullscreen' : 'Fullscreen';
+  });
+
+  function prepareEvidenceScorecard() {
+    const slide = document.getElementById('scorecard');
+    if (!slide) return;
+    const statuses = ['Not tested', 'Pass', 'Fail', 'Blocked'];
+    const cards = Array.from(slide.querySelectorAll('.content-row'));
+    cards.forEach((card, i) => {
+      const heading = card.querySelector('h3')?.textContent || ('Checkpoint '+(i+1));
+      const pick = document.createElement('select');
+      pick.className = 'scorecard-select';
+      pick.setAttribute('aria-label', 'Result for '+heading);
+      statuses.forEach(s => { const o = document.createElement('option'); o.value=s; o.textContent=s; pick.appendChild(o); });
+      card.dataset.verdict='Not tested';
+      pick.addEventListener('change', () => { card.dataset.verdict=pick.value; });
+      card.appendChild(pick);
+    });
+    const bar=document.createElement('div');
+    bar.className='scorecard-toolbar';
+    const p=document.createElement('p');
+    p.className='scorecard-help';
+    p.textContent='Manual rehearsal notes only. The status choices do not run or prove any AVA tests.';
+    const exportButton=document.createElement('button');
+    exportButton.className='scorecard-export';
+    exportButton.type='button';
+    exportButton.textContent='Export observed status ↓';
+    exportButton.addEventListener('click',()=>{
+      const receipt={schema:'axl-workshop-observation',version:1,eventDate:'2026-10-29',observedAt:new Date().toISOString(),note:'Manual presenter status. Requires separate proof.',results:cards.map((card,i)=>({checkpoint:i+1,testId:card.dataset.testId,title:card.querySelector('h3')?.textContent||'',status:card.dataset.verdict}))};
+      const file=new Blob([JSON.stringify(receipt,null,2)],{type:'application/json'});
+      const url=URL.createObjectURL(file);
+      const link=document.createElement('a');
+      link.href=url;link.download='axl-workshop-observation.json';
+      document.body.appendChild(link);link.click();link.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),1000);
+    });
+    bar.append(p,exportButton);
+    slide.appendChild(bar);
+  }
+
+  // Three source-driven teaching patterns share one presenter-controlled state machine.
+  function prepareDiagrams() {
+    document.querySelectorAll('[data-diagram]').forEach(diagram => {
+      const controls = diagram.querySelector('.diagram-controls');
+      const moments = Array.from(diagram.querySelectorAll('[data-moment]'));
+      const fields = Array.from(diagram.querySelectorAll('[data-field]'));
+      const regions = Array.from(diagram.querySelectorAll('[data-key]'));
+      const status = diagram.querySelector('.moment-status');
+      let state = -1; // Full overview is meaningful even before the first interaction.
+      function select(index) {
+        state = index;
+        if (state < 0) controls.querySelector('details').open = false;
+        diagram.dataset.state = state < 0 ? 'all' : String(state);
+        const targets = state < 0 ? [] : moments[state].dataset.targets.split(' ');
+        regions.forEach(region => {
+          const active = targets.includes(region.dataset.key);
+          region.classList.toggle('is-active', active);
+          region.classList.toggle('is-muted', state >= 0 && !active);
+        });
+        moments.forEach((button, i) => button.setAttribute('aria-pressed', String(i === state)));
+        fields.forEach((button, i) => button.setAttribute('aria-pressed', String(i === state)));
+        status.textContent = state < 0 ? diagram.dataset.overview :
+          `${state + 1} / ${moments.length} · ${moments[state].textContent}: ${moments[state].dataset.cue}`;
+        // Keep focus on the presenter's chosen control, including at the endpoints.
+        controls.querySelector('[data-diagram-action="previous"]').setAttribute('aria-disabled', String(state === 0));
+        controls.querySelector('[data-diagram-action="next"]').setAttribute('aria-disabled', String(state === moments.length - 1));
+      }
+      moments.forEach((button, i) => button.addEventListener('click', () => select(i)));
+      fields.forEach((button, i) => {
+        button.addEventListener('click', () => select(i));
+        button.addEventListener('focus', () => select(i));
+      });
+      controls.querySelector('[data-diagram-action="previous"]').addEventListener('click', () => select(state < 0 ? moments.length - 1 : Math.max(0, state - 1)));
+      controls.querySelector('[data-diagram-action="next"]').addEventListener('click', () => select(Math.min(moments.length - 1, state + 1)));
+      controls.querySelector('[data-diagram-action="all"]').addEventListener('click', () => select(-1));
+      controls.hidden = false;
+      select(-1);
+    });
+  }
+
+  prepareDiagrams();
+  prepareEvidenceScorecard();
+  render();
+})();
+</script>
+</body>
+</html>
