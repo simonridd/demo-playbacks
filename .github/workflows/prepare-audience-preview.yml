@@ -1,0 +1,49 @@
+name: Prepare validated audience preview
+on:
+  push:
+    branches: [codex/axl-edu8-publish]
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create isolated publication worktree
+        run: git worktree add --detach "$RUNNER_TEMP/audience-publication" "$GITHUB_SHA"
+      - name: Verify and prepare only the audience HTML
+        working-directory: ${{ runner.temp }}/audience-publication
+        run: |
+          python3 - <<'PY'
+          import bz2,hashlib,json
+          from pathlib import Path
+          raw=bz2.decompress(b''.join(Path(f'.github/edu8-public.part{i}').read_bytes() for i in range(3)))
+          assert hashlib.sha256(raw).hexdigest()=='a364fd63b4736162baf89d1421edddaef37571b45d71274e32db9c7906e0114e'
+          change=json.loads(raw)
+          target=Path('previews/axl-bot-ava-matrix-2026-10-29/index.html')
+          old=target.read_text(encoding='utf-8')
+          assert hashlib.sha256(old.encode()).hexdigest()==change['base']
+          lines=old.splitlines(keepends=True)
+          for start,end,replacement in reversed(change['ops']):
+              lines[start:end]=replacement
+          result=''.join(lines)
+          digest=hashlib.sha256(result.encode()).hexdigest()
+          assert digest==change['output']=='6547507af822e7b248c51db6513cf91b9ebfd3d31c81791dbf401582cc280477'
+          assert 'data-route="main"' in result and 'data-route="backup"' in result
+          assert 'Private presenter notes' not in result
+          target.write_text(result,encoding='utf-8')
+          print('Prepared exact CI-verified audience HTML:',digest)
+          PY
+      - name: Retain reviewed file on a temporary branch
+        working-directory: ${{ runner.temp }}/audience-publication
+        run: |
+          git config user.name 'Presentation validation'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add previews/axl-bot-ava-matrix-2026-10-29/index.html
+          git commit -m 'Prepare verified audience-first AXL preview'
+          git push origin HEAD:refs/heads/codex/axl-edu8-published-file
+          echo "Prepared commit: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+          echo "HTML blob: $(git rev-parse HEAD:previews/axl-bot-ava-matrix-2026-10-29/index.html)" >> "$GITHUB_STEP_SUMMARY"
