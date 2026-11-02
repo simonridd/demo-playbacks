@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "title": "From SDD to AVA creation",
+  "stories": [
+    {
+      "id": "alder-vale",
+      "title": "Alder & Vale"
+    },
+    {
+      "id": "second-ava-build",
+      "title": "Harbour Borough Library"
+    }
+  ],
+  "files": {
+    "index.html": {
+      "sha256": "873d338c727c0d10a48f7c3a0fc230216baaae65e4107221553ca366d1c0f9f5",
+      "bytes": 14672115
+    },
+    "alder-vale/index.html": {
+      "sha256": "fff6021d7f446d136f731d61bc9e481b1d9c8be353c69985599f4caf5e1ec897",
+      "bytes": 13141777
+    },
+    "second-ava-build/index.html": {
+      "sha256": "67765473f5293782de950b539bcea75a1b16e71f266e7a236aa0151f8950a263",
+      "bytes": 1413138
+    },
+    "alder-vale/call.html": {
+      "sha256": "235d161c14d756f20af9d1d66506ab7d504e61b373bd86fadf6d0ae8cde04798",
+      "bytes": 7030926
+    },
+    "alder-vale/call.mp4": {
+      "sha256": "d0fd43aafe7e33278bb273c0cbf03958b910224a31706c239e86bfe9edb2da01",
+      "bytes": 5148184
+    }
+  },
+  "publicationScope": "Audience artifacts only; no raw calls, private source bundles or provider session exports."
+}
