@@ -98,3 +98,10 @@ The hosted player and single-file presentation use the same silent paired record
 ## Benefits and customer examples — 23 October 2026
 
 The supplied IPI–Holcim demo slides are incorporated into the root presentation and its offline edition using the existing IPI styling. The benefits overview combines overlapping material in `#problems`, with separate Web Messenger and AVA benefits. New `#copilot` and `#customer-results` sections precede the characters and demos. The customer examples retain all nine supplied figures and their customer/region groupings. The welcome includes the demo date. Navigation and counters use all nine sections. Existing routes and all five embedded players are preserved.
+
+
+## SDD / AVA stories — 2 November 2026
+
+The two complete independent stories are published at `previews/sdd-ava-creation/`: Alder & Vale and Second AVA Build (Harbour Borough Library). Their selected evidence and the final Alder & Vale call are included in the combined HTML download. See `docs/SDD_AVA_PUBLICATION_20261102.md` and the adjacent `publication.json`.
+
+The earlier collection is temporarily hidden from home/library discovery at the owner’s request. Its individual routes and files remain unchanged, and its previous listing is retained as `docs/retained-library-20261102.html`. No content was deleted. Relay remains featured.
