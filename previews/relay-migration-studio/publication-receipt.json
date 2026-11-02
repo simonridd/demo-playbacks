@@ -4,7 +4,7 @@
   "productBrandingRevision": "4e2f4e10360ff2fdc044cca672c91a5e21c2e7ea",
   "sceneCount": 13,
   "durations": {
-    "full": 270,
+    "full": 270.04,
     "overview": 90
   },
   "selectedScope": {
@@ -16,10 +16,21 @@
     "Library back link replaces internal preview label",
     "Private source links point to the public evidence summary"
   ],
-  "audioGenerated": false,
+  "audioGenerated": true,
   "files": {
-    "index.html": "c855d77f6e71d6f9b232270351f2812807d992421429c94a56d2b085e449f3c5",
-    "90-seconds.html": "ce839d0a56011a4bbbb0d36e5489d2716779e409a876dad0fd099b6258c4abc4",
+    "index.html": "e3cafc4271f5bc2c819cdadadb051d8a191f1df8d172f58eb24c441ac99ed698",
+    "90-seconds.html": "1c87666a973e06966cdc6206824e67823a050f8dee4b2d8c27d24fff4d43fa22",
     "cover.png": "1e4d996732be9b09a52eca87e41f6caf219941074117c5e1616386f6de01511f"
+  },
+  "recordedNarration": {
+    "chapters": 13,
+    "spokenSeconds": 261.64,
+    "model": "gemini-3.8-flash-tts",
+    "voice": "en-gb-advisor-2",
+    "route": "full",
+    "separateChapterRecordings": true,
+    "overviewRecorded": false,
+    "startsOn": "Play story",
+    "runtimeSpeechServiceRequired": false
   }
 }
