@@ -4,7 +4,7 @@
   "productBrandingRevision": "4e2f4e10360ff2fdc044cca672c91a5e21c2e7ea",
   "sceneCount": 13,
   "durations": {
-    "full": 234.44,
+    "full": 233.64,
     "overview": 90
   },
   "selectedScope": {
@@ -18,13 +18,13 @@
   ],
   "audioGenerated": true,
   "files": {
-    "index.html": "71e41ee1944e82a35a1c52a91ac667d18a1a010d8cab104277c7046fa6e94e2c",
-    "90-seconds.html": "f6c4939a7d1f6b7e5a4c35ed7bd1c610943324168d61bf66e7acd577fc83e762",
+    "index.html": "62b2f086dd8d5edc1557950d15541592715f97f09a0fc9f151b7f4c325b8405a",
+    "90-seconds.html": "29f8038b7d70a8cc35747af6554d7f9c7fd7a78d55c4d1e396d4d1760b4e5f61",
     "cover.png": "1e4d996732be9b09a52eca87e41f6caf219941074117c5e1616386f6de01511f"
   },
   "recordedNarration": {
     "chapters": 13,
-    "spokenSeconds": 226.04,
+    "spokenSeconds": 225.24,
     "model": "gemini-3.8-flash-tts",
     "voice": "en-gb-advisor-2",
     "route": "full",
@@ -33,6 +33,12 @@
     "startsOn": "Play story",
     "runtimeSpeechServiceRequired": false,
     "reRecordedChapters": [
+      1
+    ],
+    "unchangedChapters": [
+      2,
+      3,
+      4,
       5,
       6,
       7,
@@ -42,15 +48,9 @@
       11,
       12,
       13
-    ],
-    "unchangedChapters": [
-      1,
-      2,
-      3,
-      4
     ]
   },
-  "editorialRevision": "plain-language-20261102",
+  "editorialRevision": "opening-wording-20261102",
   "catalogue": {
     "resourceTypes": 34,
     "managedTypes": 11
