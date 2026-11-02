@@ -2,7 +2,7 @@
 
 The homepage now features exactly two stories, in order:
 
-1. **Relay Migration Studio** — available 4:30 walkthrough and 90-second overview.
+1. **Relay Migration Studio** — available 3:54 walkthrough and 90-second overview.
 2. **From SDD to AVA creation** — clearly labelled in production, with a stable
    destination for the finished walkthrough. No private working captures or
    unfinished native acceptance have been published for this slot.
@@ -42,3 +42,18 @@ errors or unexpected external requests. (Related assertions are grouped into
 checks.) Screenshots were visually inspected, including the narrow SDD layout.
 
 The private authoring suite now includes four actual-media tests covering all 13 recorded chapters, native endings, pause/resume/speed, navigation/mute/route changes and embedded offline audio. The full route uses measured clip lengths plus 0.7-second gaps. The short script remains unrecorded. The approved voice and timing are retained in the Relay publication receipt; individual editable WAVs remain in the private authoring project. Publication status is recorded separately after the main-branch Pages deployment is checked.
+
+## Plain-language revision
+
+Scenes 5–13 now explain decisions and outcomes for colleagues new to Relay:
+recreate or reuse dependencies; optional renaming; preview what stays/new/changes;
+agree the exact work; a final safety check; apply; re-plan; inspect and restore
+supported settings; and discuss team working practices with Simon Ridd.
+The close gives the verified 34-type catalogue / 11 managed-type distinction.
+Evidence details remain available without crowding the main narration. The live
+same-org evidence is not promoted into a real cross-org acceptance claim.
+Nine separately editable chapter recordings were regenerated with the approved
+narrator. The first four WAVs are byte-identical. The full story runs about four
+minutes; the short route remains 90 seconds. A completed-run screenshot replaces
+the pre-execution screen in scene 10. Other featured and historical demos remain
+unchanged; only the Relay card description/runtime changes on the homepage.
