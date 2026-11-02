@@ -2,7 +2,7 @@
 
 The homepage now features exactly two stories, in order:
 
-1. **Relay Migration Studio** — available 3:54 walkthrough and 90-second overview.
+1. **Relay Migration Studio** — available 3:53 walkthrough and 90-second overview.
 2. **From SDD to AVA creation** — clearly labelled in production, with a stable
    destination for the finished walkthrough. No private working captures or
    unfinished native acceptance have been published for this slot.
@@ -57,3 +57,6 @@ narrator. The first four WAVs are byte-identical. The full story runs about four
 minutes; the short route remains 90 seconds. A completed-run screenshot replaces
 the pre-execution screen in scene 10. Other featured and historical demos remain
 unchanged; only the Relay card description/runtime changes on the homepage.
+
+Opening narration follow-up: scene 1 now says “the genuine IPI UI”, removing
+“branded”. Only its WAV was replaced; chapters 2–13 retain identical bytes.
