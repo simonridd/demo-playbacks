@@ -1,0 +1,25 @@
+{
+  "format": 1,
+  "sourceBaseline": "bf013815d6d563c5c797449aa980641d34b4c0fe",
+  "productBrandingRevision": "4e2f4e10360ff2fdc044cca672c91a5e21c2e7ea",
+  "sceneCount": 13,
+  "durations": {
+    "full": 270,
+    "overview": 90
+  },
+  "selectedScope": {
+    "root": "Cedar queue 1",
+    "records": 7,
+    "targetApplyPerformed": false
+  },
+  "publicEditionChanges": [
+    "Library back link replaces internal preview label",
+    "Private source links point to the public evidence summary"
+  ],
+  "audioGenerated": false,
+  "files": {
+    "index.html": "c855d77f6e71d6f9b232270351f2812807d992421429c94a56d2b085e449f3c5",
+    "90-seconds.html": "ce839d0a56011a4bbbb0d36e5489d2716779e409a876dad0fd099b6258c4abc4",
+    "cover.png": "1e4d996732be9b09a52eca87e41f6caf219941074117c5e1616386f6de01511f"
+  }
+}
