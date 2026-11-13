@@ -105,3 +105,9 @@ The supplied IPI–Holcim demo slides are incorporated into the root presentatio
 The two complete independent stories are published at `previews/sdd-ava-creation/`: Alder & Vale and Second AVA Build (Harbour Borough Library). Their selected evidence and the final Alder & Vale call are included in the combined HTML download. See `docs/SDD_AVA_PUBLICATION_20261102.md` and the adjacent `publication.json`.
 
 The earlier collection is temporarily hidden from home/library discovery at the owner’s request. Its individual routes and files remain unchanged, and its previous listing is retained as `docs/retained-library-20261102.html`. No content was deleted. Relay remains featured.
+
+## Audience analytics
+
+The maintained audience pages use the shared demonstration tracker from the production repository. It records anonymous opens, supported-player progress, control clicks, visible active time and native media coverage. Offline copies and excluded rehearsals send no events. The shared project uses the EU ingestion region and the free capped plan.
+
+When rebuilding an audience page, repeat the production repository's `analytics:prepare` step using `config/demo-analytics.public.json` and the stable page ID in `config/demo-analytics.release.json`. Prepare from the original native build into a separate output, then review and publish through a PR. Keep the selected recordings, documents and other public assets unchanged. No personal API key or session credential belongs in this public repository.
