@@ -115,4 +115,4 @@ When rebuilding an audience page, repeat the production repository's `analytics:
 
 ## Banking skills presentation
 
-The complete Westbridge skills presentation is available at [`previews/banking-skills/`](previews/banking-skills/). It includes the 53-slide story, four banking journeys, the focused Copilot recording and a downloadable presentation package. Existing presentation routes and recordings are preserved.
+The complete Westbridge skills presentation is available at [`previews/copilot-example/`](previews/copilot-example/). It includes the 53-slide story, four banking journeys, the focused Copilot recording and a downloadable presentation package. Existing presentation routes and recordings are preserved.

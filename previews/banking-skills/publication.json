@@ -1,38 +1,5 @@
 {
   "version": 1,
-  "title": "Westbridge Banking skills presentation",
-  "publishedPath": "previews/banking-skills/",
-  "sourcePackage": "westbridge-skills-20261116-v1",
-  "files": [
-    {
-      "file": "banking-copilot.html",
-      "bytes": 1549742,
-      "sha256": "0910024f64f13c108e5e3395463af3d2c635849366a8a4491358204b866468f4"
-    },
-    {
-      "file": "banking-copilot.mp4",
-      "bytes": 1047364,
-      "sha256": "f23faaeba2a2d38a38c647f056a7770ecbbdba372e5bc179df919f62104a3bc7"
-    },
-    {
-      "file": "banking-journeys.html",
-      "bytes": 21627160,
-      "sha256": "6434597e088ad0cce1d5f8a7e2dc88626850bea3868bce4a88ff4b49ba7c12c5"
-    },
-    {
-      "file": "index.html",
-      "bytes": 12601,
-      "sha256": "2fcc90d50de18fdc0454ea4837ef03435203eac0dc800a20191d555d2ac22648"
-    },
-    {
-      "file": "presentation.html",
-      "bytes": 704117,
-      "sha256": "bf848930675f03098327ef4986bb9d1968e3038610a38d80047b2156f87fead6"
-    },
-    {
-      "file": "westbridge-skills.zip",
-      "bytes": 17006590,
-      "sha256": "837ea41de4c4e5ec7155fdddd5e7a41b64bec164ff495ffb836bbdc85360d064"
-    }
-  ]
+  "movedTo": "../copilot-example/",
+  "publishedPath": "previews/copilot-example/"
 }
