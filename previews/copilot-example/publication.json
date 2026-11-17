@@ -20,8 +20,8 @@
     },
     {
       "file": "banking-journeys.html",
-      "bytes": 25145532,
-      "sha256": "c39513bbde39075904eaa0cc86e59d1d9f8f0a92209e97a0d95acb4066451cfd"
+      "bytes": 25145316,
+      "sha256": "0fb2134ec8c27e5589acbf4383ac0dd215da2af409c180c217f445f07daa3401"
     },
     {
       "file": "index.html",
@@ -35,8 +35,8 @@
     },
     {
       "file": "westbridge-skills.zip",
-      "bytes": 20139214,
-      "sha256": "d72c9c599171a429c22112d6d42660e4d7a592a835d16d3c576093a73c15f4a6"
+      "bytes": 20139172,
+      "sha256": "c70ba17db5c1711730a6c01734764e856b6621119e4247c8cc2590257b94dbff"
     }
   ]
 }
