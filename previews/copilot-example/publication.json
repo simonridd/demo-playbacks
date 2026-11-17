@@ -2,7 +2,7 @@
   "version": 1,
   "title": "Westbridge Banking skills presentation",
   "publishedPath": "previews/copilot-example/",
-  "sourcePackage": "copilot-example-narrated-20261117-v1",
+  "sourcePackage": "copilot-example-phone-overlays-20261117",
   "presenterNarration": {
     "digitalJourneys": 4,
     "updated": "2026-11-17"
@@ -10,23 +10,23 @@
   "files": [
     {
       "file": "banking-copilot.html",
-      "bytes": 2015762,
-      "sha256": "e22556c17e5014adf5edb846c9b9d760dc6fe2a4ba49ec1cd9da69d039860865"
+      "bytes": 2514132,
+      "sha256": "b2c280fcb5637b6b84c3254f99036ba7a5223edcdefb8b403c3f8821a24988c3"
     },
     {
       "file": "banking-copilot.mp4",
-      "bytes": 1396878,
-      "sha256": "1c1499a3a570a63c95fe70b12f960d62ce25761da040c926c4ddf8a2f7b265c9"
+      "bytes": 1625943,
+      "sha256": "dbef3b9e84c8328b8f21d73ee83f1e9e5d7be3efb13719df64b5a74b1f8af547"
     },
     {
       "file": "banking-journeys.html",
-      "bytes": 25145316,
-      "sha256": "0fb2134ec8c27e5589acbf4383ac0dd215da2af409c180c217f445f07daa3401"
+      "bytes": 30911443,
+      "sha256": "ff64d5f3cb132e6c8f4eb77326e4a72bbac110aef6c7c0169da62c6576e70a24"
     },
     {
       "file": "index.html",
-      "bytes": 12651,
-      "sha256": "e742b63588b193c355267cf6f972da99c6c6bb3a335cfddda416571e34e3a3d0"
+      "bytes": 12685,
+      "sha256": "754d64fa65e219df2fdadb74e8dc44471953ad9241d3aaf6aa9f60eef13d58ce"
     },
     {
       "file": "presentation.html",
@@ -35,8 +35,12 @@
     },
     {
       "file": "westbridge-skills.zip",
-      "bytes": 20139172,
-      "sha256": "c70ba17db5c1711730a6c01734764e856b6621119e4247c8cc2590257b94dbff"
+      "bytes": 24405119,
+      "sha256": "8dced4a71c24b04da09053295f93b4a1f8aaa48fc1dac7fae69ceedc7c99dc8d"
     }
-  ]
+  ],
+  "customerPhone": {
+    "digitalClips": 4,
+    "updated": "2026-11-17"
+  }
 }
