@@ -1,0 +1,46 @@
+name: Package Thirdfort audience HTML
+on:
+  push:
+    branches: [codex/thirdfort-html-package-20261117]
+    paths: ['.thirdfort-package/**', '.github/workflows/thirdfort-html-package.yml']
+permissions:
+  contents: write
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Assemble audience-only HTML using pinned existing IPI assets
+        run: |
+          python3 .thirdfort-package/make-fragments.py
+          python3 .thirdfort-package/assemble.py . build/audience-payload.json build/audience/index.html
+          echo 'c7c55669a16ba12943c53f1cce2811e3139c38372a4af9e3638ebf2afd1cf178  build/audience/index.html' | sha256sum -c -
+      - name: Store the checked HTML blob without modifying a branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import base64,json,pathlib
+          p=pathlib.Path('build/audience/index.html')
+          pathlib.Path('build/blob-request.json').write_text(json.dumps({'content':base64.b64encode(p.read_bytes()).decode(),'encoding':'base64'}))
+          PY
+          gh api --method POST repos/simonridd/demo-playbacks/git/blobs --input build/blob-request.json > build/blob-response.json
+          python3 - <<'PY'
+          import json,pathlib
+          r=json.loads(pathlib.Path('build/blob-response.json').read_text())
+          expected=json.loads(pathlib.Path('build/audience/build-receipt.json').read_text())['gitBlobSha']
+          assert r['sha']==expected,(r['sha'],expected)
+          print('CHECKED_AUDIENCE_BLOB='+r['sha'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thirdfort-checked-audience-html
+          path: |
+            build/audience/index.html
+            build/audience/build-receipt.json
+            build/blob-response.json
+          retention-days: 7
+          if-no-files-found: error
