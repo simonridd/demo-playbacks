@@ -1,0 +1,43 @@
+name: Verify Thirdfort published HTML
+on:
+  push:
+    branches: [codex/thirdfort-html-package-20261117]
+    paths: ['.github/workflows/thirdfort-live-verify.yml']
+permissions:
+  contents: read
+jobs:
+  live-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check live page matches the reviewed audience file
+        shell: bash
+        run: |
+          set -euo pipefail
+          url='https://simonridd.github.io/demo-playbacks/previews/thirdfort-discovery/?verify=d0729f9aa305a4b4faee8b95cbbea7d73acc7d64'
+          expected='c7c55669a16ba12943c53f1cce2811e3139c38372a4af9e3638ebf2afd1cf178'
+          matched=false
+          for attempt in $(seq 1 24); do
+            status=$(curl --location --silent --show-error --max-time 15 --output /tmp/thirdfort.html --write-out '%{http_code}' "$url" || true)
+            actual=$(sha256sum /tmp/thirdfort.html 2>/dev/null | cut -d' ' -f1 || true)
+            if [ "$status" = '200' ] && [ "$actual" = "$expected" ]; then
+              matched=true
+              break
+            fi
+            echo "Deployment readiness attempt $attempt: HTTP $status"
+            sleep 5
+          done
+          test "$matched" = true
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          p=Path('/tmp/thirdfort.html'); s=p.read_text()
+          assert s.count('class="slide ')==8
+          for marker in ['operatorNote','sourceIds','speaker-notes.md','GENESYS_BILLING','simonridd@gmail','Westbridge','banking-coordination']:
+              assert marker not in s,marker
+          print('LIVE_HTTP=200')
+          print('LIVE_URL=https://simonridd.github.io/demo-playbacks/previews/thirdfort-discovery/')
+          print('SLIDES=8')
+          print('SHA256='+hashlib.sha256(p.read_bytes()).hexdigest())
+          print('AUDIENCE_PRIVACY_CHECK=PASS')
+          PY
