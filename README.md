@@ -126,3 +126,7 @@ The [25-second motion preview](previews/genesys-ai-comparison/video/) shows the 
 ## Five visual presentation editions
 
 [Explore the five-presentation collection](previews/presentation-next/): Genesys Standalone AI, Hodge Bank, Aled’s Cars, Cedar Home and Thirdfort. Each has Original and Visual editions with matching slide selection, a separate presentation stage and a responsive Read view. The new editions contain 52 slides. Existing published routes remain available.
+
+## Co-op · Everyday, considered.
+
+[Open the new Co-op presentation](previews/co-op-everyday/): nine original scenes around a small grocery problem and a joined-up response. The presentation uses one original Blender still, one CSS type reveal, one adapted 21st.dev comparison, one GSAP handoff and one Three.js inspection, with a complete Read view. Existing presentations and comparisons remain available.
