@@ -129,4 +129,4 @@ The [25-second motion preview](previews/genesys-ai-comparison/video/) shows the 
 
 ## Co-op · Everyday, considered.
 
-[Open the new Co-op presentation](previews/co-op-everyday/): ten original scenes around Maya’s grocery problem and Sam’s joined-up response, with matching editorial portraits and a Co-op | IPI cover. The presentation uses one original Blender still, one CSS type reveal, one adapted 21st.dev comparison, one GSAP handoff and one Three.js inspection, with a complete Read view. Existing presentations and comparisons remain available.
+[Open the new Co-op presentation](previews/co-op-everyday/): thirteen original scenes around Maya’s grocery problem and Sam’s work as an agent, with matching editorial portraits and a Co-op | IPI cover. A later sequence connects his searching, checking and writing to Agent Copilot’s help. The presentation uses one original Blender still, one CSS type reveal, one adapted 21st.dev comparison, one GSAP handoff and one Three.js inspection, with a complete Read view. Existing presentations and comparisons remain available.
