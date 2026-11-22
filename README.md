@@ -116,3 +116,7 @@ When rebuilding an audience page, repeat the production repository's `analytics:
 ## Banking skills presentation
 
 The complete Westbridge skills presentation is available at [`previews/copilot-example/`](previews/copilot-example/). It includes the 53-slide story, four banking journeys, the focused Copilot recording and a downloadable presentation package. Existing presentation routes and recordings are preserved.
+
+## Presentation before and after
+
+[Compare the Genesys AI briefing](previews/genesys-ai-comparison/) using Original and Updated at the same slide. The updated edition adds a contents page, a visual opening and more readable layouts while retaining the five core slides, four supplementary slides and recording link. Both audience presentations also open independently. The existing [published briefing](previews/genesys-standalone-ai/) is unchanged.
