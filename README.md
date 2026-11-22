@@ -125,4 +125,4 @@ The [25-second motion preview](previews/genesys-ai-comparison/video/) shows the 
 
 ## Five visual presentation editions
 
-[Explore the five-presentation collection](previews/presentation-next/): Genesys Standalone AI, Hodge Bank, Aled’s Cars, Cedar & Co and Thirdfort. Each has Original and Visual editions with matching slide selection, a separate presentation stage and a responsive Read view. The new editions contain 52 slides. Existing published routes remain available.
+[Explore the five-presentation collection](previews/presentation-next/): Genesys Standalone AI, Hodge Bank, Aled’s Cars, Cedar Home and Thirdfort. Each has Original and Visual editions with matching slide selection, a separate presentation stage and a responsive Read view. The new editions contain 52 slides. Existing published routes remain available.
