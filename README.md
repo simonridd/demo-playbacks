@@ -119,4 +119,4 @@ The complete Westbridge skills presentation is available at [`previews/copilot-e
 
 ## Presentation before and after
 
-[Compare the Genesys AI briefing](previews/genesys-ai-comparison/) using Original and Updated at the same slide. The updated edition adds a contents page, a visual opening and more readable layouts while retaining the five core slides, four supplementary slides and recording link. Both audience presentations also open independently. The existing [published briefing](previews/genesys-standalone-ai/) is unchanged.
+[Compare the Genesys AI briefing](previews/genesys-ai-comparison/) using Original, Updated and With Motion at the same slide. The Motion edition adds bounded entrances and native guided-connection tracing while preserving the first redesign as Updated. The updated edition adds a contents page, a visual opening and more readable layouts while retaining the five core slides, four supplementary slides and recording link. Both audience presentations also open independently. The existing [published briefing](previews/genesys-standalone-ai/) is unchanged.
