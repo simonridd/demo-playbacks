@@ -129,8 +129,10 @@ The [25-second motion preview](previews/genesys-ai-comparison/video/) shows the 
 
 ## Co-op · Everyday, considered.
 
-[Open the new Co-op presentation](previews/co-op-everyday/): fifteen scenes follow Maya’s missing egg through Sam’s help, a refund for the carton and her confirmation. Sam appears at a Co-op customer care workstation, and his Copilot summary reflects the resolved request. The deck retains the Co-op | IPI cover and natural customer imagery. The presentation uses one original Blender still, one CSS type reveal, one adapted 21st.dev comparison, one GSAP handoff and one Three.js inspection, with a complete Read view. Existing presentations and comparisons remain available.
+[Open the new Co-op presentation](previews/co-op-everyday/): fourteen main scenes and one optional exploration follow Maya’s missing egg through Sam’s help, a refund for the carton and her confirmation. Sam appears at a Co-op customer care workstation, and his Copilot summary reflects the resolved request. The deck retains Co-op | IPI identity across its scenes and natural customer imagery. The presentation uses one original Blender still, one CSS type reveal, one adapted 21st.dev comparison, one GSAP handoff and one Three.js inspection, with a complete Read view. Existing presentations and comparisons remain available.
 
 The Co-op edition now includes a concise Copilot → Sam → Maya feature map and a published customer-results slide with Eir and Probe CX primary case links. The fifteen-scene story retains Maya’s refund, Sam’s reviewed notes, mobile reading mode and the five bounded visual-technology uses. Detailed source review remains private.
 
 The Co-op performance figures now count up once in 850 ms on first stage entry. Reading, print, reduced-motion and static content retain the final values, units and source context. No replay or new runtime library is added.
+
+The short Copilot walkthrough uses the existing Next/Right controls and themed action buttons to reveal guidance, confirm the checks and review the summary/code after the refund. Three.js inspection is optional exploration with Return to the same story step. The pilot proposes missing-item calls, a selected team, a baseline and measures for after-call work, summary corrections and repeat contact. Existing full recordings are unchanged.
